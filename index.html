@@ -216,6 +216,20 @@
 <section id="reports">
   <h2 class="anchored"><span class="h2mark"><img src="assets/gt-robot-teach.png" alt="" aria-hidden="true"></span><span>Report Library</span></h2>
   <div class="card">
+    <h3><a href="reports/f02-plausibility-gate.html">The AI Said It Followed the Spec &mdash; The Spec Disagreed</a></h3>
+    <span class="tag">Episode F02</span><span class="tag">Our own process</span>
+    <span class="verdict">VERDICT: a number written down before the code existed rejected a backtest that was wrong in the flattering direction</span>
+    <p style="color:var(--dim);margin-top:8px">An AI agent wrote our own leverage backtest &mdash;
+    and committed the pre-registration first: one file, 83 lines, nothing else, 7 minutes and 4
+    seconds before the commit that carried the engine. One bar in it was about the instrument
+    rather than the answer: realized beta had to land inside [1.1, 1.5]. The run printed a
+    flattering verdict and, in the same statement, the beta that disqualified it. One line was
+    sizing the position in unit counts instead of dollars. Fixed and re-run, the verdict inverted.
+    The buggy run was never committed, so every figure from it here is a labelled reconstruction.
+    The locked pre-registration, all 13 entries, the machine-produced diff &mdash; and the three
+    things this does not claim, starting with the second defect that night that no bar caught.</p>
+  </div>
+  <div class="card">
     <h3><a href="reports/a10-steven-dux.html">Steven Dux Said His Own Edge Was Fading. We Measured It.</a></h3>
     <span class="tag">Episode A10</span><span class="tag">Micro-cap shorting</span>
     <span class="verdict">VERDICT: it&rsquo;s complicated &mdash; the rule by company size is false, the rule by year was real in 2021, and he told his audience it was fading before we did</span>
@@ -267,9 +281,10 @@
   </div>
   <div class="card" style="border-style:dashed">
     <h3 style="color:var(--dim)">More reports are being prepared</h3>
-    <p style="color:var(--dim)">A report goes up once its episode is live, so this library
-    trails the channel rather than leading it &mdash; and an episode is not listed here until
-    the report behind it is. Subscribe to get each one as it lands.</p>
+    <p style="color:var(--dim)">A report goes up when its episode ships &mdash; in practice
+    just before it, so the video does not point at a page that is not there yet &mdash; and an
+    episode is not listed here until the report behind it is. Subscribe to get each one as it
+    lands.</p>
   </div>
 </section>
 
