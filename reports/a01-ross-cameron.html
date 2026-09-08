@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ross Cameron's Momentum Rules — Full Test Report | Ground Truth</title>
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--dim:#9da7b3;--acc:#3fb950;--warn:#d29922;--red:#f85149;--line:#30363d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px 60px}
+  .crumb{padding:26px 0 0;font-size:13px}
+  .crumb a{color:var(--acc);text-decoration:none}
+  h1{font-size:clamp(23px,4.5vw,32px);line-height:1.25;margin:18px 0 6px}
+  .meta{color:var(--dim);font-size:14px;margin-bottom:26px}
+  h2{font-size:20px;margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+  p{margin-bottom:12px}
+  .verdict-box{background:var(--panel);border:1px solid var(--warn);border-radius:10px;padding:18px 20px;margin:10px 0}
+  .verdict-box .v{color:var(--warn);font-weight:700;letter-spacing:.05em;font-size:14px}
+  .tblwrap{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-size:13px}
+  .ok{color:var(--acc);font-weight:700}
+  .bad{color:var(--red);font-weight:700}
+  .dim{color:var(--dim)}
+  .note{background:var(--panel);border-left:3px solid var(--acc);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer p{margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="crumb"><a href="../index.html">← Ground Truth report library</a></div>
+
+<h1>Ross Cameron's Momentum Rules — Full Test Report</h1>
+<div class="meta">Episode A01 · <a style="color:var(--acc)" href="https://youtu.be/VYxwCpBaQX8">watch the episode</a> · report format v1</div>
+
+<div class="verdict-box">
+  <div class="v">VERDICT — FAITHFUL NO-EDGE / TRANSFER-NEGATIVE</div>
+  <p style="margin:8px 0 0">Ross Cameron's published rules encode cleanly into a machine — and priced
+  faithfully at 1-minute resolution, on survivorship-free data with real costs, they have no positive
+  expectancy. The edge, if it exists, lives in a layer the published rules don't capture.</p>
+</div>
+
+<h2>What we granted vs. what we tested</h2>
+<p><b>Granted, not re-audited:</b> that Ross Cameron makes money trading — taken at face value from
+his own published, broker-verified statements. That was never the question.</p>
+<p><b>Tested:</b> only whether his <em>published rules</em>, handed to a machine, reproduce that
+result. They don't. The violinist is real; the sheet music doesn't reproduce the performance.</p>
+
+<h2>How the test was run (the Five Gates applied)</h2>
+<p><b>Gate 1 — the claim in writing:</b> we encoded the published momentum day-trading rules; the
+large majority of the rule set mechanizes cleanly.
+<b>Gate 2 — real data:</b> survivorship-free, point-in-time US equity data, a one-shot pull from <b>Massive.com</b> (formerly Polygon.io) — including the tickers
+that later died.
+<b>Gate 3 — real costs:</b> commissions, slippage, and honest fills at 1-minute resolution.
+<b>Gate 4 — pre-registered pass/fail:</b> written down before results.
+<b>Gate 5 — reopen bounty:</b> published below.</p>
+
+<h2>The results ledger</h2>
+<div class="tblwrap">
+<table>
+  <tr><th>Figure</th><th>What it is</th><th>Status</th></tr>
+  <tr><td><b>41 days, 0 trades</b>, equity flat at $99,802.50</td>
+      <td>The live clone on a real-time feed (paper account) traded nothing for its entire run</td>
+      <td class="dim">Real, but <b>inconclusive on profitability</b> — zero trades is zero P&amp;L
+      signal. We use it as the hook, never as the verdict.</td></tr>
+  <tr><td><b>−$20,584.83 net · profit factor 0.632 · 34 of 37 trades stopped out</b></td>
+      <td>The faithful rebuild of the best-documented entry pattern, priced over years of honest data</td>
+      <td class="ok">MEASURED — the evidence seat of the verdict</td></tr>
+  <tr><td><b>0 for 12 · profit factor 0.000</b></td>
+      <td>The twelve setups the rules themselves call textbook — the faithful robot lost all twelve</td>
+      <td class="ok">MEASURED</td></tr>
+  <tr><td><b>99.95% of gross profit = one lucky all-day hold</b></td>
+      <td>What little the backtest made came from a single position held all day — not breakout edge</td>
+      <td class="ok">MEASURED</td></tr>
+  <tr><td class="dim"><s>−$35,791 · 31 of 32 stopped</s></td>
+      <td class="dim">A second detector we built produced this scarier number — and failed our own
+      fidelity audit (it dropped rule components and hardened one filter to always-pass)</td>
+      <td class="bad">EXCLUDED — our artifact, not his edge. It appears nowhere in the episode or
+      this verdict. Publishing a number your own audit killed is the exact sin this channel exists
+      to expose.</td></tr>
+</table>
+</div>
+
+<div class="note"><b>Why the exclusion row is printed at all:</b> a test that only shows you its
+surviving numbers is grading its own homework (Gate 4). The graveyard of our own instruments is part
+of the report.</div>
+
+<h2>What the verdict does NOT claim</h2>
+<p>It does not claim Ross Cameron doesn't trade profitably (granted above). It does not claim the
+41-day zero was "discipline" — zero trades supports no such story, in either direction. It does not
+claim <em>no human</em> can trade this style — only that the published rules, executed mechanically
+at the resolution a machine can see, don't carry the edge.</p>
+
+<h2>What would change our mind (the reopen bounty)</h2>
+<p>Pre-registered before publication: <b>(1)</b> instruments that can see below the one-minute bar,
+tested under the identical honest-friction floor; <b>(2)</b> a clean-label re-run of the faithful
+detector; <b>(3)</b> a real scanner-fed ticker universe replacing hand-labelled setups. If any of
+these clears the floor, the update ships here first.</p>
+
+<footer>
+  <p><a style="color:var(--acc);text-decoration:none;font-weight:600" href="../index.html">← All reports</a></p>
+  <p><em>Ground Truth is educational and entertainment content — not financial, investment, or tax
+  advice. We are not licensed or registered advisers; we share original research and opinions.
+  Nothing here is a recommendation to buy, sell, or hold any security, fund, or strategy. Backtests
+  and simulations are hypothetical, model real-world costs imperfectly, and past performance does
+  not guarantee future results. Do your own research and consult a qualified professional before
+  making any financial decision.</em></p>
+</footer>
+
+</div>
+</body>
+</html>

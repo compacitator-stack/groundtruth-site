@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margin vs LEAPS &mdash; What Leverage Actually Costs — Full Test Report | Ground Truth</title>
+<meta name="description" content="We priced the same 1.33x exposure two ways across six years of real prices &mdash; a margin loan against long-dated calls &mdash; and charged both sides honestly. 13 entries, 11 rolls, the locked pre-registration, and the rate sensitivity we registered and had not run until now.">
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--dim:#9da7b3;--acc:#3fb950;--warn:#d29922;--red:#f85149;--line:#30363d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px 60px}
+  .crumb{padding:26px 0 0;font-size:13px}
+  .crumb a{color:var(--acc);text-decoration:none}
+  h1{font-size:clamp(23px,4.5vw,32px);line-height:1.25;margin:18px 0 6px}
+  .meta{color:var(--dim);font-size:14px;margin-bottom:26px}
+  h2{font-size:20px;margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 8px;color:var(--ink)}
+  p{margin-bottom:12px}
+  ul,ol{margin:0 0 12px 22px}
+  li{margin-bottom:7px}
+  .verdict-box{background:var(--panel);border:1px solid var(--warn);border-radius:10px;padding:18px 20px;margin:10px 0}
+  .verdict-box .v{color:var(--warn);font-weight:700;letter-spacing:.05em;font-size:14px}
+  .tblwrap{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-size:13px}
+  .ok{color:var(--acc);font-weight:700}
+  .bad{color:var(--red);font-weight:700}
+  .warnc{color:var(--warn);font-weight:700}
+  .dim{color:var(--dim)}
+  .note{background:var(--panel);border-left:3px solid var(--acc);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .lock{background:var(--panel);border-left:3px solid var(--warn);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .ledger{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:8px;margin:14px 0}
+  .ledger table{min-width:640px;font-size:13.5px;border:0}
+  .ledger th{position:sticky;top:0;z-index:1;border-top:0}
+  .dl{display:inline-block;background:var(--panel);border:1px solid var(--acc);color:var(--acc);
+      padding:9px 18px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;margin:6px 0}
+  .dl:hover{background:var(--acc);color:#0d1117}
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer p{margin-bottom:12px}
+  code{background:var(--panel);padding:1px 6px;border-radius:4px;font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="crumb"><a href="../index.html">← Ground Truth report library</a></div>
+
+<h1>Margin vs LEAPS &mdash; What Leverage Actually Costs</h1>
+<div class="meta">Episode C02 &middot; report format v2 &middot; lab run 2020-07-01 &rarr; 2026-06-22, pre-registration locked before any code ran before the run</div>
+
+<div class="verdict-box">
+  <div class="v">VERDICT &mdash; THE NON-CALLABLE VERSION IS CORRECTLY PRICED, AND AT A SAFE RATIO YOU DO NOT NEED IT</div>
+  <p style="margin:8px 0 0">Held at 1.33&times; for six years, the option construction costs <b>+1.37%</b> a year more than the margin loan on the index fund and <b>+1.43%</b> on the volatile name. That is a real price for removing a real risk. But at that ratio the margin book's worst equity ratio over the whole window was <b>75%</b> against a 25% maintenance requirement &mdash; <b>it was never called, and it was never close.</b> Insurance, correctly priced, against something the construction had already excluded.</p>
+</div>
+
+<h2>What we granted, and what we actually tested</h2>
+
+<p><b>Granted, not measured:</b> that long-dated deep-in-the-money calls really do remove the margin call. They do. There is no loan behind them, so no broker can force the position closed. That half of the pitch is true and we are not testing it.</p>
+
+<p><b>Tested:</b> what it costs. We ran the same 1.33&times; exposure two ways over the same six years and charged both sides honestly &mdash; bought at the ask, marked at the bid every day, commission on both sides, dividends credited against the loan. <b>13 entries, 11 of them rolls.</b></p>
+
+<div class="lock"><b>What this report does NOT claim, pre-committed before the data:</b> this is two tickers, not a class, and the volatile one is a single high-volatility cyclical rather than a category. The window is bull-dominated with one real bear in it. Taxes are excluded, and that runs <b>against</b> the option arm, because rolling realises a gain about every twelve months while a held margin position defers it. After tax the gap gets wider, not narrower.</div>
+
+<h2>&sect;1 &middot; The locked pre-registration</h2>
+
+<p>Committed <code>6beaa55</code> on before any code ran, <b>before the probe was run</b> &mdash; the wager you cannot move after seeing the cards.</p>
+
+<h3>The falsifiable question</h3>
+<p>Does the non-callable construction cost less than the margin loan it replaces, at a ratio a careful person would actually hold?</p>
+<ul>
+  <li><b>A yes looks like:</b> the option arm's CAGR drag lands at or below 1 point a year.</li>
+  <li><b>A no looks like:</b> the drag exceeds 2 points a year, and margin construction stands.</li>
+  <li><b>Ambiguous residue:</b> between 1 and 2 points a year &mdash; situational, and only for ambitions above 1.33&times;. This is where the answer landed.</li>
+</ul>
+
+<h3>Our stated prior: the drag would be real but under a point</h3>
+<p>We were wrong, and wrong in the direction that made the product look better than it is. Both names came in above the band we guessed.</p>
+
+<h3>The primary configuration (locked)</h3>
+<div class="tblwrap"><table>
+<tr><th>Parameter</th><th>Locked value</th></tr>
+<tr><td>Leverage</td><td>1.33&times; (1.33 shares per $1 of equity)</td></tr><tr><td>Maintenance requirement</td><td>25%</td></tr><tr><td>Margin rate</td><td>Fed funds + 1.5% &mdash; a pre-registered approximation, never a broker quote</td></tr><tr><td>Cash sweep</td><td>max(0, Fed funds &minus; 0.5%)</td></tr><tr><td>Option selection</td><td>largest listed strike at or below 70% of spot</td></tr><tr><td>Roll trigger</td><td>time to expiry &lt; 180 days</td></tr><tr><td>Commission</td><td>$0.66 per contract, both sides</td></tr><tr><td>Fill convention</td><td>bought at the ask, marked at the bid daily</td></tr><tr><td>Window</td><td>2020-07-01 &rarr; 2026-06-22</td></tr><tr><td>Tickers</td><td>QQQ, MU</td></tr>
+</table></div>
+
+<h3>Deliberately NOT tested &mdash; named in advance</h3>
+<ol>
+<li>Taxes &mdash; and their exclusion runs against the option arm, not for it.</li><li>Any ratio above 1.33&times;. The pitch is loudest at 2&times;; we did not test it as a held book.</li><li>Delta-selected strikes. We chose by moneyness; the educators whose lesson this prices choose by delta, which is a different scale and a different contract.</li><li>Rolling at three months. We rolled at six.</li>
+</ol>
+
+<div class="note">A drag at or below a point would have said the non-callable version is a viable substitute; above two points would have said margin construction stands. Both endings were disarmed on paper before the run.</div>
+
+<h3>The goalposts &mdash; all required to proceed</h3>
+<div class="tblwrap"><table>
+<tr><th>#</th><th>Pre-registered goalpost</th><th>Measured</th><th>Pass</th></tr>
+<tr><td>1</td><td>Pre-registered goalpost &mdash; drag &le; 1.0 pt/yr on both names</td><td>+1.37% / +1.43%</td><td class="bad">NO</td></tr><tr><td>2</td><td>Pre-registered goalpost &mdash; implied financing inside FFR &rarr; FFR+4% on every entry</td><td>QQQ 4 of 7 inside; MU 0 of 6</td><td class="bad">NO</td></tr><tr><td>3</td><td>Pre-registered goalpost &mdash; the margin arm is called at least once in the window</td><td>never called on either name</td><td class="bad">NO</td></tr><tr><td>4</td><td>Pre-registered goalpost &mdash; the verdict survives a &plusmn;1% move in the margin rate</td><td>holds on 2 of 2</td><td class="ok">YES</td></tr>
+</table></div>
+<p><b>1 of 4.</b> The one that passed is the sensitivity &mdash; and it is the one that had never been run until 2026-08-28. The three that failed all failed in the same direction: the option construction is more expensive than registered, and the risk it insures against never arrived.</p>
+
+<h2>&sect;2 &middot; The headline arithmetic</h2>
+<div class="tblwrap"><table>
+<tr><th>Figure</th><th>Value</th><th>What it means</th></tr>
+<tr><td><b>QQQ &middot; the index fund</b></td><td>23.69%</td><td>22.32%</td><td class="bad">+1.37%</td><td>19.76%</td><td>75.2%</td><td class="ok">never called</td></tr><tr><td><b>MU &middot; the volatile name</b></td><td>78.37%</td><td>76.94%</td><td class="bad">+1.43%</td><td>70.38%</td><td>71.0%</td><td class="ok">never called</td></tr>
+</table></div>
+
+<h2>&sect;3 &middot; Was it the path? The stress tests</h2>
+<p>The margin arm's worst equity ratio over the whole six years was <b>75%</b> on the index fund and <b>71%</b> on the volatile name, against a 25% maintenance requirement. On the index fund that is where the book <i>started</i> &mdash; the cushion never narrowed at all.</p><p>This was not a kind window. At 1.33&times; and a 25% maintenance requirement the hinge is a <b>67% fall</b>, and the deepest fall in the record was <b>37.8% intraday</b>. <b>The construction excluded the event. The weather never got a vote.</b> The converse is just as true and it is ours to say: <i>never called at this ratio</i> is a statement about arithmetic, not about the future.</p>
+
+<h2>&sect;4 &middot; The controls</h2>
+<p>Buy-and-hold, unlevered, over the same window: <b>QQQ &middot; the index fund</b> 19.76% &middot; <b>MU &middot; the volatile name</b> 70.38%. Realized beta lands where 1.33&times; says it should &mdash; margin 1.21 vs LEAPS 1.18 (QQQ) &middot; margin 1.15 vs LEAPS 1.10 (MU), so the two arms really are carrying the same exposure and the comparison is like-for-like.</p>
+
+<h2>&sect;5 &middot; The best objection, pre-registered and answered</h2>
+<p><b>&ldquo;Your answer rests on a borrowing rate you made up.&rdquo;</b> It is a fair objection and it is why we registered a sensitivity before writing any code &mdash; and then did not run it, which we said on camera. It has now been run.</p><div class="tblwrap"><table><tr><th>&nbsp;</th><th>drag @ FFR+0.5%</th><th>drag @ FFR+1.5%</th><th>drag @ FFR+2.5%</th><th>breakeven spread</th><th>verdict</th></tr><tr><td><b>QQQ &middot; the index fund</b></td><td class="bad">+1.51%</td><td class="bad">+1.37%</td><td class="bad">+1.23%</td><td>FFR + 9.02%</td><td class="ok">holds</td></tr><tr><td><b>MU &middot; the volatile name</b></td><td class="bad">+1.46%</td><td class="bad">+1.43%</td><td class="bad">+1.41%</td><td>FFR + 26.67%</td><td class="ok">holds</td></tr></table></div><p>Move the borrowing rate a full point in either direction and the gap never closes on either name. The rate that would actually close it on the index fund is <b>Fed funds + 9.02%</b> &mdash; <b>7.5 points above what we charged ourselves.</b> The verdict does not rest on the rate guess.</p>
+
+<h2>&sect;6 &middot; Their own terms</h2>
+<p>Two things run against us and we are stating them rather than glossing them.</p><p><b>Our strike rule is not their strike rule.</b> We chose the largest listed strike at or below 70% of spot; the two educators whose lesson this prices choose by <i>delta</i> and aim for 70&ndash;80. Those are not the same contract. On the index fund, moving to an 80% strike adds a median of about 1.4 points a year in entry premium &mdash; so our figure is a <b>floor on their version, not a price for it</b>.</p><p><b>We rolled at six months; at least one creator teaches three.</b> Different positions on the time-decay curve. Which is more expensive is something we did not measure and will not guess.</p>
+
+<h2>&sect;7 &middot; The complete ledger &mdash; all 13 rows</h2>
+<div class="note">All 13 entries, both names, every one we opened. <b>11 of them are rolls</b> &mdash; the other two are the openings. The engine's own counter increments once per entry period including the terminal hold, so <code>leaps_rolls</code> in the summary file equals the entry count; the roll count here is derived, and the report and the episode both say entries and rolls separately for that reason. The <b>implied financing</b> column is the interest rate the option is quietly charging: the pre-registered band was Fed funds to Fed funds + 4%, checked on every entry, and rows outside it are marked. Check our arithmetic: the CSV below is the same file the figures above are computed from.</div>
+<a class="dl" href="c02-entries-ledger.csv">Download the full 13-row ledger (CSV)</a>
+<div class="ledger"><table>
+<tr><th>#</th><th>Sym</th><th>Entry</th><th>Expiry</th><th>Strike</th><th>Spot</th><th>Ask</th><th>Moneyness</th><th>Implied financing</th><th>Premium over intrinsic</th></tr>
+<tr><td class="dim">1</td><td><b>MU</b></td><td>2020-07-01</td><td>2022-01-21</td><td>32.5</td><td>49.70</td><td>22.95</td><td>65.4%</td><td class="bad">12.50%</td><td>11.57%</td></tr>
+<tr><td class="dim">2</td><td><b>MU</b></td><td>2021-07-26</td><td>2023-01-20</td><td>52.5</td><td>76.30</td><td>28.20</td><td>68.8%</td><td class="bad">5.89%</td><td>5.77%</td></tr>
+<tr><td class="dim">3</td><td><b>MU</b></td><td>2022-07-25</td><td>2024-01-19</td><td>40.0</td><td>60.15</td><td>25.70</td><td>66.5%</td><td class="bad">10.05%</td><td>9.23%</td></tr>
+<tr><td class="dim">4</td><td><b>MU</b></td><td>2023-07-24</td><td>2025-01-17</td><td>45.0</td><td>65.48</td><td>26.50</td><td>68.7%</td><td class="bad">9.66%</td><td>9.19%</td></tr>
+<tr><td class="dim">5</td><td><b>MU</b></td><td>2024-07-22</td><td>2026-01-16</td><td>80.0</td><td>115.28</td><td>47.55</td><td>69.4%</td><td class="bad">11.20%</td><td>10.64%</td></tr>
+<tr><td class="dim">6</td><td><b>MU</b></td><td>2025-07-21</td><td>2027-01-15</td><td>75.0</td><td>113.23</td><td>48.85</td><td>66.2%</td><td class="bad">10.27%</td><td>9.38%</td></tr>
+<tr><td class="dim">7</td><td><b>QQQ</b></td><td>2020-07-01</td><td>2021-12-17</td><td>175.0</td><td>250.49</td><td>86.00</td><td>69.9%</td><td class="bad">4.24%</td><td>4.20%</td></tr>
+<tr><td class="dim">8</td><td><b>QQQ</b></td><td>2021-06-21</td><td>2022-12-16</td><td>240.0</td><td>344.36</td><td>113.49</td><td>69.7%</td><td class="dim">2.61%</td><td>2.65%</td></tr>
+<tr><td class="dim">9</td><td><b>QQQ</b></td><td>2022-06-21</td><td>2023-12-15</td><td>195.0</td><td>281.08</td><td>104.46</td><td>69.4%</td><td class="bad">6.67%</td><td>6.54%</td></tr>
+<tr><td class="dim">10</td><td><b>QQQ</b></td><td>2023-06-20</td><td>2024-12-20</td><td>255.0</td><td>366.90</td><td>135.06</td><td>69.5%</td><td class="bad">6.33%</td><td>6.31%</td></tr>
+<tr><td class="dim">11</td><td><b>QQQ</b></td><td>2024-06-24</td><td>2025-12-19</td><td>329.8</td><td>473.96</td><td>173.87</td><td>69.6%</td><td class="bad">6.35%</td><td>6.26%</td></tr>
+<tr><td class="dim">12</td><td><b>QQQ</b></td><td>2025-06-23</td><td>2026-12-18</td><td>370.0</td><td>531.65</td><td>192.85</td><td>69.6%</td><td class="bad">5.93%</td><td>5.87%</td></tr>
+<tr><td class="dim">13</td><td><b>QQQ</b></td><td>2026-06-22</td><td>2027-12-17</td><td>515.0</td><td>735.73</td><td>275.94</td><td>70.0%</td><td class="bad">7.63%</td><td>7.50%</td></tr>
+</table></div>
+
+<h2>&sect;8 &middot; What would change our mind</h2>
+<ol>
+<li><b>A window and a ratio where the margin book is force-sold and the option book is not.</b> That is the one condition under which the drag stops being a fee and becomes a bargain, and our six years never produced one. Send it and we run it here first.</li><li><b>A broker whose maintenance requirement does not rise in a crash.</b> That would move this on the arithmetic alone &mdash; every threshold we quote is the generous one, because a margin agreement reserves the right to raise the requirement exactly when the price is testing it.</li><li><b>The delta-selected version, priced.</b> Ours is a floor on the strike they teach, not a price for it. Somebody running their rule and showing the premium is a better episode than this one.</li>
+</ol>
+
+<h2>&sect;9 &middot; What survives</h2>
+<p>A margin quote has two prices. The rate is on the screen. The second one &mdash; the fall that ends you &mdash; is in the maintenance schedule, your broker recomputes it nightly, and it moves with what you post. <b>A threshold without its maintenance requirement is not a number.</b></p><p>And the thing worth carrying: correctly priced protection, bought against a risk your construction has already excluded, is still a cost. At 1.33&times; you are paying about a point and a half a year for a margin call that the arithmetic says cannot reach you.</p>
+
+<h2>&sect;10 &middot; Want to run a test like this yourself?</h2>
+<p>Everything we make is free &mdash; the reports, the ledgers, all of it. The only thing that costs us
+real money is the market data.</p>
+<div class="note"><b>Where the numbers on this page came from.</b> The option chains are from
+<b>ThetaData</b> and the underlying equity history is a one-shot pull from <b>Massive.com</b> (formerly
+Polygon.io). Neither pays us anything, neither has any say in a verdict, and neither is the link below.</div>
+<a class="dl" href="https://eodhd.com/?via=groundtruthyoutube">Buying market data? Going through here supports Ground Truth (affiliate)</a>
+<div class="note"><b>The firewall:</b> going through that link pays us a small commission at no extra
+cost to you. <b>It is a way to support the channel, not a description of our pipeline</b> &mdash; the
+vendors that produced our numbers are named directly above, and we would rather say so plainly than let
+a commission blur the two. That is the only money this channel takes. <b>Never from anyone whose claims
+we test</b> &mdash; and never for anything inside a category we review.</div>
+<p><a class="dl" href="https://groundtruth-tested.beehiiv.com/subscribe">Get every report + the 7 Questions one-pager (free)</a></p>
+
+<footer>
+<p><a href="../index.html">&larr; All reports</a></p>
+<p><em>Ground Truth is educational and entertainment content — not financial, investment, or tax advice. We are not licensed or registered advisers; we share original research and opinions. Nothing here is a recommendation to buy, sell, or hold any security, fund, or strategy. Backtests and simulations are hypothetical, model real-world costs imperfectly, and past performance does not guarantee future results. Do your own research and consult a qualified professional before making any financial decision.</em></p>
+</footer>
+
+</div>
+</body>
+</html>

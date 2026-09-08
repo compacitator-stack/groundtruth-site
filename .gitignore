@@ -1,0 +1,25 @@
+# This repo is PUBLIC and every tracked byte is world-readable forever, so nothing lands
+# here by accident. There is no .gitignore-shaped near-miss on record yet; this exists so
+# there never is one, because `git add -A` in a directory someone used as scratch is how
+# a private file becomes a permanent public one.
+
+# scratch / extraction dirs
+.txt/
+.scratch/
+*.tmp
+*.bak
+*.orig
+
+# editor + OS
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# anything that has ever held a secret
+.env
+.env.*
+*.pem
+*.key
+token.json
+client_secret*.json
