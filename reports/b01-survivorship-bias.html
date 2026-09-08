@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Backtest Is Missing Dead Companies. We Put Them Back and Measured It. — Full Test Report | Ground Truth</title>
+<meta name="description" content="We ran one momentum strategy twice over 21.7 years of US market data, changing only whether the universe still contained the companies that died. Every figure, the grid, and what we got wrong.">
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--dim:#9da7b3;--acc:#3fb950;--warn:#d29922;--red:#f85149;--line:#30363d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px 60px}
+  .crumb{padding:26px 0 0;font-size:13px}
+  .crumb a{color:var(--acc);text-decoration:none}
+  h1{font-size:clamp(23px,4.5vw,32px);line-height:1.25;margin:18px 0 6px}
+  .meta{color:var(--dim);font-size:14px;margin-bottom:26px}
+  h2{font-size:20px;margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 8px;color:var(--ink)}
+  p{margin-bottom:12px}
+  ul,ol{margin:0 0 12px 22px}
+  li{margin-bottom:7px}
+  .verdict-box{background:var(--panel);border:1px solid var(--warn);border-radius:10px;padding:18px 20px;margin:10px 0}
+  .verdict-box .v{color:var(--warn);font-weight:700;letter-spacing:.05em;font-size:14px}
+  .tblwrap{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-size:13px}
+  .ok{color:var(--acc);font-weight:700}
+  .bad{color:var(--red);font-weight:700}
+  .warnc{color:var(--warn);font-weight:700}
+  .dim{color:var(--dim)}
+  .note{background:var(--panel);border-left:3px solid var(--acc);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .lock{background:var(--panel);border-left:3px solid var(--warn);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .ledger{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:8px;margin:14px 0}
+  .ledger table{min-width:640px;font-size:13.5px;border:0}
+  .ledger th{position:sticky;top:0;z-index:1;border-top:0}
+  .dl{display:inline-block;background:var(--panel);border:1px solid var(--acc);color:var(--acc);
+      padding:9px 18px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;margin:6px 0}
+  .dl:hover{background:var(--acc);color:#0d1117}
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer p{margin-bottom:12px}
+  code{background:var(--panel);padding:1px 6px;border-radius:4px;font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="crumb"><a href="../index.html">← Ground Truth report library</a></div>
+
+<h1>Your Backtest Is Missing Dead Companies. We Put Them Back and Measured It.</h1>
+<div class="meta">Episode B01 &middot; report format v2 &middot; lab run 2026-08-15, pre-registration dated 2026-08-15 &mdash; not hash-locked</div>
+
+<div class="verdict-box">
+  <div class="v">VERDICT &mdash; REAL, USUALLY FLATTERING, AND SMALLER THAN WE FIRST SAID</div>
+  <p style="margin:8px 0 0">Deleting the companies that died flattered this strategy at <b>4 of 4</b> basket widths — by <b>+1.16 to +2.49 CAGR points a year</b>, with a drawdown <b>4.51 to 6.62 points</b> shallower than the truth. But the effect has no fixed size and <b>not even a fixed direction</b>: on a leveraged, concentrated version of the same strategy it ran backwards, costing <b>2.68 points</b>. Survivorship bias is real and it is not the reason your backtest and your account disagree.</p>
+</div>
+
+<h2>What we granted, and what we actually tested</h2>
+
+<p><b>Granted, not measured:</b> that survivorship bias exists, that it usually flatters, and that every practitioner warning you about it is right to.</p>
+
+<p><b>Tested:</b> how much it is worth, in CAGR points and drawdown points, on one strategy we built ourselves and had already believed.</p>
+
+<div class="lock"><b>What this report does NOT claim, pre-committed before the data:</b> that this explains the gap between backtests and live accounts; that the direction is a law; that a delist count carries a return effect; or anything at all about membership survivorship, which is a second effect we did not measure.</div>
+
+<h2>&sect;1 &middot; The pre-registration &mdash; and what it is not</h2>
+
+<div class="lock"><b>This pre-registration is dated, not hash-locked, and we are saying so.</b> It was written on <b>2026-08-15</b>, before any code in the lab directory; the inherited arm's was written 2026-08-11 (UTC). But <b>no commit lock exists</b> for either: the pre-registration and the script it governs landed in the <i>same</i> commit in both labs, so version control cannot witness the ordering. What stands behind the dates is a written provenance note, which is an attestation and not cryptographic evidence. Our A13 report could cite a pre-run lock hash; this one cannot, and filling the gap with a hash that does not exist would be the exact move this channel was built to catch.</div>
+
+<h3>The falsifiable question</h3>
+<p>The survivorship verdict-flip vs spy holds at >= 3 of 4 basket widths.</p>
+<ul>
+  <li><b>A yes looks like:</b> the survivorship-free arm loses to SPY while the survivor-only arm beats it, at 3 or more of the 4 widths — the verdict itself flipping on the data choice alone.</li>
+  <li><b>A no looks like:</b> the flip appears at fewer than 3 widths, meaning the bias moves the number without moving the verdict.</li>
+  <li><b>Ambiguous residue:</b> a flip at exactly 2 of 4, which we pre-committed to read as unresolved rather than as support.</li>
+</ul>
+
+<h3>Our stated prior: we expected the flip to hold at 3 or more widths</h3>
+<p>It held at <b>1 of 4</b>. <b>The prediction was falsified.</b> The bias moved the number at every width and moved the verdict at only one, which is a smaller claim than the one we registered — and the one we are left with.</p>
+
+<h3>The primary configuration (locked)</h3>
+<div class="tblwrap"><table>
+<tr><th>Parameter</th><th>Locked value</th></tr>
+<tr><td>strategy</td><td>12-1 momentum: 252-day return, 5-day skip, monthly re-rank, equal-weight daily hold of the prior day's top-N</td></tr><tr><td>universe</td><td>point-in-time top-500-liquid US common stocks (min $1M dollar-volume, $5 price floor)</td></tr><tr><td>window</td><td>2003-09-10 to 2026-06-22 — 5,731 trading days, 262 rebalance months, 21.7 effective years</td></tr><tr><td>widths swept</td><td>5, 9, 15, 25</td></tr><tr><td>the one variable</td><td>whether the universe keeps names that later delisted, or is intersected with today's active flag</td></tr><tr><td>frictions</td><td>none — no stop, no leverage, no transaction cost</td></tr>
+</table></div>
+
+<h3>Deliberately NOT tested &mdash; named in advance</h3>
+<ol>
+<li><b>Transaction costs and slippage</b> — excluded so the one variable stays one variable; it also means every number here is a gross number.</li><li><b>Membership survivorship</b> — the second effect a real user inherits, unmeasured and not claimed.</li><li><b>Delisting force-exit</b> — a dead name's return goes NaN and is dropped rather than sold at a loss, which flatters the survivorship-FREE arm too.</li>
+</ol>
+
+<div class="note">A flip would have said the data choice decides the verdict; no flip would have said it moves the number only. Both endings were disarmed on paper before the run.</div>
+
+<h3>The goalposts &mdash; all required to proceed</h3>
+<div class="tblwrap"><table>
+<tr><th>#</th><th>Pre-registered goalpost</th><th>Measured</th><th>Pass</th></tr>
+<tr><td>Pre-registered goalpost 1 — the verdict flip holds at &ge;3 of 4 widths</td><td class="num">1 of 4</td><td><b>FALSIFIED</b></td></tr><tr><td>Pre-registered goalpost 2 — the survivor-only arm understates drawdown</td><td class="num">held on the plain basket, reversed on the inherited arm</td><td><b>FALSIFIED</b></td></tr><tr><td>Pre-registered goalpost 3 — delisting attrition falls monotonically as the as-of date approaches today</td><td class="num">38.2% &rarr; 32.4% &rarr; 25.4%</td><td>CONFIRMED</td></tr><tr><td>Pre-registered goalpost 4 — the census reproduces from the store</td><td class="num">at least 6,529 of 11,827</td><td>CONFIRMED</td></tr>
+</table></div>
+<p><b>3 of 6 pre-registered predictions across both labs were wrong</b> — and on this lab's own four, two were. Both counts are true; they have different denominators, and a count without its denominator is the defect this channel exists to catch.</p>
+
+<h2>&sect;2 &middot; The headline arithmetic</h2>
+<div class="tblwrap"><table>
+<tr><th>Figure</th><th>Value</th><th>What it means</th></tr>
+<tr><td>Plain basket, 9 names — survivorship-free</td><td class="num">7.49%/yr</td></tr><tr><td>Same basket — survivor-only universe</td><td class="num">9.58%/yr</td></tr><tr><td><b>What deleting the dead was worth</b></td><td class="num"><b>+2.09 pts/yr</b></td></tr><tr><td>Range across all 4 widths</td><td class="num">+1.16 to +2.49 pts/yr</td></tr><tr><td>Drawdown, made to look shallower by</td><td class="num">4.51 to 6.62 pts</td></tr><tr><td>Inherited leveraged arm — the same bias, backwards</td><td class="num">-2.68 pts/yr</td></tr><tr><td>SPY over the same window</td><td class="num">9.07%/yr, -56.47% drawdown</td></tr>
+</table></div>
+
+<h2>&sect;3 &middot; Was it the path? The stress tests</h2>
+<p>The sweep across basket widths <b>is</b> the stress test: the same question asked four times at 5, 9, 15, 25 names. The sign of the effect survived all four. Its <i>size</i> did not — it moves by a factor of roughly two across widths, which is why this report gives a range and never a single number.</p><p>Both arms reproduced exactly on re-run (CAGR and drawdown deltas both 0.0), in 82.1s of a registered 2700s budget.</p>
+
+<h2>&sect;4 &middot; The controls</h2>
+<p><b>SPY, identical in all 8 cells:</b> $65,896.78 from $10,000, 9.07%/yr, -56.47% max drawdown. It is the same instrument in every row, so any difference between rows is the basket, not the market.</p><p><b>The ghost bound.</b> Dead names occupy 0.000% to 0.724% of basket-day slots. That is a <i>bound on how much of the effect can be mechanical</i>, not a second measurement of the effect.</p>
+
+<h2>&sect;5 &middot; The best objection, pre-registered and answered</h2>
+<p><b>The best objection is that our survivorship-free arm is itself flattered.</b> It is. When a held name's data ends, its return goes NaN and is dropped — there is no force-exit at a loss and no cost charged. So the true gap between the two universes is <b>at least</b> what we report, never exactly it. Every delta on this page is a floor.</p><p><b>The second objection is that <code>active</code> tracks symbols, not companies.</b> Also true. A ticker change, a merger and a bankruptcy all read identically in this flag — UTX, which merged, sits beside LEH, which did not. So the honest phrase is <i>symbols that stopped</i>, not <i>companies that went to zero</i>.</p>
+
+<h2>&sect;6 &middot; Their own terms</h2>
+<p>There is no practitioner under test here. The strategy is ours, we built it, and we had already believed it — which is the only reason we can open every drawer of it for you. The claim on trial was our own.</p>
+
+<h2>&sect;7 &middot; The complete ledger &mdash; all 8 rows</h2>
+<div class="note"><b>This is a grid, not a trade ledger, and the difference matters.</b> <code>sim_hold</code> returns endpoints — a final value, a CAGR and a max drawdown per cell — not a row per fill. So what follows is every cell the experiment produced, 4 widths &times; 2 universes = 8 cells, and there is no per-trade file behind it to publish. Saying so is cheaper than implying otherwise. Check our arithmetic: the CSV below is the same file the figures above are computed from.</div>
+<a class="dl" href="b01-survivorship-bias-ledger.csv">Download the full 8-row ledger (CSV)</a>
+<div class="ledger"><table>
+<tr><th>#</th><th>width</th><th>universe</th><th>final $</th><th>CAGR</th><th>max DD</th><th>beats SPY</th><th>dead names held</th><th>ghost-days</th><th>basket-day slots</th><th>ghost share</th></tr>
+<tr><td class="dim">1</td><td>5</td><td>survivorship-free</td><td class="num">$10,085.13</td><td class="num">0.04%</td><td class="num">-96.76%</td><td>no</td><td class="num">148</td><td class="num">165</td><td class="num">27,320</td><td class="num">0.604%</td></tr>
+<tr><td class="dim">2</td><td>5</td><td>survivor-only</td><td class="num">$17,219.86</td><td class="num">2.53%</td><td class="num">-91.16%</td><td>no</td><td class="num">0</td><td class="num">0</td><td class="num">27,320</td><td class="num">0.000%</td></tr>
+<tr><td class="dim">3</td><td>9</td><td>survivorship-free</td><td class="num">$47,995.13</td><td class="num">7.49%</td><td class="num">-89.43%</td><td>no</td><td class="num">233</td><td class="num">356</td><td class="num">49,176</td><td class="num">0.724%</td></tr>
+<tr><td class="dim">4</td><td>9</td><td>survivor-only</td><td class="num">$72,839.31</td><td class="num">9.58%</td><td class="num">-82.81%</td><td>yes</td><td class="num">0</td><td class="num">0</td><td class="num">49,176</td><td class="num">0.000%</td></tr>
+<tr><td class="dim">5</td><td>15</td><td>survivorship-free</td><td class="num">$172,550.64</td><td class="num">14.02%</td><td class="num">-72.62%</td><td>yes</td><td class="num">327</td><td class="num">522</td><td class="num">81,960</td><td class="num">0.637%</td></tr>
+<tr><td class="dim">6</td><td>15</td><td>survivor-only</td><td class="num">$215,334.37</td><td class="num">15.18%</td><td class="num">-68.11%</td><td>yes</td><td class="num">0</td><td class="num">0</td><td class="num">81,960</td><td class="num">0.000%</td></tr>
+<tr><td class="dim">7</td><td>25</td><td>survivorship-free</td><td class="num">$282,940.19</td><td class="num">16.64%</td><td class="num">-65.58%</td><td>yes</td><td class="num">461</td><td class="num">779</td><td class="num">136,600</td><td class="num">0.570%</td></tr>
+<tr><td class="dim">8</td><td>25</td><td>survivor-only</td><td class="num">$381,926.78</td><td class="num">18.26%</td><td class="num">-60.12%</td><td>yes</td><td class="num">0</td><td class="num">0</td><td class="num">136,600</td><td class="num">0.000%</td></tr>
+</table></div>
+
+<h2>&sect;8 &middot; What would change our mind</h2>
+<ol>
+<li><b>Send us a strategy where putting the dead companies back improves it on <i>both</i> return and drawdown</b>, and we will run it here. We already found one ourselves — the leveraged arm above — which is exactly why we will not pretend the direction is a law. Find us a second and this becomes a sequel, not a correction.</li><li><b>Show that the untyped bucket is not what we assume.</b> Our census floor rests on 6,768 rows that carry no type and of which 0 are active. If a large share of those are not common stocks, the floor moves and we will move it in public.</li><li><b>Publish a per-trade reconstruction that contradicts the grid.</b> We report endpoints because that is what the simulator returns; a fill-level run that disagrees with these eight cells would be a finding and we would rather have it than not.</li>
+</ol>
+
+<h2>&sect;9 &middot; What survives</h2>
+<p><b>Survivorship bias is real, and it is smaller than its reputation.</b> On this strategy it is worth +1.16 to +2.49 CAGR points a year — enough to matter, nowhere near enough to explain why a backtest and a live account disagree.</p><p><b>The direction is not a law.</b> We found a case where it reverses, on a leveraged version of our own strategy. Anyone quoting you a single number for survivorship bias is quoting a number that depends on what they were running.</p><p><b>And the check is cheap.</b> Ask what list the backtest was allowed to buy from. If the answer is today's list, you already know which way the number leans.</p>
+
+<h2>&sect;10 &middot; Want to run a test like this yourself?</h2>
+<p>Everything we make is free &mdash; the reports, the ledgers, all of it. The only thing that costs us
+real money is the market data.</p>
+<div class="note"><b>Where the numbers on this page came from.</b> The equity history behind this report
+is a one-shot pull from <b>Massive.com</b> (formerly Polygon.io). No options data was used here. They do
+not pay us, they have no say in a verdict, and they are not the link below.</div>
+<a class="dl" href="https://eodhd.com/?via=groundtruthyoutube">Buying market data? Going through here supports Ground Truth (affiliate)</a>
+<div class="note"><b>The firewall:</b> going through that link pays us a small commission at no extra
+cost to you. <b>It is a way to support the channel, not a description of our pipeline</b> &mdash; the
+vendors that produced our numbers are named directly above, and we would rather say so plainly than let
+a commission blur the two. That is the only money this channel takes. <b>Never from anyone whose claims
+we test</b> &mdash; and never for anything inside a category we review.</div>
+<p><a class="dl" href="https://groundtruth-tested.beehiiv.com/subscribe">Get every report + the 7 Questions one-pager (free)</a></p>
+
+<footer>
+<p><a href="../index.html">&larr; All reports</a></p>
+<p><em>Ground Truth is educational and entertainment content — not financial, investment, or tax advice. We are not licensed or registered advisers; we share original research and opinions. Nothing here is a recommendation to buy, sell, or hold any security, fund, or strategy. Backtests and simulations are hypothetical, model real-world costs imperfectly, and past performance does not guarantee future results. Do your own research and consult a qualified professional before making any financial decision.</em></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+width,arm,final_usd,cagr_pct,maxdd_pct,beats_spy,dead_names_held,ghost_days,basket_day_slots,ghost_share_pct
+5,survivorship-free,10085.13,0.04,-96.76,no,148,165,27320,0.604
+5,survivor-only,17219.86,2.53,-91.16,no,0,0,27320,0.0
+9,survivorship-free,47995.13,7.49,-89.43,no,233,356,49176,0.724
+9,survivor-only,72839.31,9.58,-82.81,yes,0,0,49176,0.0
+15,survivorship-free,172550.64,14.02,-72.62,yes,327,522,81960,0.637
+15,survivor-only,215334.37,15.18,-68.11,yes,0,0,81960,0.0
+25,survivorship-free,282940.19,16.64,-65.58,yes,461,779,136600,0.57
+25,survivor-only,381926.78,18.26,-60.12,yes,0,0,136600,0.0

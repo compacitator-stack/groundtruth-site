@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ground Truth — We Test the Strategies Gurus Sell</title>
+<meta name="description" content="Real data, real costs, and the verdict written down before the results. Get the free 7 Questions one-pager plus the full test report for every episode.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--dim:#9da7b3;--acc:#3fb950;--warn:#d29922;--line:#30363d;
+    /* brand palette, sampled from the shipped A13 thumbnail */
+    --cream:#fcecd0;--cream-2:#e9dbc1;--teal:#014f57;--teal-2:#025b63;
+    --gold:#efba25;--gold-hi:#ffd35c;--slate:#121010;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+       font:16px/1.65 Inter,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;
+        background:linear-gradient(105deg,var(--cream) 0%,var(--cream) 46%,var(--teal) 46.6%,var(--teal-2) 100%)}
+  /* paper grain, so the cream reads as stock rather than flat fill */
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;
+    background-image:radial-gradient(rgba(120,100,70,.30) 1px,transparent 1px);background-size:4px 4px}
+  .hero-inner{position:relative;max-width:900px;margin:0 auto;padding:44px 20px 48px;
+              display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:center}
+  .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:#8a6d2f}
+  h1{font-family:Anton,Impact,"Arial Black",sans-serif;font-weight:400;
+     font-size:clamp(30px,5.4vw,50px);line-height:1.04;letter-spacing:.005em;
+     color:var(--slate);margin:12px 0 12px;text-transform:uppercase}
+  .hero .sub{color:#4a4034;font-size:17px;max-width:30ch;margin-bottom:20px}
+  .hero .sub b{color:var(--slate)}
+
+  .cta-btn{display:inline-block;background:var(--gold);color:var(--slate);
+    font-weight:700;font-size:18px;letter-spacing:.01em;
+    padding:16px 30px;border-radius:10px;text-decoration:none;
+    border:2px solid var(--slate);box-shadow:5px 5px 0 var(--slate);
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease}
+  .cta-btn:hover{background:var(--gold-hi);transform:translate(2px,2px);box-shadow:3px 3px 0 var(--slate)}
+  .cta-btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--slate)}
+  .cta-btn:focus-visible{outline:3px solid #0a58ca;outline-offset:3px}
+  /* the diagonal split runs under this line, so it gets its own cream ground rather than
+     relying on whatever happens to be behind it at a given breakpoint */
+  .microtrust{display:inline-block;margin-top:12px;font-size:13.5px;color:#4a4034;font-weight:600;
+    background:rgba(252,236,208,.94);padding:7px 13px;border-radius:8px}
+  .microtrust span{white-space:nowrap}
+
+  .hero-art{position:relative;justify-self:center;align-self:end;width:300px;height:330px}
+  .hero-art img{position:absolute;right:-6px;bottom:-48px;width:250px;height:auto;
+                filter:drop-shadow(0 16px 22px rgba(0,0,0,.34))}
+  /* the teach stick - the episode's own prop: wood shaft, ink grip, red tip - aimed at the button */
+  .stick{position:absolute;left:-300px;bottom:-16px;width:430px;height:170px;overflow:visible;
+         pointer-events:none;z-index:3}
+
+  @media(max-width:820px){
+    .hero-inner{grid-template-columns:1fr 210px;gap:8px;padding:34px 20px 38px}
+    .hero-art{width:210px;height:250px}
+    .hero-art img{width:180px;bottom:-38px}
+    .stick{left:-244px;bottom:-12px;width:352px;height:140px}
+  }
+  @media(max-width:600px){
+    .hero{background:linear-gradient(160deg,var(--cream) 0%,var(--cream) 58%,var(--teal) 58.6%,var(--teal-2) 100%)}
+    .hero-inner{grid-template-columns:1fr;padding:30px 20px 34px}
+    .hero .sub{max-width:none}
+    .cta-btn{display:block;text-align:center;font-size:17px;padding:15px 20px}
+    .hero-art{width:100%;height:190px;margin-top:6px}
+    .hero-art img{width:150px;right:6px;bottom:-34px}
+    .stick{display:none}   /* the arrow can't aim honestly once the layout stacks */
+  }
+
+  .valuebar{background:var(--slate);border-top:3px solid var(--gold)}
+  .valuebar ul{max-width:900px;margin:0 auto;padding:15px 20px;list-style:none;
+    display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:center;font-size:14.5px;color:#e8e2d6}
+  .valuebar li::before{content:"✓";color:var(--gold);font-weight:700;margin-right:8px}
+
+  /* ---------- BODY ---------- */
+  section{padding:38px 0;border-top:1px solid var(--line)}
+  h2{font-size:23px;margin-bottom:18px}
+  .gates{display:grid;gap:12px}
+  .gate{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .gate b{color:var(--acc)}
+  .gate .n{color:var(--warn);font-weight:700;margin-right:8px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:14px}
+  .card h3{font-size:17px;margin-bottom:6px}
+  .card a{color:var(--acc);text-decoration:none}
+  .card a:hover{text-decoration:underline}
+  .tag{display:inline-block;font-size:12px;padding:2px 10px;border-radius:20px;border:1px solid var(--line);color:var(--dim);margin-right:6px}
+  .verdict{color:var(--warn);font-weight:600;font-size:13px}
+
+  /* second-chance CTA for people who scrolled past the hero */
+  .cta-strip{background:linear-gradient(100deg,var(--teal) 0%,var(--teal-2) 100%);
+    border:2px solid var(--slate);border-radius:12px;padding:24px;text-align:center;margin:6px 0}
+  .cta-strip h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(19px,3.2vw,26px);color:#fff;letter-spacing:.01em;margin-bottom:8px}
+  .cta-strip p{color:#bfe0e2;font-size:15px;margin-bottom:16px}
+
+
+  /* section headers get the lead actor pointing at them */
+  h2.anchored{display:flex;align-items:center;gap:2px;flex-wrap:nowrap;min-height:86px}
+  .h2mark{position:relative;flex:0 0 auto;width:104px;height:86px;margin-right:8px}
+  /* the canonical in-video host with his own teach stick — not the thumbnail render.
+     His ink outlines are near-black, so a pale halo keeps him legible on the dark page. */
+  .h2mark img{position:absolute;left:0;bottom:-12px;height:86px;width:auto;
+    filter:drop-shadow(0 0 1px rgba(246,238,222,.95)) drop-shadow(0 0 3px rgba(246,238,222,.45))
+           drop-shadow(0 4px 6px rgba(0,0,0,.5))}
+  h2.anchored span{min-width:0}
+  @media(max-width:600px){ .h2mark{width:74px;height:62px} .h2mark img{height:62px;bottom:-9px} }
+
+  /* ---------- WATCH BAND ---------- */
+  .watch{background:linear-gradient(100deg,#1a1207 0%,#241a0b 100%);
+         border:2px solid var(--gold);border-radius:14px;padding:24px;margin:6px 0;
+         display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:center}
+  .watch h3{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(21px,3.4vw,29px);color:#fff;letter-spacing:.01em;margin-bottom:8px;line-height:1.08}
+  .watch p{color:#d7c9a6;font-size:15px;margin-bottom:16px}
+  .watch-btn{display:inline-block;background:#ff0033;color:#fff;font-weight:700;font-size:17px;
+    padding:14px 26px;border-radius:10px;text-decoration:none;border:2px solid #121010;
+    box-shadow:5px 5px 0 #121010;transition:transform .12s ease, box-shadow .12s ease}
+  .watch-btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 #121010}
+  .watch-btn:focus-visible{outline:3px solid #ffd35c;outline-offset:3px}
+  .thumbwrap{position:relative;display:block;border-radius:10px;overflow:hidden;
+    border:2px solid var(--slate);box-shadow:0 10px 24px rgba(0,0,0,.5);line-height:0}
+  .thumbwrap img{width:100%;height:auto;display:block;transition:transform .25s ease}
+  .thumbwrap:hover img{transform:scale(1.04)}
+  .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.18)}
+  .play i{width:66px;height:46px;border-radius:11px;background:#ff0033;display:block;
+    position:relative;box-shadow:0 4px 14px rgba(0,0,0,.55)}
+  .play i::after{content:"";position:absolute;left:26px;top:13px;border-style:solid;
+    border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
+  .eplabel{position:absolute;left:8px;top:8px;background:rgba(18,16,16,.86);color:#f0e6d2;
+    font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:6px}
+  @media(max-width:760px){ .watch{grid-template-columns:1fr;gap:18px}
+                           .watch-btn{display:block;text-align:center} }
+
+  footer{padding:34px 0 54px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer p{margin-bottom:12px}
+  .yt{color:var(--acc);text-decoration:none;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">Ground Truth</div>
+      <h1>The 7 questions to ask before you trust a strategy with money</h1>
+      <p class="sub">A free one-pager from the channel that tests money promises the way a trading
+      desk would — <b>real data, real costs, and the verdict written down before the results.</b></p>
+
+      <a class="cta-btn" href="https://groundtruth-tested.beehiiv.com/subscribe">Send me the 7 Questions →</a>
+      <div class="microtrust"><span>Free.</span> &nbsp;<span>One email per episode.</span>
+      &nbsp;<span>Unsubscribe anytime.</span></div>
+    </div>
+
+    <div class="hero-art">
+      <!-- the teach stick, aimed down-left at the button: wood shaft, ink grip, red tip -->
+      <img src="assets/gt-robot.png" width="448" height="620"
+           alt="The Ground Truth robot pointing at the signup button">
+      <svg class="stick" viewBox="0 0 430 170" fill="none" aria-hidden="true">
+        <line x1="426" y1="132" x2="72" y2="88" stroke="#121010" stroke-width="12" stroke-linecap="round" opacity=".18"/>
+        <line x1="424" y1="128" x2="70" y2="84" stroke="#b5813f" stroke-width="9" stroke-linecap="round"/>
+        <line x1="424" y1="128" x2="70" y2="84" stroke="#dcae6b" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+        <line x1="421" y1="128" x2="385" y2="123" stroke="#121010" stroke-width="14" stroke-linecap="round"/>
+        <line x1="112" y1="89" x2="68" y2="84" stroke="#d1392b" stroke-width="11" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<div class="valuebar">
+  <ul>
+    <li>The 7 Questions one-pager, instantly</li>
+    <li>Every episode's full test report</li>
+    <li>No spam, nothing for sale</li>
+  </ul>
+</div>
+
+<div class="wrap">
+
+<section id="method">
+  <h2 class="anchored"><span class="h2mark"><img src="assets/gt-robot-teach.png" alt="" aria-hidden="true"></span><span>The Method — the Five Gates</span></h2>
+  <div class="gates">
+    <div class="gate"><span class="n">1</span><b>Get the claim in writing.</b> Exact promise, exact rules. If the rules aren't public, that's the first finding.</div>
+    <div class="gate"><span class="n">2</span><b>Real data, including the graveyard.</b> Survivorship-free, point-in-time — the accounts that blew up don't post returns.</div>
+    <div class="gate"><span class="n">3</span><b>Real costs.</b> Commissions, slippage, spreads, the fills you actually get.</div>
+    <div class="gate"><span class="n">4</span><b>Write pass/fail down before the results.</b> Pre-registration — or the test grades its own homework.</div>
+    <div class="gate"><span class="n">5</span><b>Publish what would change your mind.</b> A verdict without a reopen condition is an opinion.</div>
+  </div>
+</section>
+
+<section id="watch">
+  <h2 class="anchored"><span class="h2mark"><img src="assets/gt-robot-teach.png" alt="" aria-hidden="true"></span><span>Watch the Episodes</span></h2>
+  <div class="watch">
+    <div>
+      <h3>Every test, as a 16-minute cartoon</h3>
+      <p>The reports are the receipts. The episodes are the story — the pitch given its full
+      voice, the machine built on screen, and the verdict landing with its numbers attached.
+      New episode with every report.</p>
+      <a class="watch-btn" href="https://www.youtube.com/@GroundTruth-i3x">▶ Watch on YouTube</a>
+    </div>
+    <a class="thumbwrap" href="https://www.youtube.com/@GroundTruth-i3x"
+       aria-label="Watch Ground Truth on YouTube">
+      <img src="assets/ep-a13.jpg" width="640" height="360"
+           alt="Ground Truth episode: Riley Coleman's free checklist, 1,212 trades">
+      <span class="play"><i></i></span>
+      <span class="eplabel">LATEST EPISODE</span>
+    </a>
+  </div>
+</section>
+
+<section id="reports">
+  <h2 class="anchored"><span class="h2mark"><img src="assets/gt-robot-teach.png" alt="" aria-hidden="true"></span><span>Report Library</span></h2>
+  <div class="card">
+    <h3><a href="reports/a10-steven-dux.html">Steven Dux Said His Own Edge Was Fading. We Measured It.</a></h3>
+    <span class="tag">Episode A10</span><span class="tag">Micro-cap shorting</span>
+    <span class="verdict">VERDICT: it&rsquo;s complicated &mdash; the rule by company size is false, the rule by year was real in 2021, and he told his audience it was fading before we did</span>
+    <p style="color:var(--dim);margin-top:8px">Two pre-registrations, run against the days his own rule names. The version that sorts by company size did not survive. The version that sorts by year did: in 2021 the stocks that crossed his line closed lower 20.7 percentage points more often than the same stocks on the days they did not. By 2023, at his own number, that gap is 5.3. He disclosed the decay himself, and he was right. What we still cannot measure is whether any of it was ever borrowable &mdash; that is the open bounty.</p>
+  </div>
+  <div class="card">
+    <h3><a href="reports/f01-ai-self-approval.html">The AI Isn&rsquo;t Lying to You. It&rsquo;s Grading Its Own Homework.</a></h3>
+    <span class="tag">Episode F01</span><span class="tag">Our own process</span>
+    <span class="verdict">VERDICT: an AI reviewing an AI genuinely works &mdash; and ours has never once approved anything</span>
+    <p style="color:var(--dim);margin-top:8px">We audited our own review process for three weeks: 26 rounds, 212 blind lens-runs across 9 episodes, zero approvals. The defendant here is a structure, not a person &mdash; one agent sitting in every chair. The number that should worry you is not the zero; it is how many of our own published episodes never entered a doctor round at all.</p>
+  </div>
+  <div class="card">
+    <h3><a href="reports/c02-leaps-vs-margin.html">Margin vs LEAPS — What Leverage Actually Costs</a></h3>
+    <span class="tag">Episode C02</span><span class="tag">Leverage</span>
+    <span class="verdict">VERDICT: correctly priced insurance against a risk the construction already excluded</span>
+    <p style="color:var(--dim);margin-top:8px">The same 1.33x exposure held two ways for six
+    years — a margin loan against long-dated calls — with both sides charged honestly: bought at
+    the ask, marked at the bid daily, commission both ways. The options cost about 1.4 points a
+    year more, and over the whole window the margin book was never called and never close. All 13
+    entries, the locked pre-registration, and the rate sensitivity we registered and had not run
+    until now.</p>
+  </div>
+  <div class="card">
+    <h3><a href="reports/b01-survivorship-bias.html">Your Backtest Is Missing Dead Companies — Full Test Report</a></h3>
+    <span class="tag">Episode B01</span><span class="tag">Backtest data</span>
+    <span class="verdict">VERDICT: real, usually flattering, and smaller than we first said</span>
+    <p style="color:var(--dim);margin-top:8px">One momentum strategy run twice over 21.7 years,
+    changing only whether the universe still contained the companies that died. Deleting the dead
+    flattered it at 4 of 4 basket widths — +1.16 to +2.49 CAGR points a year — but on a leveraged
+    version of the same strategy the bias ran backwards. The dated pre-registration (not
+    hash-locked, and we say why), all 8 cells of the grid, and the two predictions we got wrong.</p>
+  </div>
+  <div class="card">
+    <h3><a href="reports/a13-riley-coleman.html">Riley Coleman's Free 5-Step Checklist — Full Test Report</a></h3>
+    <span class="tag">Episode A13</span><span class="tag">Price action</span>
+    <span class="verdict">VERDICT: the written skeleton is dead — 0 of 4 goalposts</span>
+    <p style="color:var(--dim);margin-top:8px">His free five-step entry checklist, coded exactly as
+    written and run on 1,212 trades across 22 years: it loses before a single cent of cost, winning
+    31.3% against the 33.3% its own 2R target needs. The locked pre-registration, the complete
+    trade-by-trade ledger, and what would change our mind.</p>
+  </div>
+  <div class="card">
+    <h3><a href="reports/a01-ross-cameron.html">Ross Cameron's Momentum Rules — Full Test Report</a></h3>
+    <span class="tag">Episode A01</span><span class="tag">Day trading</span>
+    <span class="verdict">VERDICT: faithful no-edge / transfer-negative</span>
+    <p style="color:var(--dim);margin-top:8px">A faithful clone of the published rules, priced on
+    survivorship-free data with real costs: 0-for-12 on the setups the rules call textbook.
+    The full ledger, the exclusions, and the reopen bounty.</p>
+  </div>
+  <div class="card" style="border-style:dashed">
+    <h3 style="color:var(--dim)">More reports are being prepared</h3>
+    <p style="color:var(--dim)">Every published episode gets its report here. Subscribe to get
+    each one as it lands.</p>
+  </div>
+</section>
+
+<section id="signup">
+  <div class="cta-strip">
+    <h3>Get the 7 Questions, free</h3>
+    <p>Plus the full test report behind every episode — every number, the pre-registration,
+    and what would change our mind.</p>
+    <a class="cta-btn" href="https://groundtruth-tested.beehiiv.com/subscribe">Send me the 7 Questions →</a>
+  </div>
+</section>
+
+<footer>
+  <p><a class="yt" href="https://www.youtube.com/@GroundTruth-i3x">▶ Watch the episodes on YouTube</a></p>
+  <p><em>Ground Truth is educational and entertainment content — not financial, investment, or tax
+  advice. We are not licensed or registered advisers; we share original research and opinions.
+  Nothing here is a recommendation to buy, sell, or hold any security, fund, or strategy. Backtests
+  and simulations are hypothetical, model real-world costs imperfectly, and past performance does
+  not guarantee future results. Do your own research and consult a qualified professional before
+  making any financial decision.</em></p>
+</footer>
+
+</div>
+</body>
+</html>

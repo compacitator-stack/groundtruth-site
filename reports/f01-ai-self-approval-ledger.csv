@@ -1,0 +1,27 @@
+episode,log_path,date,panel_type,blind_lens_runs,pass_tally_stated,passes,verdict_summary,source_line
+b01,production/b01/doctor_v1.md,2026-08-15,blind,4,yes,0,4 of 4 lenses BLOCKER; no lens passed,L8 + L12-16 + L18
+c09,production/c09/doctor_v1.md,2026-07-26,INLINE-one-reviewer,0,no,0,1 BLOCKER 4 MAJOR 2 MINOR all applied; script advanced to red-pen,L13
+c09,production/c09/doctor_v2.md,2026-07-26,blind,11,yes,0,PANEL VERDICT BLOCKER; zero returned PASS,L3-5 + L17-19
+c09,production/c09/doctor_v3.md,2026-07-26,blind,8,yes,0,v4 DID NOT PASS - 4 BLOCKER 4 NEEDS-WORK 0 PASS,L3-5 + L7
+c09,production/c09/doctor_v4.md,2026-07-26,blind,5,yes,0,verification panel on cut draft - 2 BLOCKER 3 NEEDS-WORK 0 PASS,L24-26
+d05,production/d05/doctor_v1.md,2026-07-28,blind,5,yes,0,4 BLOCKER 1 NEEDS-WORK 0 PASS,L3 + L7
+d05,production/d05/doctor_v2.md,2026-07-28,blind,6,yes,0,5 BLOCKER 1 NEEDS-WORK 0 PASS,L3 + L8
+d05,production/d05/doctor_v3.md,2026-07-28,blind,6,yes,0,6 BLOCKER 0 PASS,L3 + L5
+d13,production/d13/doctor_v1.md,2026-07-28,blind,11,yes,0,8 BLOCKER 3 NEEDS-WORK 0 PASS,L4 + L5
+d13,production/d13/doctor_v2.md,2026-07-28,blind,6,yes,0,6 BLOCKER 0 PASS,L1 + L3
+d13,production/d13/doctor_v3.md,2026-07-28,blind,5,yes,0,5 BLOCKER 0 PASS,L1 + L3
+d13,production/d13/doctor_v4.md,2026-07-28,blind,11,yes,0,11 BLOCKER 0 PASS,L1 + L3
+d13,production/d13/doctor_v5.md,2026-08-05,blind,11,yes,0,10 BLOCKER 1 NEEDS-WORK 0 PASS,L3 + L7
+d13,production/d13/doctor_v7/ROUND1_SYNTHESIS.md,2026-08-14,blind,6,no,0,NOT APPLIED AS PATCHES; open re-authored as a unit; repair-by-addition ran 10-for-6,L3 + L5 + L17
+d20,production/d20/doctor_v1.md,2026-07-28,blind,11,yes,0,11 lenses 11 non-PASS ZERO PASS,L4 + L5
+d20,production/d20/doctor_v2.md,2026-07-28,blind,11,yes,0,11 lenses 11 non-PASS ZERO PASS,L3 + L4
+d20,production/d20/doctor_v3.md,2026-07-28,blind,11,yes,0,11 non-PASS; cumulative 33 lens-runs zero passes,L3 + L4
+d20,production/d20/doctor_v4.md,2026-07-28,blind,11,yes,0,10 BLOCKER/non-PASS 1 NEEDS-WORK; cumulative 44 lens-runs zero passes,L3 + L4
+d21,production/d21/doctor_v1.md,2026-07-28,blind,11,yes,0,7 BLOCKER 4 NEEDS-WORK 0 PASS,L4 + L7
+d21,production/d21/doctor_v2.md,2026-07-28,blind,11,yes,0,11 BLOCKER 0 PASS,L4 + L7
+d21,production/d21/doctor_v3.md,2026-07-28,blind,5,yes,0,5 BLOCKER 0 PASS,L4 + L7
+d21,production/d21/doctor_v4.md,2026-08-01,blind,5,no,0,4 BLOCKER 1 NEEDS-WORK; script has never been discharged,L3 + L7-13 + L123
+d22,production/d22/doctor_v1.md,2026-08-05,blind,11,yes,0,9 BLOCKER 2 NEEDS-WORK Zero PASS,L3 + L5
+c04,production/c04/doctor_round1.md,2026-08-13,blind,10,no,0,~25 BLOCKER-severity findings; SYNTHESISED NOT YET APPLIED,L4 + L6 + L12
+c04,production/c04/doctor_v2,2026-08-13,blind,10,no,0,"10 blind lenses; 4 BLOCKER + 3 NEEDS-WORK top-level, 3 lenses report per-item tables with no panel verdict line; ZERO returned PASS. Round has no SYNTHESIS file and no flat doctor_v2.md sibling, which is why every prior count missed it.",lens01-lens10 VERDICT lines
+j02,production/j02/doctor_round1.md,2026-08-12,blind,10,no,0,10 of 10 lenses returned findings; BLOCKER-severity findings all discharged in v2; v2 ready for Stage 4,L3 + L5 + L44
