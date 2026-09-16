@@ -1,0 +1,28 @@
+lab,registered_item,prereg_ref,results_ref,outcome,deviation_direction,how_it_was_scored
+d05_dca_vs_lumpsum,P1,PREREG.md:64-75,RESULTS.md:11-16,HIT,,"Scored in the RESULTS prior table; overall line at RESULTS.md:8 'Prior scoring — 4 hits, 1 miss.'"
+d05_dca_vs_lumpsum,P2,PREREG.md:64-75,RESULTS.md:11-16,HIT,,Per the RESULTS prior table.
+d05_dca_vs_lumpsum,P3,PREREG.md:64-75,RESULTS.md:11-16,HIT,,Per the RESULTS prior table.
+d05_dca_vs_lumpsum,P4,PREREG.md:70-72,RESULTS.md:15,MISS,UNDERSTATED_OUR_CASE,"RESULTS.md:15 'median win +7.29%, median loss -6.02% -> backwards | X'. Direction quoted from RESULTS.md:8 'The miss moved in the specimen's favour.' and RESULTS.md:111 'My P4 prior said the opposite and was wrong.' Published as a loss, on camera (the D05 script, line 159)."
+d05_dca_vs_lumpsum,P5,PREREG.md:64-75,RESULTS.md:11-16,HIT,,Per the RESULTS prior table.
+d21_copytrade_subscription_bar,Q0,PREREG.md:49,RESULTS.md:183,HIT,,flat-equivalent 0.451% inside the registered 0.2-0.5% band.
+d21_copytrade_subscription_bar,Q1,PREREG.md:50,RESULTS.md:184,HIT,,RESULTS marks it 'arithmetic - low information'.
+d21_copytrade_subscription_bar,Q2,PREREG.md:51,RESULTS.md:185,HIT,,"predicted ~$333,000; actual $333,333."
+d21_copytrade_subscription_bar,Q3,PREREG.md:52,RESULTS.md:186,NEAR,UNDERSTATED_OUR_CASE,RESULTS.md:186 'near - I predicted it *harder* to explain than it is' (12-16%/yr registered vs 11%/yr measured). Direction corroborated at RESULTS.md:196.
+d21_copytrade_subscription_bar,Q4,PREREG.md:53,RESULTS.md:187,UNSCORABLE,UNDERSTATED_OUR_CASE,RESULTS.md:187 'UNSCORABLE per Amendment 2'. Two independent reasons at RESULTS.md:177-179: an unbounded hedge clause AND a denominator the lab later banned. Direction from RESULTS.md:192 'the informative clause missed low ... in the understating direction'.
+d21_copytrade_subscription_bar,Q4a,PREREG.md:54,RESULTS.md:188,HIT,,reproduces within 2.5 pp.
+d21_copytrade_subscription_bar,Q4b,PREREG.md:55,RESULTS.md:189,HIT,,"Scored HIT but RESULTS.md:189 annotates it '(understated)' - predicted 'tens of percentage points', measured 95.6 pp. Counted as HIT per the file's own verdict; the understatement is noted at RESULTS.md:196 as part of the same directional pattern."
+d21_copytrade_subscription_bar,Q5,PREREG.md:56,RESULTS.md:190,HIT,UNDERSTATED_OUR_CASE,"OMISSION ROW. Registered in the PREREG, absent from the scoring table for three doctor rounds / 27 lens-runs (RESULTS.md:169,171); added by Amendment 3 on 2026-08-01 and it is a HIT. Direction from RESULTS.md:173 'D21's hides a HIT and under-sells us.' Direction is assigned to the OMISSION, not to the prior, which hit."
+d20_app_venture_bar,Q0,PREREG.md:42,RESULTS.md:137,HIT,,"$20,171, low end of the registered $20-24k band."
+d20_app_venture_bar,Q1,PREREG.md:42,RESULTS.md:138,HIT,,H* infinite at his run-rate.
+d20_app_venture_bar,Q2,PREREG.md:42,RESULTS.md:139,MISS,UNDERSTATED_OUR_CASE,"RESULTS.md:139 'missed low' - registered $100-150k, measured $96,569. Direction from RESULTS.md:144 'One miss (Q2), and it moved in the specimen's favour'."
+d20_app_venture_bar,Q3,PREREG.md:42,RESULTS.md:140,HIT,,both clauses held.
+d20_app_venture_bar,Q4,PREREG.md:42,RESULTS.md:141,HIT,,"$365, inside the registered $350-450 band."
+d20_app_venture_bar,Q5,PREREG.md:42,RESULTS.md:142,MISS,FLATTERED_OUR_CASE,"THE FLAGSHIP FLATTERING ROW. RESULTS.md:142 still shows Q5 as a HIT; the same file's superseded banner at RESULTS.md:9 says it is a MISS and the correct score is four of six. Ground truth: results.json:188 'q5_direction_holds': false. Caught at the D20 script review, round 2, line 39 'Q5 is a miss. The script says Six predictions. Five held. Truth: four of six.' Direction from d21_copytrade_subscription_bar/RESULTS.md:173 'D20's omission hid a MISS and flattered us'."
+held lab 3,P1,PREREG.md:41-43,RESULTS.md:65,HIT,,held until this lab’s episode ships
+held lab 3,P2,PREREG.md:44-46,RESULTS.md:66,HIT,,held until this lab’s episode ships
+held lab 3,P3,PREREG.md:47-48,RESULTS.md:67,MISS,FLATTERED_OUR_CASE,held until this lab’s episode ships
+held lab 3,P4,PREREG.md:49-50,RESULTS.md:68,HIT,,held until this lab’s episode ships
+held lab 1,P1,PREREG.md:32,RESULTS.md:8,HIT,,held until this lab’s episode ships
+held lab 1,P2,PREREG.md:33,RESULTS.md:8,HIT,,held until this lab’s episode ships
+held lab 1,P3,PREREG.md:34,RESULTS.md:8,HIT,,held until this lab’s episode ships
+held lab 1,P4,PREREG.md:35,RESULTS.md:23,NEAR,FLATTERED_OUR_CASE,held until this lab’s episode ships
