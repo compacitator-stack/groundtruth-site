@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Truth About Dividend Investing &mdash; And the Metric That Decides Nothing — Full Test Report | Ground Truth</title>
+<meta name="description" content="Yield on cost is today's yield times your price ratio since purchase. We rendered that on 184 months of two funds we actually measured, then answered the question the metric lets you skip: a dollar in SCHD became $5.95 over 14.7 years while the same dollar in SPY became $7.68. Every figure, the 184-row ledger, and what would change our mind.">
+<style>
+  :root{--bg:#0d1117;--panel:#161b22;--ink:#e6edf3;--dim:#9da7b3;--acc:#3fb950;--warn:#d29922;--red:#f85149;--line:#30363d}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px 60px}
+  .crumb{padding:26px 0 0;font-size:13px}
+  .crumb a{color:var(--acc);text-decoration:none}
+  h1{font-size:clamp(23px,4.5vw,32px);line-height:1.25;margin:18px 0 6px}
+  .meta{color:var(--dim);font-size:14px;margin-bottom:26px}
+  h2{font-size:20px;margin:34px 0 12px;padding-top:22px;border-top:1px solid var(--line)}
+  h3{font-size:16px;margin:22px 0 8px;color:var(--ink)}
+  p{margin-bottom:12px}
+  ul,ol{margin:0 0 12px 22px}
+  li{margin-bottom:7px}
+  .verdict-box{background:var(--panel);border:1px solid var(--warn);border-radius:10px;padding:18px 20px;margin:10px 0}
+  .verdict-box .v{color:var(--warn);font-weight:700;letter-spacing:.05em;font-size:14px}
+  .tblwrap{overflow-x:auto;margin:14px 0}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-size:13px}
+  .ok{color:var(--acc);font-weight:700}
+  .bad{color:var(--red);font-weight:700}
+  .warnc{color:var(--warn);font-weight:700}
+  .dim{color:var(--dim)}
+  .note{background:var(--panel);border-left:3px solid var(--acc);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .lock{background:var(--panel);border-left:3px solid var(--warn);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+  .ledger{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:8px;margin:14px 0}
+  .ledger table{min-width:640px;font-size:13.5px;border:0}
+  .ledger th{position:sticky;top:0;z-index:1;border-top:0}
+  .dl{display:inline-block;background:var(--panel);border:1px solid var(--acc);color:var(--acc);
+      padding:9px 18px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14.5px;margin:6px 0}
+  .dl:hover{background:var(--acc);color:#0d1117}
+  footer{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+  footer p{margin-bottom:12px}
+  code{background:var(--panel);padding:1px 6px;border-radius:4px;font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="crumb"><a href="../index.html">← Ground Truth report library</a></div>
+
+<h1>The Truth About Dividend Investing &mdash; And the Metric That Decides Nothing</h1>
+<div class="meta">Episode D17 &middot; report format v2 &middot; lab run 2026-08-15, pre-registration locked 2026-08-05 before the run</div>
+
+<div class="verdict-box">
+  <div class="v">VERDICT &mdash; THE METRIC IS EMPTY AND THE STRATEGY IS FINE &mdash; AND THE SECOND HALF IS NOT A SOFTENER</div>
+  <p style="margin:8px 0 0"><b>Yield on cost is your current yield multiplied by your price ratio since purchase &mdash; one plus your unrealized gain.</b> That is an identity, not a finding, and we rendered it on <b>184 of 184 fund-months</b> across <b>2 of 2</b> funds we have actually measured &mdash; worst relative residual <b>2.2 &times; 10<sup>−16</sup></b>, which is floating-point zero. It cannot license a decision that today's price and today's distribution do not already license. On 2026-06-30, SCHD had <b>one</b> market yield &mdash; 2.49% &mdash; and <b>166 different yields on cost</b>, from 2.45% to 8.42%. Same fund, same day, same distribution cheque. <b>Then the question the metric lets you skip.</b> Over its whole 14.7-year life a dollar in SCHD became <b>$5.95</b> while the same dollar in SPY became <b>$7.68</b> &mdash; the fund is <b>behind the index it is made of</b>. But the counterweight is half the finding, not a caveat: SCHD's price <i>alone</i>, with every dividend excluded, turned a dollar into <b>$3.76</b> over the same window. <b>That is real compounding, and anyone who leaves here thinking dividend stocks are a trick has been mistaught by us.</b></p>
+</div>
+
+<h2>What we granted, and what we actually tested</h2>
+
+<p><b>Granted, not measured:</b> that yield on cost is a correctly-computed number about a real past transaction. It is not a lie and it is not a fudge &mdash; a holder who bought years ago genuinely does collect that much cash per dollar he originally paid. Our claim is that it is <b>redundant</b>, which is a different word from false. We also grant the whole of the Canadian income-ETF educator's case: his figures are his own and we contradict none of them, his self-imposed sell rule is more discipline than this genre usually carries, and his tax argument &mdash; a realized gain at Canadian fifty-percent inclusion with no better opportunity visible to him &mdash; is genuinely correct.</p>
+
+<p><b>Tested:</b> two things, both on funds we measured ourselves from a survivorship-free store, month-end through 2026-06-30. <b>One:</b> whether yield on cost contains anything beyond today's yield and the price ratio &mdash; rendered month by month, <b>184 of 184 fund-months, 2 of 2 funds</b>, in both directions: one fund whose price tripled and one whose price collapsed. <b>Two:</b> whether the two dividend-focused funds on our own reference table kept pace with the index over their whole lives.</p>
+
+<div class="lock"><b>What this report does NOT claim, pre-committed before the data:</b> <b>(a)</b> anything about the Canadian income-ETF educator's own fund. It is Canadian, our store is US equities, and we hold no record of it &mdash; not its price, not its distributions, not its total return. Every figure about his position on this page is <i>his</i>, or <b>Ben Felix</b>'s, or nobody's. <b>(b)</b> that dividend-paying stocks as a cohort underperform &mdash; we measured two funds, not a cohort, and the controlled test has never been run. <b>(c)</b> that yield on cost fails as a <i>predictor</i>, as a statistical result; two funds with overlapping windows cannot support that and we do not pretend otherwise. <b>(d)</b> any tax, allocation or should-you-buy-this conclusion. This report prices a metric and reports two fund comparisons. It does not build a portfolio.</div>
+
+<h2>&sect;1 &middot; The locked pre-registration</h2>
+
+<p>Committed <code>e75442f</code> on 2026-08-05, <b>before the probe was run</b> &mdash; the wager you cannot move after seeing the cards.</p>
+
+<div class="lock"><b>What was locked, and what was not.</b> Commit <code>e75442f</code> on <b>2026-08-05</b> registered this measurement &mdash; <i>SCHD rising and ULTY falling &mdash; by ticker and by direction, 10 days before the first line of the lab</i> &mdash; and registered the jurisdiction wall in the same breath. The same commit wrote down what we expected to find &mdash; <i>&ldquo;YoC and market yield diverge monotonically for any held position, the divergence carries zero information about forward return, and the dividend-focused funds we measured trail the index by roughly their yield-and-selection gap while remaining real equity.&rdquo;</i> &mdash; and this report claims less than that: the information claim is made in its algebraic form only (section 8, criterion 1), never as a statistical result. Our lab repository is private, so the hash is printed here rather than linked; the ordering can be produced on request. The lab that answered it landed on <b>2026-08-15</b>. <b>What that lock does NOT cover:</b> the identity underneath is <b>algebra</b>; it could not have failed, and no pre-registration would turn it into evidence. It earns its place by making the magnitudes visible, not by having been in doubt. Three of the lab's seven checks were written in the same commit as the code they check. Both facts are in the goalpost tally below, rather than in a footnote.</div><h3>The falsifiable question</h3>
+<p>Do the two curves separate in the two directions we registered &mdash; yield on cost <i>above</i> market yield on the fund whose price rose, and <i>below</i> it on the fund whose price fell &mdash; on the engine we said we would use, without re-declaring a fund spec to get there?</p>
+<ul>
+  <li><b>A yes looks like:</b> both directions appear on the two named funds, computed natively, and the separation between the two lines equals the price ratio.</li>
+  <li><b>A no looks like:</b> either fund separates the wrong way, or the engine cannot address one of them without a hand-rebuilt spec &mdash; which would make the receipt a reconstruction rather than a measurement.</li>
+  <li><b>Ambiguous residue:</b> one fund native and one reconstructed. We pre-committed to report that as two different evidence classes rather than as one table.</li>
+</ul>
+
+<h3>Our stated prior: SCHD rising and ULTY falling &mdash; by ticker and by direction, 10 days before the first line of the lab</h3>
+<p>Both directions arrived exactly as registered. SCHD's yield on cost finished <b>8.30%</b> against a market yield of <b>2.49%</b> on a price ratio of ×3.3384; ULTY's finished <b>37.71%</b> against <b>108.30%</b> on ×0.3482. <b>What we got wrong was the exhibit.</b> We registered two curves as the payoff. The single strongest thing the lab produced is not a curve at all &mdash; it is a count, the 166 simultaneous yields on cost in section 2 &mdash; and we had not registered it, asked for it, or thought of it.</p>
+
+<h3>The primary configuration (locked)</h3>
+<div class="tblwrap"><table>
+<tr><th>Parameter</th><th>Locked value</th></tr>
+<tr><td>Market yield</td><td>trailing-twelve-month distributions per share &divide; today's month-end price</td></tr><tr><td>Yield on cost</td><td>the same trailing-twelve-month cash &divide; the month-end price at a chosen purchase month</td></tr><tr><td>Warm-up</td><td>12 months required; the first eleven months of each fund are <b>dropped</b>, never annualized up from a stub</td></tr><tr><td>Split handling</td><td>price and distributions are both split-adjusted per share by the store's own cumulative factor, so every split cancels in the ratio</td></tr><tr><td>Funds</td><td>SCHD (price rose) and ULTY (price fell) &mdash; both required to be natively addressable in the engine, with no re-declared specs</td></tr><tr><td>Windows</td><td>SCHD 2012-09-30 &rarr; 2026-06-30, 166 month-ends &middot; ULTY 2025-01-31 &rarr; 2026-06-30, 18 month-ends</td></tr><tr><td>Total-return arm</td><td>month-end price plus distributions per share; the gap is the fund's total return minus the index's, over the fund's own window</td></tr><tr><td>Data</td><td>a survivorship-free US month-end store &mdash; the same engine and the same method used for all 24 funds on our reference table</td></tr><tr><td>Frictions</td><td>none &mdash; this is an ownership metric, not a strategy. No trading, no commission, no tax</td></tr>
+</table></div>
+
+<h3>Deliberately NOT tested &mdash; named in advance</h3>
+<ol>
+<li><b>The Canadian income-ETF educator's own fund.</b> It is Canadian and our store is US equities. We hold no price, distribution or total-return record for it, and no number on this page is a measurement of it.</li><li><b>The dividend-payer cohort.</b> Two funds are two funds. The size- and sector-controlled payers-versus-non-payers test on our own survivorship-free store has never been run.</li><li><b>Yield on cost as a forward predictor.</b> The identity makes the question moot for a holder's decision; it does not answer the statistical question, and this report does not run that experiment.</li><li><b>Any fund's distribution ledger.</b> Where a payout was funded from &mdash; income versus return of capital &mdash; is a different receipt. Return of capital appears here only as a modelled property of a wrapper class, never as a measured quantity of anyone's fund.</li><li><b>The price of the covered-call overlay.</b> That is another episode's method-home, public on the channel; its one receipt is quoted in section 5 as a callback, never as this report's proof.</li>
+</ol>
+
+<div class="note">A wrong-way separation on either fund, or a fund the engine could not address natively, would have sent this lab back before a single frame was drawn; the two directions arriving as registered is what licensed the rendering. Both endings are stated here; only the expected one was written down in the lock commit, and it is quoted in section 1.</div>
+
+<h3>The goalposts &mdash; all required to proceed</h3>
+<div class="tblwrap"><table>
+<tr><th>#</th><th>Pre-registered goalpost</th><th>Measured</th><th>Pass</th></tr>
+<tr><td>1</td><td>Pre-registered goalpost &mdash; the fund whose price rose shows yield on cost ABOVE market yield</td><td>SCHD 8.30% vs 2.49%, ×3.3384</td><td class="ok">YES</td></tr><tr><td>2</td><td>Pre-registered goalpost &mdash; the fund whose price fell shows yield on cost BELOW market yield</td><td>ULTY 37.71% vs 108.30%, ×0.3482</td><td class="ok">YES</td></tr><tr><td>3</td><td>Pre-registered goalpost (the engine, named in the lock commit; the no-re-declared-spec wording is the lab's) &mdash; both funds natively addressable in the engine, with no re-declared spec</td><td>2 of 2</td><td class="ok">YES</td></tr><tr><td>4</td><td>Lab-time check, NOT registered in advance &mdash; this lab stands on the same engine and store as the receipt of record</td><td>8 of 8 published cells reproduce to &plusmn;0.06pp</td><td class="ok">YES</td></tr><tr><td>5</td><td>Pre-registered goalpost (the jurisdiction wall, in the same commit) &mdash; no measured claim about the Canadian fund, anywhere in the lab</td><td>0 series, 0 cells; its only appearance is arithmetic on his own reported numbers</td><td class="ok">HELD</td></tr>
+</table></div>
+<p><b>5 of 5</b> &mdash; rows 1, 2 and 5 registered by name in the lock commit, row 3 by the engine it names, row 4 written with the lab &mdash; and that tally is worth less than it looks, which is why it is printed with the question it asked. These goalposts asked <i>&ldquo;did the lab measure what it registered, on the engine it registered, without touching the jurisdiction it cannot see?&rdquo;</i> They did <b>not</b> ask whether yield on cost is empty &mdash; <b>that is an identity and it could not have come out any other way</b>, which section 3 says at length. And three of this lab's seven checks were not registered in advance at all: the 166-purchase-month fan, the anchor re-derivation and the negative control were written in the same commit as the code they check, so version control cannot witness their ordering, and we are not going to imply that it can.</p>
+
+<h2>&sect;2 &middot; The headline arithmetic</h2>
+<div class="tblwrap"><table>
+<tr><th>Figure</th><th>Value</th><th>What it means</th></tr>
+<tr><td><b>A dollar in SCHD, its whole 14.7-year life</b></td><td><b>$5.95</b></td><td>total return, distributions included</td></tr><tr><td><b>The same dollar in SPY, the same window</b></td><td><b>$7.68</b></td><td class="bad">the fund is behind the index it is made of</td></tr><tr><td>A dollar of SCHD's <b>price alone</b>, every dividend excluded</td><td class="ok"><b>$3.76</b></td><td>the counterweight, and it is half the finding &mdash; this is real compounding</td></tr><tr><td>DIVO, 9.5 years, against the same index</td><td>$3.09 vs $3.87</td><td>the second independent datapoint, same direction</td></tr><tr><td>QYLD against the index it writes calls on, 12.5 years</td><td class="bad">$1.76 vs $9.26</td><td>what a <i>covered-call</i> fund did over a real cycle &mdash; SCHD is not this</td></tr><tr><td><b>SCHD on 2026-06-30: market yield vs yield on cost</b></td><td><b>2.49%</b> vs <b>8.30%</b></td><td>separated by exactly the ×3.3384 the price moved</td></tr><tr><td>ULTY on the same day, the same arithmetic running backwards</td><td>108.30% vs 37.71%</td><td>×0.3482 &mdash; the price collapsed, so yield on cost sits below</td></tr><tr><td><b>One fund, one day, one distribution cheque</b></td><td><b>166 yields on cost</b>, 2.45% to 8.42%</td><td>median 4.52%, a 3.44× spread against <b>one</b> market yield of 2.49%</td></tr><tr><td>The identity, rendered</td><td class="ok">184 of 184 fund-months</td><td>worst relative residual 2.2 &times; 10<sup>−16</sup> &mdash; floating-point zero</td></tr>
+</table></div>
+
+<h2>&sect;3 &middot; Was it the path? The stress tests</h2>
+<p><b>The first stress test is the annualization convention, because that is where this corpus has been bitten before.</b> The column our reference table prints as &ldquo;CAGR&rdquo; is an annualized arithmetic mean, not a geometric one, and the two are not the same number. Every rate this report could have shipped was recomputed both ways. SCHD's gap against the index moves from −2.08pp to <b>−1.99pp</b> (full precision; the receipt file's cell reads −1.98 because it subtracts a 2-dp intermediate &mdash; REINDEX_FIX_2026-09-05.md, rounding note); SCHD's price-only rate moves from 10.48% to 9.46%. The verdict survives both. But <b>DIVO's gap moves by 0.51pp</b> (−3.21 to −2.70 at full precision; the receipt cell's −2.69 would say 0.52, for the same reason), which is enough that its published rate is only true on one convention &mdash; so this report does not print that rate, and says <i>about three points a year</i> instead.</p><p><b>That is the whole reason this report's headline is a multiple and not a rate.</b> $5.95 against $7.68 carries no annualization convention at all, so no convention can inflate it. Wherever a figure could be stated either way on this page, it is stated as a multiple.</p><p><b>The second stress test is the negative control, and it is the one that matters.</b> An identity check that has only ever been seen green is not a check. So the lab corrupts a purchase basis on purpose and re-runs, and its results file records the outcome: <b>166 of 184 fund-months flip to fail and the 18 untouched months stay green</b> &mdash; the guard bites exactly the fund it was pointed at, and nothing else. What that proves is less than it sounds: not the arithmetic, which cannot fail, but that the machine is reading the price it was told to read. This page's own generator carries the same kind of control &mdash; corrupt one ledger row and it refuses to write.</p><p><b>And the honest limit of all of it.</b> Every figure here is downstream of one store. A store error would reproduce perfectly through every check on this page, and no amount of internal consistency would show it.</p>
+
+<h2>&sect;4 &middot; The controls</h2>
+<p><b>The index is the control, and it is the same instrument in every comparison.</b> Over SCHD's own 14.7 years a dollar in SPY became $7.68; over DIVO's 9.5 years, $3.87; over QYLD's 12.5 years a dollar in QQQ became $9.26. Each fund is measured against the thing it is actually made of, over that fund's own window, never a shared one.</p><p><b>Is this lab standing on the same engine as the receipt of record?</b> 8 of 8 published cells across 2 of 2 funds reproduce to &plusmn;0.06pp, the print precision of the page they came from. Separately, the whole reference table was re-derived for this episode: <b>96 of 96 master cells across 24 of 24 funds, 21 of 21 gap cells, 0 differences</b>. That check asked whether the engine still produces the number the page prints. It did <b>not</b> ask whether the store's own records are right.</p><p><b>One scar from that re-derivation, recorded rather than buried.</b> 6 of the 24 rows on our reference table had no live engine entry, because the file that declared them is no longer on disk anywhere. Their specs were rebuilt and they reproduce &mdash; but a <i>reconstruction</i> is a different evidence class from a <i>measurement</i>, and QYLD, cited on this page, is one of them. The two funds this report's identity work rests on are not: <b>2 of 2</b> natively specified, which is why that was goalpost 3 and not a footnote.</p>
+
+<h2>&sect;5 &middot; The best objection, pre-registered and answered</h2>
+<p><b>&ldquo;You did not measure his fund, so what exactly are you telling him?&rdquo;</b> That is the right objection, and the answer is a boundary rather than a dodge. His fund is Canadian. <b>Our store is US equities and we hold no record of Evolve BANK &mdash; no price, no distributions, no total return &mdash; so we never measured it, and nothing on this page is a measurement of it.</b> Exactly three things transfer, and only these three:</p><ol><li><b>The arithmetic.</b> Yield on cost equals current yield times the price ratio in every currency and every tax code. It is an identity, so jurisdiction is irrelevant to it. That is the only reason this report works at all with a Canadian holder in it.</li><li><b>Covered-call <i>class</i> behaviour, offered as an analogue and labelled as one.</b> Our US evidence is QYLD: a dollar became $1.76 while a dollar in the index it writes calls on became $9.26 over 12.5 years. That is a US fund and a US index. It is an analogue for a class, never a stand-in for his fund. Underneath that class sits a contract, and an earlier episode of ours priced one: a single share of that same index with one call written against it every week, 2020-07 to 2026-06, collected <b>$327</b> of premium and handed back <b>$429</b> of capped-away gains &mdash; you sold the ceiling, and that is where the gap between the two dollar figures goes. It is <a href="https://youtu.be/QIYcMwtYP0c">that episode&rsquo;s</a> receipt, quoted here as a callback, never as this report&rsquo;s proof.</li><li><b>The only on-jurisdiction evidence in this episode &mdash; and it is not ours.</b> <b>Ben Felix</b> measured <b>20 Canadian-listed covered-call ETFs</b> against matched underlyings and found an average drag of <b>−3.25pp a year</b> (median −2.96pp), with only <b>2 of 20</b> outperforming; in his withdrawal study the equity investor ends about <b>26% richer</b> at identical spending, an implied break-even fee of <b>1.5–2.7% a year</b>. <b>Those are his measurements of Canadian funds, not ours.</b> They are cited here with his name on them, and they may not be blended into a sentence with anything we measured.</li></ol><p><b>The second objection is bigger: two funds is not &ldquo;dividend investing.&rdquo;</b> Correct. SCHD and DIVO are two funds with real, cycle-tested histories &mdash; on our own reference table only 7 of 24 funds have lived through a bear market at all, and these two are among them &mdash; but two is two. The controlled payers-versus-non-payers test on our own survivorship-free store: <b>we own the data and have not run it</b>, and that is reopen criterion 2 rather than a sentence we are hoping you skip.</p>
+
+<h2>&sect;6 &middot; Their own terms</h2>
+<p>The holder in this episode is a Canadian income-ETF educator. <b>He is not named on this page, in the episode, or on the thumbnail.</b> Two reasons, and they are independent: our own framing rule keeps both practitioners in this episode out of the title and the thumbnail; and he is a sincere retail practitioner selling nothing, so this page identifies him by role, jurisdiction and source rather than by name or video ID &mdash; an earlier draft of this page carried the ID, and it was removed before publication for exactly that reason. <b>His video is credited, by channel, at the top of the episode&rsquo;s description</b>, which is where a credit belongs and where you can go and watch the original. His figures below are quoted as he stated them, and the arithmetic does not depend on who he is.</p><p><b>His numbers are his, and we contradict none of them.</b> He reports a yield on cost of <b>22.6%</b> against a market yield of <b>15.1%</b> and calls it his secret weapon; he has a self-imposed rule to sell at <b>+20%</b> unrealized, and he breaks it. <b>His numbers, our arithmetic:</b> 22.6 divided by 15.1 is ×1.4967, which says the price is up <b>49.7%</b> &mdash; and the unrealized gain he states separately, in his own video, is about <b>50%</b>. The two agree to <b>0.3 of a point</b>. The inputs are his and are marked as his; only the division is ours. <b>His secret weapon returned the number his own profit-and-loss line had already shown him.</b></p><p><b>And he is right to hold.</b> A realized gain of about <b>$19k</b>, as he reports it, at Canadian fifty-percent inclusion, with no better opportunity visible to him, has to clear its own tax haircut before a switch makes sense. That argument is correct, and it is the one that actually decides his case. <b>We are replacing his reasoning, not his answer.</b> He also says two things on camera we would not improve on: that Canadian banks &ldquo;acted like tech IPO launches&rdquo;, and that &ldquo;what goes up quickly could come down just as quickly&rdquo;.</p><p>The mirror runs the other way too, on a different holder in a different video, and the same arithmetic applies: ULTY (his cost basis) 35% on cost against 62% market = ×0.5645, a price move of −43.5% &middot; WMAX (his cost basis) 28% on cost against 47% market = ×0.5957, a price move of −40.4%. Same vanity metric, opposite direction, and it decides nothing in either. That holder is not named here either.</p>
+
+<h2>&sect;7 &middot; The complete ledger &mdash; all 184 rows</h2>
+<div class="note"><b>Every fund-month of both funds &mdash; 166 for SCHD and 18 for ULTY, 184 rows, the whole denominator of the identity check.</b> Each row carries the market yield, the yield on cost against that fund's fixed purchase month, and the price ratio. <b>The month-end price and the distributions per share that produce the market yield are NOT published here</b> &mdash; they are a licensed vendor series and not ours to hand out, which is a limit we would rather state than quietly exceed. Nothing in the check below depends on them: <b>market yield &times; price ratio reproduces yield on cost on all 184 of 184 published rows to within 2.8 parts in 10,000</b>, which is the rounding of the columns as printed, not the accuracy of the identity. The residual column is computed at full internal precision, which is why it reads as floating-point zero and the recomputation from the printed columns does not. <b>The last column is the point:</b> it is how far <code>market yield × price ratio</code> lands from the yield on cost printed beside it, and every one of the 184 is at the machine's own rounding floor. <b>This is not a discovery and we are not dressing it as one</b> &mdash; it is algebra, rendered on real months of two real funds so the magnitudes are visible and the claim is ours rather than narrated. <b>The CSV's columns, in order:</b> <code>fund</code>, <code>month_end</code>, <code>market_yield_pct</code>, <code>yield_on_cost_pct</code>, <code>purchase_month</code>, <code>price_ratio</code>, <code>identity_rel_residual</code> &mdash; the two yields are percentages, the ratio is the month-end price over the purchase-month price, and the residual is |yield on cost &minus; market yield &times; price ratio| &divide; yield on cost, at full internal precision. Check our arithmetic: every yield, price ratio, residual and purchase-month fan figure on this page is recomputable from the CSV below &mdash; a fund&rsquo;s fan is its last row&rsquo;s yield on cost divided by each of its rows&rsquo; price ratio, to the rounding of the printed columns. The total-return multiples in sections 2, 4 and 5 come from a separate receipt whose per-month series is not published here.</div>
+<a class="dl" href="d17-yield-on-cost-ledger.csv">Download the full 184-row ledger (CSV)</a>
+<div class="ledger"><table>
+<tr><th>#</th><th>Fund</th><th>Month end</th><th>Market yield</th><th>Yield on cost</th><th>Price ratio</th><th>Identity residual</th></tr>
+<tr><td class="dim">1</td><td><b>SCHD</b></td><td>2012-09-30</td><td>2.343%</td><td>2.343%</td><td>×1.0000</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">2</td><td><b>SCHD</b></td><td>2012-10-31</td><td>2.365%</td><td>2.343%</td><td>×0.9906</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">3</td><td><b>SCHD</b></td><td>2012-11-30</td><td>2.354%</td><td>2.343%</td><td>×0.9953</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">4</td><td><b>SCHD</b></td><td>2012-12-31</td><td>2.858%</td><td>2.817%</td><td>×0.9857</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">5</td><td><b>SCHD</b></td><td>2013-01-31</td><td>2.708%</td><td>2.817%</td><td>×1.0404</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">6</td><td><b>SCHD</b></td><td>2013-02-28</td><td>2.652%</td><td>2.817%</td><td>×1.0623</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">7</td><td><b>SCHD</b></td><td>2013-03-31</td><td>2.741%</td><td>3.031%</td><td>×1.1057</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">8</td><td><b>SCHD</b></td><td>2013-04-30</td><td>2.662%</td><td>3.031%</td><td>×1.1388</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">9</td><td><b>SCHD</b></td><td>2013-05-31</td><td>2.625%</td><td>3.031%</td><td>×1.1548</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">10</td><td><b>SCHD</b></td><td>2013-06-30</td><td>2.722%</td><td>3.096%</td><td>×1.1374</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">11</td><td><b>SCHD</b></td><td>2013-07-31</td><td>2.603%</td><td>3.096%</td><td>×1.1896</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">12</td><td><b>SCHD</b></td><td>2013-08-31</td><td>2.698%</td><td>3.096%</td><td>×1.1475</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">13</td><td><b>SCHD</b></td><td>2013-09-30</td><td>2.713%</td><td>3.176%</td><td>×1.1704</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">14</td><td><b>SCHD</b></td><td>2013-10-31</td><td>2.584%</td><td>3.176%</td><td>×1.2289</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">15</td><td><b>SCHD</b></td><td>2013-11-30</td><td>2.520%</td><td>3.176%</td><td>×1.2602</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">16</td><td><b>SCHD</b></td><td>2013-12-31</td><td>2.465%</td><td>3.144%</td><td>×1.2751</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">17</td><td><b>SCHD</b></td><td>2014-01-31</td><td>2.580%</td><td>3.144%</td><td>×1.2184</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">18</td><td><b>SCHD</b></td><td>2014-02-28</td><td>2.484%</td><td>3.144%</td><td>×1.2657</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">19</td><td><b>SCHD</b></td><td>2014-03-31</td><td>2.584%</td><td>3.312%</td><td>×1.2817</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">20</td><td><b>SCHD</b></td><td>2014-04-30</td><td>2.538%</td><td>3.312%</td><td>×1.3051</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">21</td><td><b>SCHD</b></td><td>2014-05-31</td><td>2.505%</td><td>3.312%</td><td>×1.3223</td><td class="dim">2.7e-16</td></tr>
+<tr><td class="dim">22</td><td><b>SCHD</b></td><td>2014-06-30</td><td>2.604%</td><td>3.466%</td><td>×1.3311</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">23</td><td><b>SCHD</b></td><td>2014-07-31</td><td>2.650%</td><td>3.466%</td><td>×1.3082</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">24</td><td><b>SCHD</b></td><td>2014-08-31</td><td>2.562%</td><td>3.466%</td><td>×1.3531</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">25</td><td><b>SCHD</b></td><td>2014-09-30</td><td>2.646%</td><td>3.549%</td><td>×1.3412</td><td class="dim">2.5e-16</td></tr>
+<tr><td class="dim">26</td><td><b>SCHD</b></td><td>2014-10-31</td><td>2.595%</td><td>3.549%</td><td>×1.3677</td><td class="dim">2.5e-16</td></tr>
+<tr><td class="dim">27</td><td><b>SCHD</b></td><td>2014-11-30</td><td>2.520%</td><td>3.549%</td><td>×1.4084</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">28</td><td><b>SCHD</b></td><td>2014-12-31</td><td>2.627%</td><td>3.641%</td><td>×1.3861</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">29</td><td><b>SCHD</b></td><td>2015-01-31</td><td>2.711%</td><td>3.641%</td><td>×1.3430</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">30</td><td><b>SCHD</b></td><td>2015-02-28</td><td>2.577%</td><td>3.641%</td><td>×1.4132</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">31</td><td><b>SCHD</b></td><td>2015-03-31</td><td>2.712%</td><td>3.718%</td><td>×1.3708</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">32</td><td><b>SCHD</b></td><td>2015-04-30</td><td>2.692%</td><td>3.718%</td><td>×1.3812</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">33</td><td><b>SCHD</b></td><td>2015-05-31</td><td>2.679%</td><td>3.718%</td><td>×1.3882</td><td class="dim">2.4e-16</td></tr>
+<tr><td class="dim">34</td><td><b>SCHD</b></td><td>2015-06-30</td><td>2.889%</td><td>3.847%</td><td>×1.3318</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">35</td><td><b>SCHD</b></td><td>2015-07-31</td><td>2.868%</td><td>3.847%</td><td>×1.3412</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">36</td><td><b>SCHD</b></td><td>2015-08-31</td><td>3.029%</td><td>3.847%</td><td>×1.2699</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">37</td><td><b>SCHD</b></td><td>2015-09-30</td><td>3.200%</td><td>4.002%</td><td>×1.2504</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">38</td><td><b>SCHD</b></td><td>2015-10-31</td><td>2.942%</td><td>4.002%</td><td>×1.3600</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">39</td><td><b>SCHD</b></td><td>2015-11-30</td><td>2.934%</td><td>4.002%</td><td>×1.3638</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">40</td><td><b>SCHD</b></td><td>2015-12-31</td><td>2.974%</td><td>3.988%</td><td>×1.3412</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">41</td><td><b>SCHD</b></td><td>2016-01-31</td><td>3.043%</td><td>3.988%</td><td>×1.3106</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">42</td><td><b>SCHD</b></td><td>2016-02-29</td><td>3.021%</td><td>3.988%</td><td>×1.3203</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">43</td><td><b>SCHD</b></td><td>2016-03-31</td><td>2.930%</td><td>4.086%</td><td>×1.3944</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">44</td><td><b>SCHD</b></td><td>2016-04-30</td><td>2.936%</td><td>4.086%</td><td>×1.3920</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">45</td><td><b>SCHD</b></td><td>2016-05-31</td><td>2.895%</td><td>4.086%</td><td>×1.4115</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">46</td><td><b>SCHD</b></td><td>2016-06-30</td><td>2.862%</td><td>4.125%</td><td>×1.4414</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">47</td><td><b>SCHD</b></td><td>2016-07-31</td><td>2.782%</td><td>4.125%</td><td>×1.4824</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">48</td><td><b>SCHD</b></td><td>2016-08-31</td><td>2.792%</td><td>4.125%</td><td>×1.4776</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">49</td><td><b>SCHD</b></td><td>2016-09-30</td><td>2.673%</td><td>3.933%</td><td>×1.4717</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">50</td><td><b>SCHD</b></td><td>2016-10-31</td><td>2.715%</td><td>3.933%</td><td>×1.4487</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">51</td><td><b>SCHD</b></td><td>2016-11-30</td><td>2.629%</td><td>3.933%</td><td>×1.4960</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">52</td><td><b>SCHD</b></td><td>2016-12-31</td><td>2.887%</td><td>4.376%</td><td>×1.5155</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">53</td><td><b>SCHD</b></td><td>2017-01-31</td><td>2.901%</td><td>4.376%</td><td>×1.5082</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">54</td><td><b>SCHD</b></td><td>2017-02-28</td><td>2.806%</td><td>4.376%</td><td>×1.5597</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">55</td><td><b>SCHD</b></td><td>2017-03-31</td><td>2.884%</td><td>4.472%</td><td>×1.5506</td><td class="dim">2.0e-16</td></tr>
+<tr><td class="dim">56</td><td><b>SCHD</b></td><td>2017-04-30</td><td>2.877%</td><td>4.472%</td><td>×1.5544</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">57</td><td><b>SCHD</b></td><td>2017-05-31</td><td>2.828%</td><td>4.472%</td><td>×1.5816</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">58</td><td><b>SCHD</b></td><td>2017-06-30</td><td>2.881%</td><td>4.520%</td><td>×1.5687</td><td class="dim">2.0e-16</td></tr>
+<tr><td class="dim">59</td><td><b>SCHD</b></td><td>2017-07-31</td><td>2.834%</td><td>4.520%</td><td>×1.5948</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">60</td><td><b>SCHD</b></td><td>2017-08-31</td><td>2.835%</td><td>4.520%</td><td>×1.5944</td><td class="dim">2.0e-16</td></tr>
+<tr><td class="dim">61</td><td><b>SCHD</b></td><td>2017-09-30</td><td>2.991%</td><td>4.868%</td><td>×1.6278</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">62</td><td><b>SCHD</b></td><td>2017-10-31</td><td>2.886%</td><td>4.868%</td><td>×1.6866</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">63</td><td><b>SCHD</b></td><td>2017-11-30</td><td>2.770%</td><td>4.868%</td><td>×1.7576</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">64</td><td><b>SCHD</b></td><td>2017-12-31</td><td>2.630%</td><td>4.681%</td><td>×1.7798</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">65</td><td><b>SCHD</b></td><td>2018-01-31</td><td>2.515%</td><td>4.681%</td><td>×1.8609</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">66</td><td><b>SCHD</b></td><td>2018-02-28</td><td>2.665%</td><td>4.681%</td><td>×1.7562</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">67</td><td><b>SCHD</b></td><td>2018-03-31</td><td>2.613%</td><td>4.457%</td><td>×1.7054</td><td class="dim">2.0e-16</td></tr>
+<tr><td class="dim">68</td><td><b>SCHD</b></td><td>2018-04-30</td><td>2.643%</td><td>4.457%</td><td>×1.6863</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">69</td><td><b>SCHD</b></td><td>2018-05-31</td><td>2.597%</td><td>4.457%</td><td>×1.7165</td><td class="dim">2.0e-16</td></tr>
+<tr><td class="dim">70</td><td><b>SCHD</b></td><td>2018-06-30</td><td>2.751%</td><td>4.716%</td><td>×1.7144</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">71</td><td><b>SCHD</b></td><td>2018-07-31</td><td>2.631%</td><td>4.716%</td><td>×1.7924</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">72</td><td><b>SCHD</b></td><td>2018-08-31</td><td>2.572%</td><td>4.716%</td><td>×1.8334</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">73</td><td><b>SCHD</b></td><td>2018-09-30</td><td>2.601%</td><td>4.796%</td><td>×1.8435</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">74</td><td><b>SCHD</b></td><td>2018-10-31</td><td>2.765%</td><td>4.796%</td><td>×1.7346</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">75</td><td><b>SCHD</b></td><td>2018-11-30</td><td>2.675%</td><td>4.796%</td><td>×1.7930</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">76</td><td><b>SCHD</b></td><td>2018-12-31</td><td>3.064%</td><td>5.006%</td><td>×1.6337</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">77</td><td><b>SCHD</b></td><td>2019-01-31</td><td>2.890%</td><td>5.006%</td><td>×1.7325</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">78</td><td><b>SCHD</b></td><td>2019-02-28</td><td>2.777%</td><td>5.006%</td><td>×1.8028</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">79</td><td><b>SCHD</b></td><td>2019-03-31</td><td>2.926%</td><td>5.321%</td><td>×1.8184</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">80</td><td><b>SCHD</b></td><td>2019-04-30</td><td>2.835%</td><td>5.321%</td><td>×1.8769</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">81</td><td><b>SCHD</b></td><td>2019-05-31</td><td>3.068%</td><td>5.321%</td><td>×1.7343</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">82</td><td><b>SCHD</b></td><td>2019-06-30</td><td>2.911%</td><td>5.374%</td><td>×1.8459</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">83</td><td><b>SCHD</b></td><td>2019-07-31</td><td>2.864%</td><td>5.374%</td><td>×1.8765</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">84</td><td><b>SCHD</b></td><td>2019-08-31</td><td>2.902%</td><td>5.374%</td><td>×1.8522</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">85</td><td><b>SCHD</b></td><td>2019-09-30</td><td>3.037%</td><td>5.787%</td><td>×1.9054</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">86</td><td><b>SCHD</b></td><td>2019-10-31</td><td>2.997%</td><td>5.787%</td><td>×1.9311</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">87</td><td><b>SCHD</b></td><td>2019-11-30</td><td>2.914%</td><td>5.787%</td><td>×1.9857</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">88</td><td><b>SCHD</b></td><td>2019-12-31</td><td>2.977%</td><td>5.997%</td><td>×2.0146</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">89</td><td><b>SCHD</b></td><td>2020-01-31</td><td>3.030%</td><td>5.997%</td><td>×1.9791</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">90</td><td><b>SCHD</b></td><td>2020-02-29</td><td>3.343%</td><td>5.997%</td><td>×1.7941</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">91</td><td><b>SCHD</b></td><td>2020-03-31</td><td>4.033%</td><td>6.310%</td><td>×1.5645</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">92</td><td><b>SCHD</b></td><td>2020-04-30</td><td>3.582%</td><td>6.310%</td><td>×1.7617</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">93</td><td><b>SCHD</b></td><td>2020-05-31</td><td>3.454%</td><td>6.310%</td><td>×1.8268</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">94</td><td><b>SCHD</b></td><td>2020-06-30</td><td>3.546%</td><td>6.383%</td><td>×1.8000</td><td class="dim">1.4e-16</td></tr>
+<tr><td class="dim">95</td><td><b>SCHD</b></td><td>2020-07-31</td><td>3.368%</td><td>6.383%</td><td>×1.8953</td><td class="dim">2.8e-16</td></tr>
+<tr><td class="dim">96</td><td><b>SCHD</b></td><td>2020-08-31</td><td>3.204%</td><td>6.383%</td><td>×1.9924</td><td class="dim">2.8e-16</td></tr>
+<tr><td class="dim">97</td><td><b>SCHD</b></td><td>2020-09-30</td><td>3.423%</td><td>6.583%</td><td>×1.9235</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">98</td><td><b>SCHD</b></td><td>2020-10-31</td><td>3.410%</td><td>6.583%</td><td>×1.9308</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">99</td><td><b>SCHD</b></td><td>2020-11-30</td><td>3.013%</td><td>6.583%</td><td>×2.1851</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">100</td><td><b>SCHD</b></td><td>2020-12-31</td><td>3.162%</td><td>7.055%</td><td>×2.2310</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">101</td><td><b>SCHD</b></td><td>2021-01-31</td><td>3.191%</td><td>7.055%</td><td>×2.2108</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">102</td><td><b>SCHD</b></td><td>2021-02-28</td><td>3.009%</td><td>7.055%</td><td>×2.3447</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">103</td><td><b>SCHD</b></td><td>2021-03-31</td><td>2.865%</td><td>7.266%</td><td>×2.5364</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">104</td><td><b>SCHD</b></td><td>2021-04-30</td><td>2.803%</td><td>7.266%</td><td>×2.5924</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">105</td><td><b>SCHD</b></td><td>2021-05-31</td><td>2.716%</td><td>7.266%</td><td>×2.6758</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">106</td><td><b>SCHD</b></td><td>2021-06-30</td><td>2.892%</td><td>7.606%</td><td>×2.6303</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">107</td><td><b>SCHD</b></td><td>2021-07-31</td><td>2.873%</td><td>7.606%</td><td>×2.6473</td><td class="dim">1.2e-16</td></tr>
+<tr><td class="dim">108</td><td><b>SCHD</b></td><td>2021-08-31</td><td>2.814%</td><td>7.606%</td><td>×2.7026</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">109</td><td><b>SCHD</b></td><td>2021-09-30</td><td>3.005%</td><td>7.759%</td><td>×2.5823</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">110</td><td><b>SCHD</b></td><td>2021-10-31</td><td>2.878%</td><td>7.759%</td><td>×2.6960</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">111</td><td><b>SCHD</b></td><td>2021-11-30</td><td>2.938%</td><td>7.759%</td><td>×2.6407</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">112</td><td><b>SCHD</b></td><td>2021-12-31</td><td>2.782%</td><td>7.823%</td><td>×2.8115</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">113</td><td><b>SCHD</b></td><td>2022-01-31</td><td>2.861%</td><td>7.823%</td><td>×2.7346</td><td class="dim">1.1e-16</td></tr>
+<tr><td class="dim">114</td><td><b>SCHD</b></td><td>2022-02-28</td><td>2.917%</td><td>7.823%</td><td>×2.6817</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">115</td><td><b>SCHD</b></td><td>2022-03-31</td><td>2.870%</td><td>7.875%</td><td>×2.7440</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">116</td><td><b>SCHD</b></td><td>2022-04-30</td><td>2.993%</td><td>7.875%</td><td>×2.6310</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">117</td><td><b>SCHD</b></td><td>2022-05-31</td><td>2.881%</td><td>7.875%</td><td>×2.7336</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">118</td><td><b>SCHD</b></td><td>2022-06-30</td><td>3.390%</td><td>8.446%</td><td>×2.4915</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">119</td><td><b>SCHD</b></td><td>2022-07-31</td><td>3.262%</td><td>8.446%</td><td>×2.5889</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">120</td><td><b>SCHD</b></td><td>2022-08-31</td><td>3.354%</td><td>8.446%</td><td>×2.5183</td><td class="dim">2.1e-16</td></tr>
+<tr><td class="dim">121</td><td><b>SCHD</b></td><td>2022-09-30</td><td>3.730%</td><td>8.619%</td><td>×2.3106</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">122</td><td><b>SCHD</b></td><td>2022-10-31</td><td>3.354%</td><td>8.619%</td><td>×2.5698</td><td class="dim">2.1e-16</td></tr>
+<tr><td class="dim">123</td><td><b>SCHD</b></td><td>2022-11-30</td><td>3.139%</td><td>8.619%</td><td>×2.7454</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">124</td><td><b>SCHD</b></td><td>2022-12-31</td><td>3.391%</td><td>8.910%</td><td>×2.6275</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">125</td><td><b>SCHD</b></td><td>2023-01-31</td><td>3.322%</td><td>8.910%</td><td>×2.6821</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">126</td><td><b>SCHD</b></td><td>2023-02-28</td><td>3.436%</td><td>8.910%</td><td>×2.5931</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">127</td><td><b>SCHD</b></td><td>2023-03-31</td><td>3.609%</td><td>9.184%</td><td>×2.5447</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">128</td><td><b>SCHD</b></td><td>2023-04-30</td><td>3.638%</td><td>9.184%</td><td>×2.5242</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">129</td><td><b>SCHD</b></td><td>2023-05-31</td><td>3.794%</td><td>9.184%</td><td>×2.4205</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">130</td><td><b>SCHD</b></td><td>2023-06-30</td><td>3.582%</td><td>9.048%</td><td>×2.5259</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">131</td><td><b>SCHD</b></td><td>2023-07-31</td><td>3.438%</td><td>9.048%</td><td>×2.6317</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">132</td><td><b>SCHD</b></td><td>2023-08-31</td><td>3.490%</td><td>9.048%</td><td>×2.5924</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">133</td><td><b>SCHD</b></td><td>2023-09-30</td><td>3.701%</td><td>9.110%</td><td>×2.4612</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">134</td><td><b>SCHD</b></td><td>2023-10-31</td><td>3.848%</td><td>9.110%</td><td>×2.3673</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">135</td><td><b>SCHD</b></td><td>2023-11-30</td><td>3.620%</td><td>9.110%</td><td>×2.5165</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">136</td><td><b>SCHD</b></td><td>2023-12-31</td><td>3.491%</td><td>9.245%</td><td>×2.6480</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">137</td><td><b>SCHD</b></td><td>2024-01-31</td><td>3.486%</td><td>9.245%</td><td>×2.6518</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">138</td><td><b>SCHD</b></td><td>2024-02-29</td><td>3.423%</td><td>9.245%</td><td>×2.7005</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">139</td><td><b>SCHD</b></td><td>2024-03-31</td><td>3.315%</td><td>9.296%</td><td>×2.8045</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">140</td><td><b>SCHD</b></td><td>2024-04-30</td><td>3.471%</td><td>9.296%</td><td>×2.6779</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">141</td><td><b>SCHD</b></td><td>2024-05-31</td><td>3.401%</td><td>9.296%</td><td>×2.7329</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">142</td><td><b>SCHD</b></td><td>2024-06-30</td><td>3.642%</td><td>9.850%</td><td>×2.7047</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">143</td><td><b>SCHD</b></td><td>2024-07-31</td><td>3.429%</td><td>9.850%</td><td>×2.8724</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">144</td><td><b>SCHD</b></td><td>2024-08-31</td><td>3.350%</td><td>9.850%</td><td>×2.9402</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">145</td><td><b>SCHD</b></td><td>2024-09-30</td><td>3.468%</td><td>10.198%</td><td>×2.9402</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">146</td><td><b>SCHD</b></td><td>2024-10-31</td><td>3.462%</td><td>10.198%</td><td>×2.9457</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">147</td><td><b>SCHD</b></td><td>2024-11-30</td><td>3.310%</td><td>10.198%</td><td>×3.0814</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">148</td><td><b>SCHD</b></td><td>2024-12-31</td><td>3.640%</td><td>10.376%</td><td>×2.8508</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">149</td><td><b>SCHD</b></td><td>2025-01-31</td><td>3.573%</td><td>10.376%</td><td>×2.9040</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">150</td><td><b>SCHD</b></td><td>2025-02-28</td><td>3.484%</td><td>10.376%</td><td>×2.9781</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">151</td><td><b>SCHD</b></td><td>2025-03-31</td><td>3.718%</td><td>10.847%</td><td>×2.9176</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">152</td><td><b>SCHD</b></td><td>2025-04-30</td><td>4.026%</td><td>10.847%</td><td>×2.6943</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">153</td><td><b>SCHD</b></td><td>2025-05-31</td><td>3.972%</td><td>10.847%</td><td>×2.7308</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">154</td><td><b>SCHD</b></td><td>2025-06-30</td><td>3.868%</td><td>10.696%</td><td>×2.7652</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">155</td><td><b>SCHD</b></td><td>2025-07-31</td><td>3.868%</td><td>10.696%</td><td>×2.7652</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">156</td><td><b>SCHD</b></td><td>2025-08-31</td><td>3.671%</td><td>10.696%</td><td>×2.9134</td><td class="dim">1.7e-16</td></tr>
+<tr><td class="dim">157</td><td><b>SCHD</b></td><td>2025-09-30</td><td>3.787%</td><td>10.789%</td><td>×2.8487</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">158</td><td><b>SCHD</b></td><td>2025-10-31</td><td>3.865%</td><td>10.789%</td><td>×2.7913</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">159</td><td><b>SCHD</b></td><td>2025-11-30</td><td>3.747%</td><td>10.789%</td><td>×2.8790</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">160</td><td><b>SCHD</b></td><td>2025-12-31</td><td>3.819%</td><td>10.932%</td><td>×2.8623</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">161</td><td><b>SCHD</b></td><td>2026-01-31</td><td>3.513%</td><td>10.932%</td><td>×3.1117</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">162</td><td><b>SCHD</b></td><td>2026-02-28</td><td>3.297%</td><td>10.932%</td><td>×3.3151</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">163</td><td><b>SCHD</b></td><td>2026-03-31</td><td>3.441%</td><td>11.016%</td><td>×3.2014</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">164</td><td><b>SCHD</b></td><td>2026-04-30</td><td>3.292%</td><td>11.016%</td><td>×3.3464</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">165</td><td><b>SCHD</b></td><td>2026-05-31</td><td>3.248%</td><td>11.016%</td><td>×3.3913</td><td class="dim">1.6e-16</td></tr>
+<tr><td class="dim">166</td><td><b>SCHD</b></td><td>2026-06-30</td><td>2.486%</td><td>8.301%</td><td>×3.3384</td><td class="dim">2.1e-16</td></tr>
+<tr><td class="dim">167</td><td><b>ULTY</b></td><td>2025-01-31</td><td>122.012%</td><td>122.012%</td><td>×1.0000</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">168</td><td><b>ULTY</b></td><td>2025-02-28</td><td>146.222%</td><td>128.197%</td><td>×0.8767</td><td class="dim">2.2e-16</td></tr>
+<tr><td class="dim">169</td><td><b>ULTY</b></td><td>2025-03-31</td><td>178.947%</td><td>124.727%</td><td>×0.6970</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">170</td><td><b>ULTY</b></td><td>2025-04-30</td><td>165.285%</td><td>112.348%</td><td>×0.6797</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">171</td><td><b>ULTY</b></td><td>2025-05-31</td><td>146.089%</td><td>103.508%</td><td>×0.7085</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">172</td><td><b>ULTY</b></td><td>2025-06-30</td><td>130.478%</td><td>94.702%</td><td>×0.7258</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">173</td><td><b>ULTY</b></td><td>2025-07-31</td><td>125.793%</td><td>88.983%</td><td>×0.7074</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">174</td><td><b>ULTY</b></td><td>2025-08-31</td><td>129.439%</td><td>84.553%</td><td>×0.6532</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">175</td><td><b>ULTY</b></td><td>2025-09-30</td><td>122.929%</td><td>77.468%</td><td>×0.6302</td><td class="dim">1.8e-16</td></tr>
+<tr><td class="dim">176</td><td><b>ULTY</b></td><td>2025-10-31</td><td>127.925%</td><td>73.100%</td><td>×0.5714</td><td class="dim">1.9e-16</td></tr>
+<tr><td class="dim">177</td><td><b>ULTY</b></td><td>2025-11-30</td><td>143.395%</td><td>66.576%</td><td>×0.4643</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">178</td><td><b>ULTY</b></td><td>2025-12-31</td><td>142.994%</td><td>61.497%</td><td>×0.4301</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">179</td><td><b>ULTY</b></td><td>2026-01-31</td><td>137.986%</td><td>57.214%</td><td>×0.4146</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">180</td><td><b>ULTY</b></td><td>2026-02-28</td><td>131.437%</td><td>53.120%</td><td>×0.4041</td><td class="dim">1.3e-16</td></tr>
+<tr><td class="dim">181</td><td><b>ULTY</b></td><td>2026-03-31</td><td>131.078%</td><td>46.315%</td><td>×0.3533</td><td class="dim">1.5e-16</td></tr>
+<tr><td class="dim">182</td><td><b>ULTY</b></td><td>2026-04-30</td><td>123.619%</td><td>44.705%</td><td>×0.3616</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">183</td><td><b>ULTY</b></td><td>2026-05-31</td><td>111.320%</td><td>40.655%</td><td>×0.3652</td><td class="dim">0.0e+00</td></tr>
+<tr><td class="dim">184</td><td><b>ULTY</b></td><td>2026-06-30</td><td>108.305%</td><td>37.707%</td><td>×0.3482</td><td class="dim">0.0e+00</td></tr>
+</table></div>
+
+<h2>&sect;8 &middot; What would change our mind</h2>
+<ol>
+<li><b>Make yield on cost decide something.</b> Show us a rule that takes yield on cost as an input, is <b>not reducible to current market yield and current price</b> &mdash; which is the entire content of the metric &mdash; and beats the same rule with yield on cost removed, on a pre-registered out-of-sample test. We will run it here, first. We owe you a warning about this one: the identity makes it a hard bounty <i>by construction</i>, because a transform of two numbers you already have cannot carry information they do not. So the honest version is <b>prove the arithmetic wrong, or show us the rule</b>. We cannot see how, and we would like to be shown.</li><li><b>The two-fund scope limit &mdash; the likeliest of the three to move.</b> SCHD and DIVO are two funds, not the dividend-payer cohort. A size- and sector-controlled payers-versus-non-payers total-return test on the survivorship-free store could show the two-fund gap is a selection artifact. <b>We own the data and have not run it.</b> Send a pre-registered cohort specification, or we will run it ourselves; until then the general claim stays scoped to two funds and says so on its face.</li><li><b>A Canadian covered-call ETF record we can measure.</b> The whole jurisdiction section of this report is a boundary we cannot cross with the data we own. A survivorship-free Canadian price-and-distribution source would let us stop citing somebody else's study for the one market the holder in this episode actually lives in &mdash; and it would let us test <b>Ben Felix</b>'s numbers instead of quoting them, which is a better outcome for everyone, him included.</li>
+</ol>
+
+<h2>&sect;9 &middot; What survives</h2>
+<p><b>The cash is real, and so is the compounding.</b> Our own reference page said so before this episode existed, and in these words: &ldquo;Only SCHD and DIVO are genuine equity portfolios &hellip; real, cycle-durable NAV growth.&rdquo; A dollar of SCHD's price alone, with every dividend stripped out, became <b>$3.76</b> in 14.7 years. That is a real equity portfolio doing a real thing, and it is <b>not</b> the covered-call machine &mdash; a dollar in QYLD became $1.76 over 12.5 years while a dollar in its own index became $9.26. Anyone who leaves this page thinking &ldquo;dividend stocks are a trick&rdquo; has been mistaught by us, and we would rather spend a paragraph than let that happen.</p><p><b>What does not survive is the metric's authority.</b> Yield on cost is your current yield times your price ratio since purchase &mdash; one plus your unrealized gain. Both of those numbers are already on your brokerage screen; the third is what you get when you multiply them. It cannot tell you to hold, because it cannot know anything the other two did not already know &mdash; which is why one fund on one day can wear 166 of them at once and every one of them is correct.</p><p><b>And the question it lets you skip is the only one that pays.</b> Not <i>what does this yield against what I paid</i>, but <i>what did the money do</i>. Over 14.7 years the answer for the strongest fund on our own table was <b>$5.95 against the index's $7.68</b> &mdash; a real portfolio, really compounding, behind the thing it is made of. That is a decision you can actually make. Yield on cost never was.</p>
+
+<h2>&sect;10 &middot; Want to run a test like this yourself?</h2>
+<p>Everything we make is free &mdash; the reports, the ledgers, all of it. The only thing that costs us
+real money is the market data.</p>
+
+<div class="note"><b>Where the numbers on this page came from.</b> The month-end prices and the per-share distributions behind every fund figure here are a one-shot pull from <b>Massive.com (formerly Polygon.io)</b> taken 2026-06-22 &mdash; survivorship-free, with delisted names present to their delist date &mdash; read through the same engine that produced our reference table. The store ends on that pull date and the lab labels each month by its calendar month-end, so every &ldquo;2026-06-30&rdquo; cell on this page is the last bar in the pull, not a later print. No options data was used on this page; the one covered-call contract in section 5 is quoted from an earlier episode. The vendor does not pay us, has no say in a verdict, and is not the link below. The holder&rsquo;s own figures and <b>Ben Felix</b>&rsquo;s study are not market data, and are credited where they appear.</div>
+<a class="dl" href="https://eodhd.com/?via=groundtruthyoutube">Buying market data? Going through here supports Ground Truth (affiliate)</a>
+<div class="note"><b>The firewall:</b> going through that link pays us a small commission at no extra
+cost to you. <b>It is a way to support the channel, not a description of our pipeline</b> &mdash; the
+vendor that produced our numbers is named directly above, and we would rather say so plainly than let
+a commission blur the two. That is the only money this channel takes. <b>Never from anyone whose claims
+we test</b> &mdash; and never for anything inside a category we review.</div>
+<p><a class="dl" href="https://groundtruth-tested.beehiiv.com/subscribe">Get every report + the 7 Questions one-pager (free)</a></p>
+
+<footer>
+<p><a href="../index.html">&larr; All reports</a></p>
+<p><em>Ground Truth is educational and entertainment content &mdash; not financial, investment, or tax advice. We are not licensed or registered advisers; we share original research and opinions. Nothing here is a recommendation to buy, sell, or hold any security, fund, or strategy. Backtests and simulations are hypothetical, model real-world costs imperfectly, and past performance does not guarantee future results. Do your own research and consult a qualified professional before making any financial decision.</em></p>
+</footer>
+
+</div>
+</body>
+</html>
