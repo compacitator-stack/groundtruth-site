@@ -1,0 +1,72 @@
+[HISTORICAL RECORD. Label added 2026-09-22 for publication.]
+This is our own original protocol for this test, as filed in our lab on 2026-07-14 (commit 9b2666b).
+Below the line it is shown unchanged, except one internal reference, redacted and marked
+[internal note reference removed].
+
+Timing: the protocol and both result files first appear together in that same commit. Its
+"pre-registration" wording is therefore our own record, not an independently sealed lock. Only the
+daily clock was pre-registered; the hourly clock was added later.
+
+Corrections to this text:
+- His "2,000" is his career count of bots he backtested, not the width of the search in his video, which the video does not state.
+- We ran the search method his video demonstrates on a coin-flip signal: not his exact procedure (the risk skeleton follows his only in shape) and not his bot.
+- The words it quotes as his ("verified identical on TradingView") paraphrase his video; they are not his exact words.
+
+Full report: i05c-noise-search.html
+----------------------------------------------------------------------------------------------------
+# I05c — "The AI that data-mines 2,000 strategies" — Noise-Survives-the-Search receipt
+## Pre-registration (write the bar BEFORE the run — GT B04 doctrine)
+
+**Specimen:** YouTube `BPFwaD0CgZ8` (David / David Tech). Claim: ChatGPT + an MCP server
+searched ~2,000 backtested configs and surfaced a gold **1H** strategy at **1,669% net /
+28% maxDD / 31% WR / 456 trades / PF 1.89**, "verified identical on TradingView," then hooked
+to Telegram for a 30-day forward test.
+
+**Thesis under test (ours):** the headline is a **multiple-comparisons artifact**, not an edge.
+A search that backtests ~2,000 configs and reports the single best will surface a spectacular
+result *even when the entry signal carries zero information* — because the winner is the extreme
+right tail of a luck distribution, not a discovered edge. His forward test does not rescue it:
+forward-testing the survivor of a 2,000-wide search never pays down the data-mining.
+
+**Why this stands in for his gold strat:** his literal instrument (spot gold 1H, Asia-session
+filter) is not in our survivorship-free store (US equity + ETF only; gold = GLD, market-hours,
+no Asia session). The lesson is about the **search**, not the instrument — so we reproduce the
+*procedure* on real data with a provably-null signal. If a null signal + his procedure
+manufactures his headline, the headline is not evidence of an edge.
+
+### Design (provably-null signal on real data)
+- **Data:** `SPY` daily OHLC, survivorship-free store, 2004-01-02 .. 2024-12-31 (real prices;
+  relatable; upward drift = the *friendly* case, which only makes the point stronger).
+- **Split:** IN-SAMPLE = 2004..2014 (the search happens here). OUT-OF-SAMPLE = 2015..2024
+  (used only to validate the winner; the search never sees it).
+- **Risk skeleton = his, faithfully:** long-only, one position at a time, ATR(14) stop at
+  `k·ATR`, target at `R=3.8 × risk` (his R:R 3.8), fixed-fractional sizing (risk `f=2%` of
+  equity per trade → compounds like a TradingView % boilerplate). **Gaps honored at the open**
+  (a gap through the stop loses MORE than 1R — no flattering fills).
+- **Entry SIGNAL = the null:** `Bernoulli(p_entry)`, seeded per config, **independent of price
+  by construction.** Stands in for "some indicator combo with some parameters" — the point is it
+  has no predictive content.
+- **Search grid (~2,048 configs, his ~2,000):** `seed ∈ 128 values × p_entry ∈
+  {0.02,0.04,0.06,0.10} × k_atr ∈ {1.0,1.5,2.0,2.5}`. Rank by IN-SAMPLE net return; **report the
+  single best** (his exact procedure).
+- **Fair null = buy-and-hold** (`[internal note reference removed]`). Because SPY
+  rose in both windows, random longs earn positive *beta*; we therefore judge the winner by
+  **alpha over B&H**, not raw return, so market exposure is not mistaken for the search "working."
+
+### Pre-registered predictions (what proves the thesis)
+1. **Best-of-2,048 IS net% is spectacular** — same order of magnitude as his 1,669% (at minimum
+   >> the median config), with WR ~20–35% and PF > 1.5: a config that *looks* like a real edge,
+   and a large positive **IS alpha over B&H**.
+2. **The winner's OUT-OF-SAMPLE alpha over B&H collapses to ~0 or negative** — because random
+   entries carry no signal into unseen data. **THE KILL.** (Raw OOS return may stay positive from
+   beta; the *alpha* is what must vanish.)
+3. **IS rank does not predict OOS** — across the top-N IS configs, rank-correlation(IS net, OOS
+   net) ≈ 0; and the share of all configs that beat B&H OOS is ~coin-flip.
+4. **Friction bites** — with a realistic per-trade cost the median config's alpha is negative and
+   the winner shrinks.
+
+### Anti-hypocrisy guard (we are not David)
+Report the **full distribution** + the winner's **OOS** + **friction** regardless of outcome. No
+cherry-picking our own demo. Seeded RNG ⇒ reproducible. If prediction 2 FAILS (winner holds its
+alpha OOS), that signals a **bug** — a null signal cannot have OOS edge — investigate, do not
+narrate.
