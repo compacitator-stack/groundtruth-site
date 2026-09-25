@@ -1,0 +1,142 @@
+{
+  "cutoff": "2026-06-22",
+  "phases": [
+    {
+      "id": "IS",
+      "start": "2010-01-01",
+      "end": "2022-12-31",
+      "seal": "full ledger committed before either OOS slice"
+    },
+    {
+      "id": "OOS-search",
+      "start": "2023-01-01",
+      "end": "2024-12-31",
+      "selection": false,
+      "once": true
+    },
+    {
+      "id": "OOS-confirm",
+      "start": "2025-01-01",
+      "end": "2026-06-22",
+      "selection": false,
+      "once": true
+    },
+    {
+      "id": "W-local",
+      "start": "2016-09-16",
+      "end": "2026-06-22",
+      "label": "APPROXIMATE LOCAL"
+    },
+    {
+      "id": "W-full",
+      "start": "2004-11-18",
+      "end": "2026-06-22",
+      "bounds": "evidence/a2/bound_protocol.jsonl"
+    }
+  ],
+  "calendar": {
+    "package": "exchange_calendars",
+    "version": "4.13.2",
+    "calendar": "XNYS",
+    "nasdaq_alias": "XNYS",
+    "source": "https://pypi.org/project/exchange_calendars/4.13.2/",
+    "purpose": "Independent session membership only; daily vendor open remains fill reference. No market prices acquired from this package."
+  },
+  "aliases": {
+    "QQQQ": "QQQ"
+  },
+  "proxy": {
+    "gold": "GLD"
+  },
+  "models": [
+    "CORE_QQQ_GLD",
+    "QQQ_HOLD",
+    "GLD_HOLD",
+    "SPY_HOLD",
+    "QQQ_GLD_MONTHLY_50_50",
+    "CORE_QQQ_CASH"
+  ],
+  "settings": [
+    {
+      "id": "PRIMARY",
+      "ma": 200,
+      "bps": 5,
+      "total_return": true
+    },
+    {
+      "id": "MA150",
+      "ma": 150,
+      "bps": 5,
+      "total_return": true
+    },
+    {
+      "id": "MA250",
+      "ma": 250,
+      "bps": 5,
+      "total_return": true
+    },
+    {
+      "id": "COST0",
+      "ma": 200,
+      "bps": 0,
+      "total_return": true
+    },
+    {
+      "id": "COST10",
+      "ma": 200,
+      "bps": 10,
+      "total_return": true
+    },
+    {
+      "id": "COST25",
+      "ma": 200,
+      "bps": 25,
+      "total_return": true
+    },
+    {
+      "id": "PRICE_ONLY",
+      "ma": 200,
+      "bps": 5,
+      "total_return": false
+    }
+  ],
+  "diagnostics": [
+    "calendar-year returns",
+    "pre-2023 versus 2023+",
+    "ex-top-5 positive strategy-return sessions, same benchmark dates"
+  ],
+  "diagnostic_conventions": {
+    "calendar_year": "Compound the corresponding daily equity returns within each parent ledger; label partial years.",
+    "pre_post": "Compound the corresponding daily returns of each parent ledger; retain parent holdings, no retrospective retune.",
+    "ex_top5": "Set the five largest positive strategy daily returns and identical benchmark-date returns to zero; preserve elapsed time; diagnostic only; ties by earliest date."
+  },
+  "account": {
+    "initial_equity": 1.0,
+    "fractional": true,
+    "leverage": false,
+    "cash_interest": 0,
+    "signals": "completed close price SMA",
+    "fills": "next exchange-session open",
+    "equality": "retain; GLD or cash fallback when uninitialized",
+    "terminal": "pre-scheduled final close liquidation with cost",
+    "dividend": "prior-close holdings entitlement; payment-date close cash; next-open reinvestment; terminal receivables at face value"
+  },
+  "metrics": {
+    "cagr": "(final_net_equity/initial_equity) ** (365.2425/elapsed_calendar_days)-1; first scored date to last scored date",
+    "max_drawdown": "positive magnitude; daily equity peak includes initial capital and terminal costs",
+    "sharpe": "sqrt(252)*daily_mean/sample_std, zero RF; zero variance NA",
+    "turnover": "sum absolute traded notional / equity immediately before respective trade batch",
+    "switches": "changes of selected core target, excludes initial and terminal scheduled trades",
+    "completed_round_trips": "position episodes closed to zero, including terminal; partial rebalance sells are not completed episodes",
+    "exposure": "mean fraction of marked equity by asset/cash/receivable before terminal liquidation; session-count denominator"
+  },
+  "criteria": {
+    "H_exact": "NOT EVALUABLE",
+    "H_approx": "CAGR >= .30 and DD <= paired QQQ; explicitly approximate diagnostic",
+    "R": "CAGR >= QQQ CAGR-.02 AND DD <= QQQ DD-.05; W-local and W-full both required for robust",
+    "persistence": "R inequalities separately on the two OOS slices",
+    "bounds": "Uniform PASS/FAIL across all 8 W-full TR variants is evaluable with disclosure; flip/uncomputable corner NOT EVALUABLE"
+  },
+  "source_commit": "d65f8fc",
+  "config_blob_sha256": "b928284ade3ba23bf0b461ba73d3f94df4319f51de04c9fa2186aa388b56e8be"
+}
