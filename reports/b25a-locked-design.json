@@ -1,0 +1,106 @@
+{
+  "lock": "The pre-registration, written 2026-07-14 at 16:49:52 US Pacific (file timestamp), before the first run log at 16:56:13. The lab was committed in one commit the same day, so the order is attested by file timestamps, not sealed by a commit.",
+  "registered": {
+    "signals": {
+      "plain": "green when close > open",
+      "heikin_ashi": "green when ha_close > ha_open",
+      "ha_close": "(o+h+l+c)/4",
+      "ha_open": "0.5*(previous ha_open + previous ha_close), seeded at (o0+c0)/2",
+      "ha_high_low": "max/min of (h or l, ha_open, ha_close)"
+    },
+    "position": "long when green, flat when red; signal at the close of day t sets the position on day t+1",
+    "fills": {
+      "honest": "real close-to-close return (the till)",
+      "fantasy": "Heikin-Ashi close-to-close return (the tag); untradeable, included only to size the gap"
+    },
+    "costs_bps_round_trip": [
+      0,
+      10
+    ],
+    "cost_per_side_bps": 5,
+    "portfolio": "equal weight across names signalled long; cash when none",
+    "benchmarks": [
+      "equal-weight buy-and-hold of every name",
+      "SPY buy-and-hold"
+    ],
+    "random_traders": {
+      "method": "per-name long/flat states shuffled, preserving each name exposure fraction",
+      "draws": 200
+    },
+    "universe": "union of the top-800 liquid US common stocks on the first trading day of each year 2004-2026, delisted names on their live dates",
+    "predictions": {
+      "P1": "P1 — Rendering adds ~nothing. At 0 bps, HA-trend and raw-candle-trend have materially indistinguishable Sharpe (|ΔSharpe| < 0.15). If HA-trend's Sharpe exceeds raw-trend's by ≥0.15 net, the rendering claim survives this cut.",
+      "P2": "P2 — The apparent edge is the fantasy fill. HA-FANTASY Sharpe/CAGR ≫ HONEST (a large, obviously-inflated gap), demonstrating that the [a misquote of the video, replaced here by its own words: “it almost feels like cheating”] smoothness is a fill you cannot get.",
+      "P3": "P3 — Doesn't beat holding. Net of 10 bps, HONEST HA-trend underperforms the B&H composite on CAGR (the smoothing lags reversals; active turnover pays friction for no edge).",
+      "P4": "P4 — Not a monkey-beat. HONEST HA-trend Sharpe sits inside the random-timing null distribution (does not exceed its 95th percentile)."
+    },
+    "lines": {
+      "kill": "KILL (thesis confirmed): P1 (Sharpe parity at 0 bps) and P3 (loses to B&H net) both hold → rendering is not its own edge; verdict = KILL, with P2 as the \"where the illusion comes from\" number-pair.",
+      "rescue": "SURVIVE (thesis wounded): P1 fails (HA-trend beats raw-trend by ≥0.15 Sharpe net) and P4 fails (beats the null's 95th pct) → HA rendering carries a real, tradeable edge → escalate to intraday reproduction before any KILL is narrated.",
+      "mixed": "Mixed → report honestly as inconclusive; do not narrate a verdict."
+    }
+  },
+  "not_in_this_lock": [
+    {
+      "item": "Price floor and daily cap",
+      "what": "a stock is held only if the signal day closed at $5 or more; every daily return is capped at 50% either way",
+      "status": "added after the first run, before the second, on 2026-07-14; applied to every arm and to the equal-weight benchmark; SPY is computed from its raw closes and the cleaning never touches it (§3)"
+    },
+    {
+      "item": "The crowd the published run built",
+      "what": "120 traders (200 registered), shuffled over every day in the panel including days a stock was not listed, so its traders held stocks on fewer days than the rule",
+      "status": "found on 2026-09-24 and rebuilt as registered (§4)"
+    },
+    {
+      "item": "Cost level for P4",
+      "what": "the code compared the rule with the crowd at 10 basis points; the pre-registration names no cost for P4",
+      "status": "run-stage choice"
+    },
+    {
+      "item": "Data filter",
+      "what": "a stock needs at least 30 daily bars with positive prices: 2,607 selected, 2,606 used",
+      "status": "run-stage choice"
+    },
+    {
+      "item": "Sharpe ratio",
+      "what": "mean over standard deviation of the daily net portfolio return, times the square root of 252; no risk-free rate",
+      "status": "run-stage definition"
+    },
+    {
+      "item": "Turnover statistic",
+      "what": "the mean over days of (stocks changed / stocks held), times 252; costs are charged each day on that changed fraction, capped at 100%",
+      "status": "run-stage definition"
+    },
+    {
+      "item": "Point-in-time universe (M3)",
+      "what": "each stock held only from its first yearly selection; a stock that later leaves the top 800 stays in, so it corrects entry only",
+      "status": "ADDED AFTER the run, 2026-09-24; unregistered sensitivity"
+    },
+    {
+      "item": "As-often crowd (M2)",
+      "what": "each stock's own hold sequence rotated to a random start",
+      "status": "ADDED AFTER the run, 2026-09-24; unregistered sensitivity, never a verdict layer"
+    }
+  ],
+  "second_registration": {
+    "what": "measurement plan for the crowd rebuilt as registered (M1) and two labelled sensitivities added after the run (M2 as-often crowd, M3 point-in-time universe); it changed no verdict line",
+    "plan_committed_utc": "2026-09-24T21:31:07Z",
+    "run_started_utc": "2026-09-24T21:35:56Z",
+    "M1": {
+      "draws": 200,
+      "seed": 2026092401,
+      "domain": "each name shuffled within its own listed days"
+    },
+    "M2": {
+      "draws": 200,
+      "seed": 2026092402,
+      "domain": "each name hold sequence rotated to a random start",
+      "status": "ADDED AFTER the run; unregistered sensitivity"
+    },
+    "M3": {
+      "domain": "each name held only from its first yearly selection; a name that later leaves the top 800 stays in (entry only)",
+      "status": "ADDED AFTER the run; unregistered sensitivity"
+    }
+  },
+  "ruling": "2026-09-24: the literal text of the lines governs; both came true; mixed, reported as inconclusive"
+}
