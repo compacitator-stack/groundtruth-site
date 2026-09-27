@@ -1,0 +1,217 @@
+{
+  "lock": "Two plans dated 2026-06-19, each stating it was locked before the first run. No version control: the order rests on the text of the plans and their last-write times (UTC): trigger plan 18:42:34, engine 18:45:03, result 18:46:35; crowd plan 19:24:05 (after the trigger result); the first crowd run wrote its positioning file at 19:26:20 (the start of that run is not recorded); the crowd engine was last written 19:31:36, after its first run (edited at least once; the change is not recoverable).",
+  "trigger_plan": {
+    "data": "SPY daily 2005-2026, yfinance",
+    "news_day": "the jobs report as the first Friday of each month; inflation report and Fed decision deferred",
+    "crowding_check": "deliberately absent (the COT gate); a fail does not count against his method",
+    "V1": "low < previous close, close > previous close, close > open",
+    "V2": "V1 and close in the top third of the range",
+    "V3": "V1 with open < previous close",
+    "short_mirror": "high > previous close, close < previous close, close < open",
+    "entry": "signal-day close",
+    "stop_and_unit": "signal-day low (high for the short); unit = entry - stop",
+    "horizons_trading_days": [
+      1,
+      3,
+      5,
+      10,
+      21,
+      42,
+      63
+    ],
+    "primary": 21,
+    "controls": [
+      "random news days",
+      "random days of any kind",
+      "every news day"
+    ],
+    "seed": 20260619,
+    "bars": {
+      "F1": "F1 (drift): at the primary horizon = 21 td, gross E[R] > 0 with bootstrap 95% CI excluding 0.",
+      "F2": "F2 (signal carries info): beats C2 random-day (> 90th pct) AND beats C1 matched-random- on-release-days at 21 td. (Not just beta; not just \"release days drift.\")",
+      "F3": "F3 (friction): net E[R] (proxy exit) > 0."
+    },
+    "verdict": {
+      "PASS": "PASS = F1 ∧ F2 ∧ F3 → advance to Test B (COT gate) and the combined faithful test.",
+      "WEAK": "WEAK = F1 ∧ ¬F2 → drift is beta, not the trigger [an internal cross-reference removed].",
+      "FAIL": "FAIL = ¬F1 → driftless trigger; strong prior the edge (if any) lives in the COT gate + discretion [cut here: the next line of the plan goes on to name the crowd test, Test B, as the decisive probe]"
+    }
+  },
+  "crowd_plan": {
+    "positioning": "CFTC legacy futures-only, non-commercial net, 2000-2026",
+    "prices": [
+      "^GSPC",
+      "GC=F",
+      "CL=F",
+      "ZN=F",
+      "6E=F (yfinance)"
+    ],
+    "entry": "release-Friday close",
+    "index": "percentile of the net over a lookback",
+    "lookback_weeks": {
+      "primary": 156,
+      "band": [
+        52,
+        156,
+        260
+      ]
+    },
+    "tail": {
+      "primary": 0.1,
+      "band": [
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "horizons_weeks": [
+      1,
+      2,
+      4,
+      8,
+      13,
+      26
+    ],
+    "primary_weeks": 4,
+    "exit": "when the index returns to 0.40-0.60",
+    "controls": [
+      "random weeks, same market",
+      "buy-and-hold",
+      "crowded weeks shuffled in time"
+    ],
+    "seed": 20260619,
+    "hypothesis": "H1: forward return after a large-spec SHORT extreme is > 0 and > the long-extreme forward return, the spread significant, and it beats a random-week baseline (carries info beyond beta). H0: forward return is independent of the COT extreme (the spread ≈ 0 / doesn't beat random-week).",
+    "bars": "F1 asymmetry: short-extreme 4wk fwd-ret > 0 AND > long-extreme 4wk fwd-ret, the spread's bootstrap 95% CI excludes 0. F2 beats random-week (C1): short-extreme fwd-ret > 90th pct of C1; the long−short spread > 90th pct of the C1 spread null. F3 friction + faithful-exit: net (after friction) positive AND the de-crowd-to-neutral exit is net-positive.",
+    "verdict": "Verdict: PASS = F1 ∧ F2 ∧ F3 (pooled, with ≥ half the markets individually directionally consistent) → the positioning pillar carries a real edge → advance to [a second-phase test of his discretionary veto] + a build decision. WEAK = F1 ∧ ¬F2 (asymmetry is just beta / persistence). FAIL = ¬F1 (no positioning asymmetry) [the rest of this sentence, our June shorthand for closing the test of this version, removed]",
+    "conjunction": "B2 conjunction (ES only): restrict LONG signals to weeks whose release-Friday (or that week) also carries a Test-A V1 news-failure reversal day; report N + delta vs B1."
+  },
+  "added_or_first_run_after_the_plans": [
+    {
+      "item": "The corrected statistic",
+      "what": "the June crowd engine stored the trades after crowded-long weeks with their sign flipped and then subtracted them, so it measured the two sides added together; the corrected engine computes the plan’s own gap (after crowded short minus after crowded long), scores it against the random weeks the plan names, and keeps every other definition",
+      "status": "found and ruled 2026-09-24; corrected run 18:11 UTC; the June engine and result file are kept unchanged beside it"
+    },
+    {
+      "item": "Crude splice taken out",
+      "what": "every crowd result is also shown without crude oil’s weeks after its data switched contracts",
+      "status": "added 2026-09-24, after the first result; reported beside the as-run figure, never instead of it"
+    },
+    {
+      "item": "The trigger in plain percent",
+      "what": "the trigger, without the crowding check, compared with random days in percent instead of the plan’s unit of risk, which runs wider on a reversal day",
+      "status": "run 2026-09-24, after the fact; not in the plan"
+    },
+    {
+      "item": "The trigger without its best trade",
+      "what": "the plan’s second concentration check for the trigger tested without the crowding check, the average without its single best trade: the engine computes and prints it, but the June write-up never reported it (§3)",
+      "status": "printed by the lab’s 2026-09-24 re-run of the unchanged engine; reported on this page for the first time"
+    },
+    {
+      "item": "The other five registered holds",
+      "what": "1, 2, 8, 13 and 26 weeks: in the lock beside the primary four weeks, first run with the corrected engine, only the hold changed",
+      "status": "run on 2026-09-24 at 21:18 UTC, after the four-week result and the correction were known"
+    },
+    {
+      "item": "The jobs-report calendar check",
+      "what": "the first-Friday rule compared with the actual release dates in the Bureau of Labor Statistics archive; counts only",
+      "status": "run 2026-09-24 at 21:20 UTC"
+    },
+    {
+      "item": "The trigger on the real release dates",
+      "what": "the trigger, without the crowding check, re-run with the actual release dates in place of the first-Friday rule",
+      "status": "an extra run outside the written plan: its own plan was committed at 21:32:15 UTC and the run started at 21:35:21 UTC on 2026-09-24; it cannot change the registered result"
+    },
+    {
+      "item": "The settle-time check",
+      "what": "what time of day each market’s daily closing price is fixed, against the report’s 3:30 pm New York release, found by matching it against the same vendor’s five-minute prices for about the last 59 days",
+      "status": "run 2026-09-24"
+    },
+    {
+      "item": "Controls for the short mirror",
+      "what": "random news-day controls for the short mirror, using the lab’s own functions: the plan asked for the same diagnostics for it as for the main arm, and the June engine printed none",
+      "status": "in the plan; run late, appended 2026-09-24"
+    },
+    {
+      "item": "Controls for V3",
+      "what": "random news-day controls for V3, one of the plan’s two variants, using the lab’s own functions; the June engine printed none for it",
+      "status": "appended 2026-09-24"
+    },
+    {
+      "item": "A blind review",
+      "what": "a separate AI reviewer given the crowd plan, the June engine, the June result and the positioning data, with no correction attached",
+      "status": "2026-09-24, before the correction was relied on"
+    }
+  ],
+  "promised_not_delivered": [
+    {
+      "half": "Trigger",
+      "item": "returns were to use prices adjusted for splits and dividends, with raw prices only for the day’s pattern; the engine used unadjusted prices throughout, so the trigger’s returns leave out SPY’s dividends (read by us from the engine on 2026-09-26)"
+    },
+    {
+      "half": "Trigger",
+      "item": "the plan’s plausibility guard asked for a sane trade count before any verdict was trusted (about 5 to 15 signals a year, about 3 to 5 once only the jobs report was used); tested without the crowding check, the trigger fired about 2.4 times a year, and neither the lab nor this page judged whether that count passes the guard. The same guard asked that no single event drive the result, and that was never judged either (the average without the best trade is in §3)"
+    },
+    {
+      "half": "Trigger",
+      "item": "the calendar was to be frozen as a file before any signal; the engine derived it in memory on each run instead"
+    },
+    {
+      "half": "Trigger",
+      "item": "the plan named pooling its three variants with the same reversal pattern on every trading day as the way to soften its small number of signals; no pooled figure was computed, and each was reported separately in the lab’s output"
+    },
+    {
+      "half": "Trigger",
+      "item": "robustness arms on the S&P futures and the cash index, and entry at the next day’s open: not run"
+    },
+    {
+      "half": "Trigger",
+      "item": "the third bar’s exit (a 42-day time stop or the stop) was never simulated; for the trigger tested without the crowding check, the lab’s own third-bar pass is the 21-day mean minus costs, so the third bar was not run as written. Those costs were set trade by trade: a round trip of one cent a side in SPY, commission taken as zero, divided by each trade’s own risk and then averaged, where the plan divided the round trip by the median risk"
+    },
+    {
+      "half": "Crowd",
+      "item": "the exit when crowding returns to neutral was never built, so the third bar exists only as its cost part; that cost was a flat 0.05% per round trip written into the engine and never printed by any run, where the plan asked for it to be computed and reported, not assumed"
+    },
+    {
+      "half": "Crowd",
+      "item": "the June engine scored the second bar’s gap against the shuffled weeks rather than the random weeks the plan names, and averaged five per-market percentiles; the corrected engine scores both, as the ledger shows"
+    },
+    {
+      "half": "Crowd",
+      "item": "the plan set its bars for each market as well as pooled; the lab scored them pooled only, and each market’s figures are published here (§3 and the ledger) without a market-by-market verdict"
+    },
+    {
+      "half": "Crowd",
+      "item": "the plan’s guards (without the top market, without the top episode, two halves of the period, a check that the positioning series is not broken) were not computed; that last check is the one that would have caught the two flaws in the positioning data (§3). Its check that the number of crowded readings in each market is sane (about a handful a year) was never judged either"
+    },
+    {
+      "half": "Crowd",
+      "item": "buy-and-hold was computed and never tabled"
+    },
+    {
+      "half": "Crowd",
+      "item": "both halves together: the plan asked for the count and its difference from the crowd alone; the lab counted the signals (3) and averaged each crowding bucket’s 21-day result in units of risk, against trigger days with no crowding, and never computed the difference from the crowd alone"
+    },
+    {
+      "half": "Crowd",
+      "item": "the plan said a market with no clean price series is dropped and logged, and that each week is entered at the closing price of the report’s Friday; Yahoo’s daily prices for gold, crude oil, the 10-year note and the euro begin in late August and September 2000, months after the positioning data, and the engine neither dropped nor logged that: it entered the 20 crowded weeks before a market’s first price at that first price (§3). Of the other 2,052 crowded weeks, 1,954 were entered at a Friday close and 72 at the next close after a Friday with no price; 15 whose positioning date was a Monday were entered at the Thursday close, the day before that week’s Friday, and 11 more at a Monday, Tuesday or Wednesday close, up to 11 days after the positioning date plus three days, two of them across a gap in the prices (the 10-year note’s 12 days in 2008, the S&P’s 7 in 2001; §3). The plan’s ranking window was 156 weeks; the engine starts ranking once a market has 20 weeks, so 243 crowded weeks, all in the markets’ first three years, were ranked against fewer than 156 (§3)"
+    }
+  ],
+  "correction": {
+    "found_and_ruled": "2026-09-24",
+    "what": "the June crowd engine computed the two sides added together (r_s + r_l); the plan asks for r_s - r_l",
+    "corrected_run_utc": "2026-09-24T18:11:45Z",
+    "june_files": "kept unchanged beside the corrected engine",
+    "ruling": "the crowd result corrected from weak to fail"
+  },
+  "later_runs": {
+    "other_registered_holds_utc": "2026-09-24T21:18:35Z",
+    "calendar_check_utc": "2026-09-24T21:20:17Z",
+    "real_date_sensitivity": {
+      "plan_committed_utc": "2026-09-24T21:32:15Z",
+      "run_started_utc": "2026-09-24T21:35:21Z",
+      "status": "UNREGISTERED; cannot change the registered result"
+    },
+    "price_start_measurement_utc": "2026-09-26T23:11:51Z",
+    "entry_days_measurement_utc": "2026-09-27T00:06:46Z"
+  }
+}
