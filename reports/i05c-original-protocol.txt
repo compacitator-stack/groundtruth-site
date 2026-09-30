@@ -1,5 +1,5 @@
 [HISTORICAL RECORD. Label added 2026-09-22 for publication.]
-This is our own original protocol for this test, as filed in our lab on 2026-07-14 (commit 9b2666b).
+This is our own original protocol for this test, as filed in our lab on 2026-07-14 (commit id withheld because the repository is private).
 Below the line it is shown unchanged, except one internal reference, redacted and marked
 [internal note reference removed].
 

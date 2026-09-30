@@ -1,7 +1,13 @@
 """I05c reproducible search: the original two experiment mains with portable I/O.
 
 Requires Python, numpy, pandas, pyarrow. Supply licensed SPY data yourself:
-  python i05c-reproduce.py --daily-csv daily.csv --minute-parquet SPY.parquet --out results
+  python i05c-reproduce.py --daily-csv daily.csv --minute-parquet SPY.parquet --out results        # corrected (default)
+  python i05c-reproduce.py --daily-csv daily.csv --minute-parquet SPY.parquet --out results --raw  # as first published
+
+CORRECTION 2026-09-29: We chose this repair rule after the original results were known. It is a post hoc correction, not part of the original daily pre-registration. We applied it before each re-run.
+By default a fixed price-repair rule (repair() below) runs on the daily rows and on the
+one-minute rows before either search; it fixes a few bad prints in the source data that inflated the hourly results
+first published on 2026-09-23. --raw skips the repair and reproduces those first-published figures exactly.
 
 Daily CSV: date (YYYY-MM-DD), ticker, o, h, l, c. Minute parquet: t (UTC epoch
 milliseconds), o, h, l, c, v. The historical run used Massive.com (formerly
@@ -16,6 +22,28 @@ import os, json, types, argparse
 from pathlib import Path
 import numpy as np
 import pandas as pd
+RAW = False                     # --raw: skip the 2026-09-29 price repair (reproduces the first-published figures)
+REPAIR_THR = 0.10
+def repair(df):
+    """Price repair. We chose this repair rule after the original results were known. It is a post hoc correction, not part of the original daily pre-registration. We applied it before each re-run.
+    Rows are never dropped. Minute rows are repaired in input file order before sorting and hourly aggregation; daily rows are repaired in date order after selecting the requested dates and ticker. (1) Compute close flags together from the original neighbouring closes, excluding the first and last rows: if the absolute value of close / neighbour - 1 exceeds 0.10 for both neighbours, replace both its close and its open with the original previous close. (2) Using the repaired closes, flag opens whose absolute ratio difference from both the previous close and their own close exceeds 0.10, excluding the first row; replace each flagged open with the repaired previous close. (3) Using the resulting open and close, replace a high above 1.10 times their maximum with that maximum, and a low below 0.90 times their minimum with that minimum. (4) Enforce final bounds: high is at least max(open, close), and low is at most min(open, close)."""
+    d = df.copy(); THR = REPAIR_THR
+    o, h, l, c = (d[x].to_numpy(float).copy() for x in ('o', 'h', 'l', 'c'))
+    pc, nc = np.roll(c, 1), np.roll(c, -1)
+    badc = (np.abs(c / pc - 1) > THR) & (np.abs(c / nc - 1) > THR)
+    badc[[0, -1]] = False
+    c[badc] = pc[badc]
+    o[badc] = c[badc]
+    pc2 = np.roll(c, 1)
+    bado = (np.abs(o / pc2 - 1) > THR) & (np.abs(o / c - 1) > THR)
+    bado[0] = False
+    o[bado] = pc2[bado]
+    mx, mn = np.maximum(o, c), np.minimum(o, c)
+    nh, nl = h > (1 + THR) * mx, l < (1 - THR) * mn
+    h[nh], l[nl] = mx[nh], mn[nl]
+    h, l = np.maximum(h, mx), np.minimum(l, mn)
+    d['o'], d['h'], d['l'], d['c'] = o, h, l, c
+    return d
 class CsvDaily:
     def __init__(self,path):self.path=path
     def load_daily(self,start,end,tickers):
@@ -37,6 +65,8 @@ SEED_BASE = 20260714
 
 def load():
     df = M.load_daily(START, END, tickers=[TICKER]).sort_values('date').reset_index(drop=True)
+    if not RAW:
+        df = repair(df)
     o = df['o'].to_numpy(float)
     h = df['h'].to_numpy(float)
     l = df['l'].to_numpy(float)
@@ -155,6 +185,8 @@ IS_CUT = pd.Timestamp('2015-01-01')
 
 def load_1h():
     df = pd.read_parquet(MIN_FP)
+    if not RAW:
+        df = repair(df)
     df['dt'] = pd.to_datetime(df['t'], unit='ms')
     g = df.set_index('dt').sort_index().resample('1h').agg(o=('o', 'first'), h=('h', 'max'), l=('l', 'min'), c=('c', 'last'), v=('v', 'sum')).dropna(subset=['o'])
     o = g['o'].to_numpy(float)
@@ -216,7 +248,9 @@ def hourly_main():
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--daily-csv',required=True);p.add_argument('--minute-parquet',required=True)
-    p.add_argument('--out',default='results');args=p.parse_args()
+    p.add_argument('--out',default='results')
+    p.add_argument('--raw',action='store_true',help='skip the 2026-09-29 price repair; reproduces the figures first published on 2026-09-23')
+    args=p.parse_args();RAW=args.raw
     OUTPUT_DIR=str(Path(args.out));Path(OUTPUT_DIR).mkdir(parents=True,exist_ok=True)
     M=CsvDaily(args.daily_csv);MIN_FP=args.minute_parquet
     daily_main();hourly_main()
