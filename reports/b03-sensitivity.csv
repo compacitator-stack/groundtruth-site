@@ -1,0 +1,23 @@
+evidence_class,measure,instances_106,instances_96
+not pre-registered,"best-of-16 IS net, median",28.48,30.3
+not pre-registered,"best-of-16 OOS net, median",3.92,3.92
+not pre-registered,"best minus typical knob IS, median",25.5,26.51
+not pre-registered,"best minus typical knob IS, % positive",100.0,100.0
+not pre-registered,"best minus typical knob OOS, median",-0.0,-0.01
+not pre-registered,"best beat typical OOS, count",49,43
+not pre-registered,"best beat typical OOS, %",46.2,44.8
+not pre-registered,"IS alpha vs B&H, median",-5.59,-9.61
+not pre-registered,"IS alpha vs B&H, % positive",47.2,43.8
+not pre-registered,"OOS alpha vs B&H, median",-39.12,-37.09
+not pre-registered,"OOS alpha positive, %",18.9,18.8
+not pre-registered,"alpha decay, median",-62.81,-58.72
+not pre-registered,"spike share, median",77.29,77.15
+not pre-registered,"plateau breadth IS, median",0.0,0.0
+not pre-registered,best-of-N IS growth,7.502,7.412
+not pre-registered,best-of-N OOS growth,1.504,1.451
+not pre-registered,best-of-N gap at N=144,47.2,49.41
+not pre-registered,POST-HOC Spearman16 median,-0.01,-0.01
+not pre-registered,POST-HOC OOS pctile mean,48.0,46.03
+not pre-registered,POST-HOC same-cell count,15,10
+not pre-registered,"median knob IS net, frictionless",7.05,8.39
+not pre-registered,"median knob IS net, COST_R 0.05",5.01,5.57

@@ -1,0 +1,105 @@
+{
+  "title": "Locked design, transcribed from the original written plan",
+  "provenance": "The author recorded the plan as written 2026-08-15 at 18:39 UTC-07:00. It entered version history with the results at 19:09:58 UTC-07:00. No pre-run copy survives, so that history cannot independently prove the claimed order. This transcription is not an earlier timestamp.",
+  "universe": {
+    "as_of": "2004-01-02",
+    "top_n": 60,
+    "minimum_dollar_volume": 5000000,
+    "price_floor": 5,
+    "type": "US common stock",
+    "qualification": "at least 250 daily bars in each window"
+  },
+  "split": {
+    "is_start": "2004-01-02",
+    "is_end": "2014-12-31",
+    "oos_start": "2015-01-01",
+    "oos_end": "2024-12-31"
+  },
+  "families": {
+    "CHANNEL": "close breaks above highest high of prior `sig` bars",
+    "MACROSS": "SMA(`sig`) crosses above SMA(200)"
+  },
+  "slow_ma": 200,
+  "headline_grid": {
+    "sig": [
+      10,
+      20,
+      30,
+      40
+    ],
+    "k_atr": [
+      1.0,
+      1.5,
+      2.0,
+      2.5
+    ],
+    "r_mult": 3.8,
+    "n": 16
+  },
+  "extended_grid": {
+    "sig": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ],
+    "k_atr": [
+      0.75,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "r_mult": [
+      1.5,
+      2.5,
+      3.8
+    ],
+    "n": 144
+  },
+  "risk_skeleton": {
+    "RISK_F": 0.02,
+    "ATR_N": 14,
+    "long_only": true,
+    "one_position_at_a_time": true,
+    "gaps_honoured_at_open": true
+  },
+  "friction": {
+    "COST_R": 0.05,
+    "meaning": "fraction of 1R paid per round trip"
+  },
+  "fair_null": "per-ticker buy-and-hold over the same window; alpha = strategy net% - B&H net%",
+  "best_of_N": {
+    "N_GRID": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      144
+    ],
+    "draws_per_N": 200,
+    "seed": 20260815
+  },
+  "predictions": [
+    "The in-sample optimum looks like an edge. For the median instance, best-of-16 IS alpha over buy-and-hold is positive and materially above the median knob's IS alpha.",
+    "THE KILL — the same knobs do not carry. For the median instance, the best-of-16 knobs' OOS alpha over buy-and-hold is ≤ 0, and the median instance's (OOS alpha − IS alpha) is strongly negative.",
+    "The surface is a spike, not a plateau. For the median instance the spike gap is large relative to the spread of the 16 cells, and fewer than half of the 16 knob settings beat buy-and-hold in-sample.",
+    "Best-of-N rises with N purely from the count. Mean best-of-N IS net increases monotonically in N, while the mean OOS net of the selected setting does not increase with N.",
+    "Friction bites. With `COST_R = 0.05` the median knob's IS net falls materially."
+  ],
+  "conditional_dispositions": [
+    "If P2 AND P3 both fail — the surface is a broad plateau (most of the 16 beat B&H IS, small spike gap) *and* the best knobs' OOS alpha holds at or above zero for the median instance — then the registered thesis is falsified, and that is a *better* episode, not a dead one: the strategy has real structure and the knobs are cosmetic. The lesson flips to *\"here is how you tell a fitted EA from a robust one — and here is one that passes.\"* Report it as the headline, in those words.",
+    "If P2 holds but P3 fails — a broad plateau that still dies out-of-sample — then the parameter surface is not the buyer-facing tell we thought it was, the \"lone spike\" beat is struck from the spine, and the held-out half carries the episode alone. Say so explicitly.",
+    "If P1 fails — the best-of-16 does not even look like an edge in-sample — the design is too weak to demonstrate anything and the result is inconclusive. Report it as inconclusive and do not narrate a verdict from it."
+  ],
+  "data": "Daily prices, the delisted-name history and the ticker reference file used for the renames come from Massive.com (formerly Polygon.io), pulled once on 2026-06-22 and split-adjusted as of that pull. The supporting opening-range study used one-minute bars from the same vendor. EODHD, the market-data affiliate linked in the video description, did not supply these measurements.",
+  "separation": "Cleaning, joined-history exclusions and open-position re-reading were later work. They are not part of this original locked design."
+}
