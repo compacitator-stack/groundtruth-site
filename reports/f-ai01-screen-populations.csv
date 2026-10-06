@@ -1,0 +1,5 @@
+rule,all_read_rows,panel_rows,W_rows,union_rows,union_W_rows,candidate_rows,candidate_W_rows,pit_candidate_rows,surv_candidate_rows,SPY_rows,SPY_execution
+S0,733,723,0,,,0,0,0,0,0,original rule reproduced
+S1,1128,1128,1046,782,726,0,0,0,0,0,original rule reproduced
+S2,10,10,4,6,2,2,0,0,2,0,new diagnostic only; original SPY loader did not apply this rule
+S3,0,0,0,0,0,0,0,0,0,0,new diagnostic only; original SPY loader did not apply this rule

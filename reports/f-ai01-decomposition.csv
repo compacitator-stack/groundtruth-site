@@ -1,0 +1,187 @@
+variant,seed,term,variance_share
+WITH,20260930,model,0.018081312510953917
+WITH,20260930,universe,0.43472787743469615
+WITH,20260930,selection,0.04242922914566064
+WITH,20260930,concentration,0.07211832377735788
+WITH,20260930,cost,0.0342615869985745
+WITH,20260930,model x universe,0.049241118642445014
+WITH,20260930,model x selection,0.07467657598057802
+WITH,20260930,model x concentration,0.0068784744383842645
+WITH,20260930,model x cost,0.011430242695772625
+WITH,20260930,universe x selection,0.02996254923780129
+WITH,20260930,universe x concentration,0.011923282605469016
+WITH,20260930,universe x cost,6.283527190034832e-05
+WITH,20260930,selection x concentration,0.004580613353325552
+WITH,20260930,selection x cost,0.08261656130913694
+WITH,20260930,concentration x cost,0.0034233698673177193
+WITH,20260930,model x universe x selection,0.023613652860625115
+WITH,20260930,model x universe x concentration,0.008102682041377889
+WITH,20260930,model x universe x cost,3.6003735298310315e-06
+WITH,20260930,model x selection x concentration,0.03683119286406866
+WITH,20260930,model x selection x cost,0.029054823377610593
+WITH,20260930,model x concentration x cost,0.0006543076958487668
+WITH,20260930,universe x selection x concentration,0.010076338150323893
+WITH,20260930,universe x selection x cost,6.009920919384681e-05
+WITH,20260930,universe x concentration x cost,2.015020280052954e-10
+WITH,20260930,selection x concentration x cost,0.008418526047347424
+WITH,20260930,model x universe x selection x concentration,0.0048943297376105
+WITH,20260930,model x universe x selection x cost,3.5784921668822366e-05
+WITH,20260930,model x universe x concentration x cost,1.930131676145358e-05
+WITH,20260930,model x selection x concentration x cost,0.0017580192870260824
+WITH,20260930,universe x selection x concentration x cost,3.1455623992315713e-06
+WITH,20260930,model x universe x selection x concentration x cost,6.02430837315635e-05
+WITH,20260931,model,0.0354862565768433
+WITH,20260931,universe,0.4132183227990184
+WITH,20260931,selection,0.02035217433977705
+WITH,20260931,concentration,0.09866588237355492
+WITH,20260931,cost,0.028804065022574873
+WITH,20260931,model x universe,0.02723272986586036
+WITH,20260931,model x selection,0.07108522718628996
+WITH,20260931,model x concentration,0.003607915588057653
+WITH,20260931,model x cost,0.009857305547830096
+WITH,20260931,universe x selection,0.03303558596796715
+WITH,20260931,universe x concentration,0.015139156716229984
+WITH,20260931,universe x cost,0.000930437107025737
+WITH,20260931,selection x concentration,0.013490488880826454
+WITH,20260931,selection x cost,0.06736056451896852
+WITH,20260931,concentration x cost,0.004286964672005917
+WITH,20260931,model x universe x selection,0.05267291025559012
+WITH,20260931,model x universe x concentration,0.004120401025459002
+WITH,20260931,model x universe x cost,0.0003388688596717443
+WITH,20260931,model x selection x concentration,0.034200321003114334
+WITH,20260931,model x selection x cost,0.025343009287297588
+WITH,20260931,model x concentration x cost,0.0012600779029708624
+WITH,20260931,universe x selection x concentration,0.007689689220935972
+WITH,20260931,universe x selection x cost,0.0020665490210089147
+WITH,20260931,universe x concentration x cost,5.0680294913987046e-05
+WITH,20260931,selection x concentration x cost,0.010495212910153295
+WITH,20260931,model x universe x selection x concentration,0.013474563847030817
+WITH,20260931,model x universe x selection x cost,0.0014419933923184697
+WITH,20260931,model x universe x concentration x cost,0.00014845415098235795
+WITH,20260931,model x selection x concentration x cost,0.003487214973641066
+WITH,20260931,universe x selection x concentration x cost,0.0002059070585956066
+WITH,20260931,model x universe x selection x concentration x cost,0.0004510696334850985
+WITH,20260932,model,0.022073982789523237
+WITH,20260932,universe,0.3862119910412809
+WITH,20260932,selection,0.06423565972661535
+WITH,20260932,concentration,0.05539319102099916
+WITH,20260932,cost,0.03379402993023385
+WITH,20260932,model x universe,0.07241134936004613
+WITH,20260932,model x selection,0.08413923486401527
+WITH,20260932,model x concentration,0.02002223443632368
+WITH,20260932,model x cost,0.01180052039870173
+WITH,20260932,universe x selection,0.028533448619122864
+WITH,20260932,universe x concentration,0.02405140231267709
+WITH,20260932,universe x cost,5.530597263129716e-05
+WITH,20260932,selection x concentration,0.005836495995604785
+WITH,20260932,selection x cost,0.0819106328698997
+WITH,20260932,concentration x cost,0.0028061048563245775
+WITH,20260932,model x universe x selection,0.02689696503796803
+WITH,20260932,model x universe x concentration,0.007667317894500635
+WITH,20260932,model x universe x cost,2.7282944885587237e-05
+WITH,20260932,model x selection x concentration,0.019557642990468745
+WITH,20260932,model x selection x cost,0.02973882272784216
+WITH,20260932,model x concentration x cost,0.0006441486974576549
+WITH,20260932,universe x selection x concentration,0.003941748633230273
+WITH,20260932,universe x selection x cost,4.7130698377211534e-05
+WITH,20260932,universe x concentration x cost,7.672907273315102e-06
+WITH,20260932,selection x concentration x cost,0.006801934884119428
+WITH,20260932,model x universe x selection x concentration,0.009557873990856726
+WITH,20260932,model x universe x selection x cost,7.055863173937142e-05
+WITH,20260932,model x universe x concentration x cost,3.5266637908657737e-06
+WITH,20260932,model x selection x concentration x cost,0.0017285293984932294
+WITH,20260932,universe x selection x concentration x cost,1.730311389309612e-05
+WITH,20260932,model x universe x selection x concentration x cost,1.595659110358696e-05
+NO,20260930,model,0.02409092500357042
+NO,20260930,universe,0.3474130915920066
+NO,20260930,selection,0.0602023541961244
+NO,20260930,concentration,0.056941277141516075
+NO,20260930,cost,0.04406045668214101
+NO,20260930,model x universe,0.04615886738821484
+NO,20260930,model x selection,0.09047058933565516
+NO,20260930,model x concentration,0.005600934602922284
+NO,20260930,model x cost,0.012761750101309597
+NO,20260930,universe x selection,0.038372668049877955
+NO,20260930,universe x concentration,0.021621057559325616
+NO,20260930,universe x cost,4.855098901562661e-05
+NO,20260930,selection x concentration,0.008228578116374112
+NO,20260930,selection x cost,0.1065376790808463
+NO,20260930,concentration x cost,0.004018764952013188
+NO,20260930,model x universe x selection,0.021204720889061886
+NO,20260930,model x universe x concentration,0.005060079873439122
+NO,20260930,model x universe x cost,1.134599248643884e-06
+NO,20260930,model x selection x concentration,0.043775620752215534
+NO,20260930,model x selection x cost,0.03262217445784027
+NO,20260930,model x concentration x cost,0.0007759685325443838
+NO,20260930,universe x selection x concentration,0.015126115868885862
+NO,20260930,universe x selection x cost,4.2098547046620706e-05
+NO,20260930,universe x concentration x cost,1.163894116106833e-06
+NO,20260930,selection x concentration x cost,0.009996772750485753
+NO,20260930,model x universe x selection x concentration,0.002660835932101627
+NO,20260930,model x universe x selection x cost,4.0496020668269945e-05
+NO,20260930,model x universe x concentration x cost,2.118616725217465e-05
+NO,20260930,model x selection x concentration x cost,0.002070088806870884
+NO,20260930,universe x selection x concentration x cost,1.7737415518740577e-05
+NO,20260930,model x universe x selection x concentration x cost,5.626070179083895e-05
+NO,20260931,model,0.040459094177724995
+NO,20260931,universe,0.3465872637596232
+NO,20260931,selection,0.01335007397466416
+NO,20260931,concentration,0.09573636875146846
+NO,20260931,cost,0.03696782261047863
+NO,20260931,model x universe,0.028722540036787324
+NO,20260931,model x selection,0.0855475443911283
+NO,20260931,model x concentration,0.004534443582854468
+NO,20260931,model x cost,0.009626488744643974
+NO,20260931,universe x selection,0.06203762282261041
+NO,20260931,universe x concentration,0.008786596586281777
+NO,20260931,universe x cost,0.0007650813642428295
+NO,20260931,selection x concentration,0.027777886812891617
+NO,20260931,selection x cost,0.0869333681389516
+NO,20260931,concentration x cost,0.005232850517160229
+NO,20260931,model x universe x selection,0.04318712190176072
+NO,20260931,model x universe x concentration,0.0024698315152805383
+NO,20260931,model x universe x cost,0.0004122304096537468
+NO,20260931,model x selection x concentration,0.028702725494353085
+NO,20260931,model x selection x cost,0.025145010911672875
+NO,20260931,model x concentration x cost,0.0013086640183178466
+NO,20260931,universe x selection x concentration,0.011935226039900257
+NO,20260931,universe x selection x cost,0.0016283732617837212
+NO,20260931,universe x concentration x cost,0.0001076139415051841
+NO,20260931,selection x concentration x cost,0.012961774907362335
+NO,20260931,model x universe x selection x concentration,0.012711528302765751
+NO,20260931,model x universe x selection x cost,0.0017617751653061068
+NO,20260931,model x universe x concentration x cost,0.00014107327499912487
+NO,20260931,model x selection x concentration x cost,0.003640951182511415
+NO,20260931,universe x selection x concentration x cost,0.00042559555001627045
+NO,20260931,model x universe x selection x concentration x cost,0.0003954578512988526
+NO,20260932,model,0.03205809427058732
+NO,20260932,universe,0.3054679775460246
+NO,20260932,selection,0.08452738606592855
+NO,20260932,concentration,0.03238502565418618
+NO,20260932,cost,0.04722611937348697
+NO,20260932,model x universe,0.06830789945389085
+NO,20260932,model x selection,0.11032162474376757
+NO,20260932,model x concentration,0.011808962521175947
+NO,20260932,model x cost,0.014562602876175291
+NO,20260932,universe x selection,0.026472711669111682
+NO,20260932,universe x concentration,0.0384575643625474
+NO,20260932,universe x cost,4.049313230589765e-05
+NO,20260932,selection x concentration,0.0038750348624768415
+NO,20260932,selection x cost,0.11441013027282647
+NO,20260932,concentration x cost,0.0037459905661447607
+NO,20260932,model x universe x selection,0.024547948569266943
+NO,20260932,model x universe x concentration,0.00645862803607397
+NO,20260932,model x universe x cost,3.180290217542163e-05
+NO,20260932,model x selection x concentration,0.010737401793826568
+NO,20260932,model x selection x cost,0.03697489501597581
+NO,20260932,model x concentration x cost,0.0007964077727990154
+NO,20260932,universe x selection x concentration,0.005123785674850844
+NO,20260932,universe x selection x cost,2.380941496786345e-05
+NO,20260932,universe x concentration x cost,7.979511836298559e-06
+NO,20260932,selection x concentration x cost,0.009174861296472193
+NO,20260932,model x universe x selection x concentration,0.010194954037402256
+NO,20260932,model x universe x selection x cost,7.993215617246208e-05
+NO,20260932,model x universe x concentration x cost,5.106319502098393e-06
+NO,20260932,model x selection x concentration x cost,0.002135404735750149
+NO,20260932,universe x selection x concentration x cost,1.662796473230973e-05
+NO,20260932,model x universe x selection x concentration x cost,2.2837427559282668e-05

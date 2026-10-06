@@ -1,0 +1,179 @@
+{
+  "title": "Corrected AI stock-picker design and dated amendments",
+  "initial_lock_commit": "0d65ef4",
+  "chronology": "Initial lock 2026-09-30; amendments 1-3 precede real model results. Amendment 4 follows the computed verdict: reporting aggregates and the omega wording threshold are post hoc, not pre-registered.",
+  "prior": "Earlier lab results were seen. No numerical probability prior is specified for the corrected run. The doubling check is confirmatory, not blind, and is outside the verdict.",
+  "effective_parameters": {
+    "PANEL_START": "2004-01-02",
+    "END": "2026-06-22",
+    "FIRST_TEST_YEAR": 2008,
+    "LAST_TEST_YEAR": 2026,
+    "MIN_DVOL": 5000000.0,
+    "PRICE_FLOOR": 5.0,
+    "TYPES": [
+      "CS"
+    ],
+    "TOP_N": 1000,
+    "SPIKE_FACTOR": 1.5,
+    "SPIKE_FACTOR_SPY": 1.1,
+    "SPLIT_TOL": 0.03,
+    "SPLIT_MIN_LOG": 0.22314355131420976,
+    "SCREEN_GUARD": 0.001,
+    "SEGMENT_GAP": 20,
+    "JOIN_SAME_TICKER_MAX_GAP": 126,
+    "JOIN_CIK_WINDOW": 30,
+    "JOIN_RATIO_BAND": [
+      0.5,
+      2.0
+    ],
+    "FEATURES": [
+      "ret_1",
+      "ret_5",
+      "ret_21",
+      "ret_63",
+      "ret_126",
+      "vol_21",
+      "vol_63",
+      "dma_21",
+      "dma_200",
+      "volz"
+    ],
+    "ELIG_BARS": 60,
+    "HORIZONS": [
+      1,
+      21,
+      126
+    ],
+    "TRAIN_CAP": 400000,
+    "TRAIN_MIN": 5000,
+    "LSTM_HIDDEN": 32,
+    "LSTM_LR": 0.001,
+    "LSTM_BATCH": 1024,
+    "LSTM_EPOCHS": 1,
+    "GBT_PARAMS": {
+      "n_estimators": 300,
+      "max_depth": 5,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "eval_metric": "logloss",
+      "tree_method": "hist"
+    },
+    "REAL_MODELS": [
+      "random",
+      "logistic",
+      "gbt",
+      "lstm"
+    ],
+    "TRAINED": [
+      "logistic",
+      "gbt",
+      "lstm"
+    ],
+    "UNIVERSES": [
+      "pit",
+      "surv"
+    ],
+    "SELECTIONS": [
+      "argmax_conf",
+      "fixed_1d",
+      "fixed_21d",
+      "fixed_126d"
+    ],
+    "CONCENTRATIONS": [
+      [
+        "top1",
+        1
+      ],
+      [
+        "top10_ew",
+        10
+      ]
+    ],
+    "COSTS_BPS": [
+      0.0,
+      5.0,
+      10.0,
+      20.0
+    ],
+    "DOSES": [
+      0.0,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "D_STAR": 0.03,
+    "STRESS_DELIST": -0.3,
+    "BASES": [
+      20260930,
+      20260931,
+      20260932
+    ],
+    "NULL_BASE": 20260930,
+    "N_NULL": 100
+  },
+  "model_label": "LSTM trained for one epoch; the earlier implementation used three epochs",
+  "label": "Above own-universe median of traded return; close t+1 to t+1+h; missing only beyond the final date.",
+  "execution": "Decide at close t, next-close fill; h trading days; gaps carry to resumption; missing-fill and empty sleeves are zero-interest cash; terminal liquidation charged.",
+  "cost": "Half round-trip bps times one-way drift-adjusted turnover; stress changes true ends only; old-cost sensitivity charges a full-book round trip on exit.",
+  "metrics": "Nominal price returns on 2008-01-03 to 2026-06-22; CAGR in calendar years; sample standard deviation; annual Sharpe sqrt(252), risk-free rate zero; drawdown from initial equity before charges.",
+  "amendments": [
+    {
+      "id": 1,
+      "time": "2026-09-30T02:41:13Z",
+      "class": "before model results",
+      "effect": "Approves design; one-epoch disclosure and code review required."
+    },
+    {
+      "id": 2,
+      "time": "2026-09-30T03:03:44Z",
+      "class": "before model results",
+      "effect": "Clarifies removed-bar screen, gap boundary, cash sleeves, liquidation costs, label median and date-mean calibration."
+    },
+    {
+      "id": 3,
+      "time": "2026-09-30T03:43:30Z",
+      "class": "before model results",
+      "effect": "Ticker-wide split reconstruction; security joins; raw-volume feature; float64 scores; complete window and null checks. Same-ticker resumes within 126 days or same-CIK starts within 30 days join if split-corrected ratio is between one half and two. Current identifiers remain limited."
+    },
+    {
+      "id": 4,
+      "time": "2026-09-30T04:47:36Z",
+      "class": "POST HOC, NOT PRE-REGISTERED; results already seen",
+      "effect": "Adds seed means and omega sums/ratios, plus the one-half systematic-wording cutoff; no threshold in the registered verdict changes. Historical before/after assertion execution was not recorded."
+    }
+  ],
+  "source_sha256": "735bb1a58478c06e08e3a229c84fa4aa45cce87238058286b1472c9701d181a6",
+  "read_amendments": "Amendment 3 replaces segment-level raw-price reconstruction and identity construction. Original paragraphs alone are not the effective design.",
+  "decision_rules": [
+    {
+      "branch": "REFUTED",
+      "locked_condition": "Model-containing share at least one half, or model main effect at least the setup main-effect sum, in at least two of three seeds in either variant."
+    },
+    {
+      "branch": "BROKEN rank trigger",
+      "locked_condition": "Model total effect ranks first, second or third among five factors in at least two of three seeds, in either variant."
+    },
+    {
+      "branch": "BROKEN size trigger",
+      "locked_condition": "Model-containing terms at least half the setup-only terms: M >= 1/3, in at least two of three seeds."
+    },
+    {
+      "branch": "Original main-effects bar",
+      "locked_condition": "Setup main-effect sum at least twice model main effect in every seed, both variants."
+    },
+    {
+      "branch": "INCONCLUSIVE",
+      "locked_condition": "Neither earlier branch fires and the main-effects bar fails."
+    },
+    {
+      "branch": "HOLDS",
+      "locked_condition": "Neither earlier branch fires and the main-effects bar passes; wording also depends on control/scope."
+    }
+  ],
+  "control_rule": "PASS only if IC 0.03 fires in both variants and IC 0 fires in neither; INDETERMINATE if IC 0 fires; otherwise FAIL.",
+  "scope_rule": "Within either stock list and either variant, rank among first two of four or M at least one third in two of three seeds narrows a HOLDS statement; it does not supersede BROKEN.",
+  "null_arm": "100 draws; NULL-SRC and four registered twins plus screened-hindsight sensitivity. Report median, 5th/95th percentiles and beat shares against matched SPY.",
+  "confirmatory_not_blind": "Median NULL-SRC CAGR at least twice price-only SPY CAGR, and horizon shares; outside every verdict condition.",
+  "descriptive": "CAGR attribution, stress and old-cost attribution, cost/turnover arithmetic, best cells, PIT/high-cost/basket corner, IC, omega and data/gate counts. Post-hoc reporting conventions are labelled separately."
+}
