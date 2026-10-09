@@ -1,0 +1,325 @@
+{
+  "episode": "D23",
+  "question": "A video says Claude + Upwork makes $7,500 a month. Is this worth my evenings and my money?",
+  "lock_commit": "55fe1b9",
+  "lock_utc": "2026-10-07 17:06:37 UTC",
+  "prereg_blob": "b14d4c0c1261a7c7d4f0262ca9a59be0a7219af1",
+  "arith_blob": "be14680cfe357379fcbf3a5259c01d0e6d8f83d1",
+  "arithmetic_reproduction": {
+    "byte_identical": true,
+    "planted_input_change_caught_by_its_output": true,
+    "hand_probes": 9
+  },
+  "inputs": {
+    "fee": {
+      "low": 0.0,
+      "high": 0.15,
+      "class": "SEC"
+    },
+    "connects_pack": {
+      "size": 100,
+      "price": 15.0,
+      "class": "UPW-DOC + SPEC"
+    },
+    "connects_per_proposal": {
+      "min": 4,
+      "max": 16,
+      "class": "UPW-DOC"
+    },
+    "freelancer_plus": {
+      "price": 19.99,
+      "connects": 100,
+      "class": "SPEC"
+    },
+    "boosted_connects": "a Connects bid, no fixed number",
+    "free_monthly_connects": "10 a month; 40 once on registration (page footer (c) 2015-2025)",
+    "claude_plan": {
+      "name": "Claude Pro",
+      "price": 20.0,
+      "class": "ANTHROPIC-DOC",
+      "bound": "cheapest plan with Cowork and Opus, billed monthly; $17/month billed annually; the Free plan can connect apps but has no Opus"
+    },
+    "fba_start_cash": null
+  },
+  "input_classes": {
+    "SEC": "an SEC filing",
+    "UPW-DOC": "an Upwork page or release",
+    "ANTHROPIC-DOC": "Anthropic's pricing page",
+    "SPEC": "the presenter's own figure, filmed in the video or in its guide (seen before the lock)"
+  },
+  "presenter_figures": {
+    "start_rate": 30.0,
+    "band_ends": [
+      40.0,
+      50.0,
+      60.0,
+      75.0
+    ],
+    "retainer": 1300.0,
+    "hours_per_retainer": 12.0,
+    "capacity_hours": 80.0,
+    "extra_project": 800.0,
+    "extra_project_hours": 10.0,
+    "direct_costs": 550.0
+  },
+  "provenance": "Fixed at the lock (55fe1b9): the questions, the leg rules, the thresholds, the verdict rule and the arithmetic script. Filled or found after it: the inputs (sources read after the lock, except two filmed values seen in the video before the lock and named in the plan as fallbacks: the Freelancer Plus price, and the Connects pack price, which an Upwork page read after the lock confirms; dated notes A2, A3 and A6), the leg grades, and the three readings of leg (c), found after seeing the data (dated note A9); the plan did not settle which reading it meant.",
+  "legs": [
+    {
+      "leg": "(a) the platform opens an on-ramp, dated",
+      "upwork_2026": "HOLDS - Upwork's own MCP, launched by 2026-08-10, freelancer agents \"draft a tailored proposal\"",
+      "fba_2018": "PARTLY - FBA opened in 2006, 12 years before the rush",
+      "grade": "PARTLY"
+    },
+    {
+      "leg": "(b) the house is paid whether or not you are hired",
+      "upwork_2026": "PARTLY - Connects are required to bid; Upwork raised the Connects per bid in 2023; never sized in 7 documents read",
+      "fba_2018": "HOLDS - $39.99 a month for Professional sellers, sale or no sale",
+      "grade": "PARTLY"
+    },
+    {
+      "leg": "(c) entrants crowd the same listings",
+      "upwork_2026": "no supply series in the sources we read: NOT TESTED (A) / FAILS (A2, B)",
+      "fba_2018": "NOT FOUND (1.2M+ new sellers in 2018, not shown rising)",
+      "grade": "NOT TESTED / FAILS"
+    },
+    {
+      "leg": "(d) sellers of the method earn regardless (beside the count)",
+      "upwork_2026": "PARTLY - method free; attention monetised; the Claude plan is paid either way if bought",
+      "fba_2018": "Jungle Scout sells tools and publishes the survey",
+      "grade": "PARTLY (observed before the plan was locked)"
+    }
+  ],
+  "readings_written_after_the_data": [
+    {
+      "reading": "A - pay per freelancer or per contract, categories by name",
+      "leg_c": "NOT TESTED",
+      "counts": "0, 2, 0, 1",
+      "label": "PARTLY",
+      "may_say": "\"partly\", with the counts"
+    },
+    {
+      "reading": "A2 - as A, with \"more complex work with AI\" (+45%, unit not stated; the same release reports per-contract earnings -13%) counted as \"AI automation\"",
+      "leg_c": "FAILS",
+      "counts": "0, 2, 1, 0",
+      "label": "FAILS",
+      "may_say": "\"this is not 2018\""
+    },
+    {
+      "reading": "B - totals count (AI video earnings +329%; AI Integration & Automation GSV up more than 50% year over year in Q1 2026)",
+      "leg_c": "FAILS",
+      "counts": "0, 2, 1, 0",
+      "label": "FAILS",
+      "may_say": "\"this is not 2018\""
+    }
+  ],
+  "figure_definitions": {
+    "+45%": "Upwork: freelancers doing more complex work with AI saw earnings increase 45% year over year (it does not say whether per person or in total); read only with: generative AI and creative production contract starts +90% and per-contract earnings -13% (Upwork's Future Workforce Index 2026 release)",
+    "+329%": "total US-demand freelancer earnings in the AI video generation and editing skill, 2025 vs 2024 (Upwork's In-Demand Skills 2026 release): demand, not a viewer's odds",
+    "AI Integration & Automation GSV up more than 50%": "gross services volume in that sub-category, year over year in Q1 2026 (Upwork's Q1 2026 results release); AI-related work overall grew more than 50%, then more than 40%, then more than 22% in Q4 2025, Q1 2026 and Q2 2026: still growing, but slowing"
+  },
+  "label_ruled_after_the_data": "CONTESTED: PARTLY on the narrow reading, FAILS on either wider reading; neither privileged",
+  "scale_line": "a rush in videos; a rush of entrants is not measured",
+  "humility": "We did not, and could not, test whether this method makes money. We have no Upwork account, we placed no bid, did no client work and surveyed no one who bought in. Every income figure we worked out in this video is what the method would need - not what anyone earned.",
+  "conflict": "Ground Truth is made with Claude - our producer-agent is Claude. We pay Anthropic, we hold no position in it, and neither Anthropic nor Upwork pays us. The method in this video, as filmed, runs on a paid Claude plan - so whichever way our verdict goes, it touches the company that makes our tools.",
+  "reopen": [
+    "Upwork publishes freelancer counts or proposals per job for 2025-26 -> leg (c) is graded on supply, as registered, and the readings stop mattering.",
+    "Upwork sizes its Connects / ads revenue -> (b) HOLDS at 2% of revenue or more, FAILS below.",
+    "The presenter shows permissioned evidence of a real $7,500 (or $6,500) month from this method -> the money claim becomes an outcome, and we say so.",
+    "A public copy of Jungle Scout's 2018-2020 start-up cost table -> the stakes comparison can be made, by the registered 1/10 rule.",
+    "Any public record of how many proposals a new freelancer sends per win in these categories -> A6/A9 become numbers instead of schedules."
+  ],
+  "sources": [
+    {
+      "source": "The video we checked: Kamil Sattar | Make Money With AI, \"Claude + Upwork = $7500/Month (Step By Step Guide)\"",
+      "url": "https://youtu.be/tp3-8woy808",
+      "retrieved_utc": "2026-10-07T16:33:47Z",
+      "sha256": ""
+    },
+    {
+      "source": "The presenter's channel page (video list; the subscriber count)",
+      "url": "https://www.youtube.com/@kamilsattar-ai/videos",
+      "retrieved_utc": "2026-10-07T16:39:44Z",
+      "sha256": "5d4f5fada7552cd38c4ee397f8737a5729601d4df6f54e981c101826cbb9b369"
+    },
+    {
+      "source": "The channel's 24 newest uploads (views, likes, comments; the 16:39 UTC view count)",
+      "url": "per-video pages",
+      "retrieved_utc": "2026-10-07T16:39:57Z",
+      "sha256": "eb559628522306eba6e001d8e52e0a74a443eb4cb66315bcc797f7119ff1e3f6"
+    },
+    {
+      "source": "The presenter's guide (the step-by-step page linked in the video's description)",
+      "url": "linked in the video description",
+      "retrieved_utc": "2026-10-07T16:42:48Z",
+      "sha256": "51d3e304381f8890a25f81150a6586100d9bc85e952db4f1b926930a33233444"
+    },
+    {
+      "source": "SEC EDGAR: Upwork's filing index",
+      "url": "https://data.sec.gov/submissions/CIK0001627475.json",
+      "retrieved_utc": "2026-10-07T17:15:22Z",
+      "sha256": "e68721282f748baf802a9714d74f22211e3fb85a08b593ad5fdc59cd38ffb4b4"
+    },
+    {
+      "source": "Upwork 10-K for 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000012/upwk-20251231.htm",
+      "retrieved_utc": "2026-10-07T17:15:30Z",
+      "sha256": "fd3b5e30afda61944ababa43a8cdeaead11685e944a79b2a68d2d7b4a122f45f"
+    },
+    {
+      "source": "Upwork 10-Q for Q2 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000047/upwk-20260630.htm",
+      "retrieved_utc": "2026-10-07T17:15:31Z",
+      "sha256": "77ace46cde1acb0d9a579d0fb9452b6dff245827a38b15a36e961e6dcb4088a9"
+    },
+    {
+      "source": "Upwork 10-Q for Q1 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000034/upwk-20260331.htm",
+      "retrieved_utc": "2026-10-07T17:15:33Z",
+      "sha256": "a6af0a9dfdaec791436addcdbeb413229b41faa050961a367e2870082a2841e7"
+    },
+    {
+      "source": "SEC EDGAR: Upwork 8-K of 2026-08-10, index",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000046/index.json",
+      "retrieved_utc": "2026-10-07T17:15:34Z",
+      "sha256": "dd1f7131a2f0fe1917792d6f2707c914823bdfe570e1347bbe976cab7d9c826d"
+    },
+    {
+      "source": "Upwork results release, Q2 2026 (SEC-filed, 2026-08-10)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000046/upwork2q26-pressrelease.htm",
+      "retrieved_utc": "2026-10-07T17:15:45Z",
+      "sha256": "845a94dc67fd617ba17ccf060b00fcb7a18c1e036c4508fd653aaf8d6a5b6e02"
+    },
+    {
+      "source": "Upwork's Connects calculator page (footer (c) 2015-2025; may predate 2026)",
+      "url": "https://wf-seo.upwork.com/tools/connects-calculator",
+      "retrieved_utc": "2026-10-07T17:17:21Z",
+      "sha256": "a2310c4e38998f976868810c47998fbfb184befce81e501a71f3e26969b317fb"
+    },
+    {
+      "source": "Anthropic's Claude pricing page",
+      "url": "https://claude.com/pricing",
+      "retrieved_utc": "2026-10-07T17:17:42Z",
+      "sha256": "f1d9b2b2daaeed90a145691f5516e8c0121ab370cb6d9c2dbd7ae9906a944263"
+    },
+    {
+      "source": "Upwork results release, Q1 2026 (SEC-filed)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000033/upwork1q26-pressrelease.htm",
+      "retrieved_utc": "2026-10-07T17:21:05Z",
+      "sha256": "db5fbb9b8677a94730dae1f914527ffd90a29a8e2abb11e19ff141c6680632ba"
+    },
+    {
+      "source": "Upwork results release, Q4 2025 (SEC-filed)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747526000005/exhibit991-upwork4q25andfu.htm",
+      "retrieved_utc": "2026-10-07T17:21:11Z",
+      "sha256": "1b9883a5a31dea07edf84284c47351df6b1cb3632a7022c07817c719497c3b27"
+    },
+    {
+      "source": "Amazon 10-K for 2018",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872419000004/amzn-20181231x10k.htm",
+      "retrieved_utc": "2026-10-07T17:21:36Z",
+      "sha256": "995e231d9ecd2106c4f6b0edc787bbb9a8eaa8079e46583065503ca5b3f0c00b"
+    },
+    {
+      "source": "Amazon 10-K for 2006",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312507034081/d10k.htm",
+      "retrieved_utc": "2026-10-07T17:21:56Z",
+      "sha256": "a2f9af9cf3553df9adec2509a00c78af06eb152131cfab7d3695f507ceb28bed"
+    },
+    {
+      "source": "Amazon 10-K for 2005",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000119312506034166/d10k.htm",
+      "retrieved_utc": "2026-10-07T17:22:06Z",
+      "sha256": "ef8e0f4ff1a8cfbc8fddfb1ce7c11b4ab628bd50e56f1999884cd8a47f27e06d"
+    },
+    {
+      "source": "Marketplace Pulse, Marketplaces Year in Review 2018",
+      "url": "https://www.marketplacepulse.com/marketplaces-year-in-review-2018",
+      "retrieved_utc": "2026-10-07T17:22:23Z",
+      "sha256": "52301478d70efb8d3f4b2b3bb07f93ed6b787cf2964f95931898a8719f9ba726"
+    },
+    {
+      "source": "Marketplace Pulse, Marketplaces Year in Review 2019",
+      "url": "https://www.marketplacepulse.com/marketplaces-year-in-review-2019",
+      "retrieved_utc": "2026-10-07T17:22:23Z",
+      "sha256": "df7fc299d685a23edf0c52b6fea9295d8b3e889c07e38cd83fa2d188bf682920"
+    },
+    {
+      "source": "Marketplace Pulse, Amazon has added three million sellers since 2017",
+      "url": "https://www.marketplacepulse.com/articles/amazon-has-added-three-million-sellers-since-2017",
+      "retrieved_utc": "2026-10-07T17:22:24Z",
+      "sha256": "c257fdce63d50cf6fad2c9c9455ddc5f5b31d08639959299b8429b41848d8424"
+    },
+    {
+      "source": "Jungle Scout, Amazon seller report 2020 results page (its survey: November 14 - December 10, 2019)",
+      "url": "https://www.junglescout.com/amazon-seller-report/2020-results/",
+      "retrieved_utc": "2026-10-07T17:22:50Z",
+      "sha256": "6ab8bce38fab3eb9a65eab42e029e6234c1823a04200d94da1f578174264efe2"
+    },
+    {
+      "source": "Jungle Scout, Amazon seller report index",
+      "url": "https://www.junglescout.com/amazon-seller-report/",
+      "retrieved_utc": "2026-10-07T17:22:51Z",
+      "sha256": "ae1c4d72eb271c6864ab3c4406aaeb905eb134c98520b8c954c0d2f8f9bf7794"
+    },
+    {
+      "source": "Jungle Scout, State of the Amazon Seller 2020 (archived 2020-04-09)",
+      "url": "https://web.archive.org/web/20200409190445id_/https://www.junglescout.com/amazon-seller-report/",
+      "retrieved_utc": "2026-10-07T17:23:25Z",
+      "sha256": "9f0cf44cecde28ed96a67cde90e183e2ad076e60cfb4c7658682ce18afe68c0d"
+    },
+    {
+      "source": "Upwork 10-K for 2023",
+      "url": "https://www.sec.gov/Archives/edgar/data/1627475/000162747524000012/upwk-20231231.htm",
+      "retrieved_utc": "2026-10-07T17:26:09Z",
+      "sha256": "7b5205da1e4520d4d12c42113e2dc2c5ff5f23919d7b4f27613871d3c8f28343"
+    },
+    {
+      "source": "Amazon seller pricing page (archived 2018-11-27)",
+      "url": "https://web.archive.org/web/20181127233129id_/https://services.amazon.com/selling/pricing.html",
+      "retrieved_utc": "2026-10-07T17:46:04Z",
+      "sha256": "3046f324fe0807239a0e3e5af3f1de55d0b4e65d88887006052bc138a6ce14a7"
+    },
+    {
+      "source": "Jungle Scout, State of the Amazon Seller 2021 (out of the registered window; report-only)",
+      "url": "https://www.junglescout.com/wp-content/uploads/2021/02/State-of-the-Amazon-Seller-2021-Jungle-Scout.pdf",
+      "retrieved_utc": "2026-10-07T17:23:54Z",
+      "sha256": "c9b48f17a96f924016110b30d21d58df0f2581b17d41038572b9c77825e9f6c5"
+    },
+    {
+      "source": "Hui, Reshef & Zhou, SSRN 4527336 (2023), as re-hosted",
+      "url": "https://www.enriquedans.com/wp-content/uploads/2023/11/Short-Term-Effects-of-Generative-AI-Employment-SSRN.pdf",
+      "retrieved_utc": "2026-10-07T17:24:37Z",
+      "sha256": "9052925ad9bcf118a313dc0bcb9c75b2ea476d1bb152f719b9abc4b291d94de2"
+    },
+    {
+      "source": "Demirci, Hannane & Zhu, CESifo Working Paper 11276 (2024)",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11276.pdf",
+      "retrieved_utc": "2026-10-07T17:25:48Z",
+      "sha256": "1d60e0ffd4397ad903afb50bba99790cd52c0c36a3207d331ed74e9e794496b5"
+    },
+    {
+      "source": "Upwork release: In-Demand Skills 2026",
+      "url": "https://www.globenewswire.com/news-release/2026/02/04/3232122/0/en/upwork-s-in-demand-skills-2026-demand-for-top-ai-skills-more-than-doubles-as-ai-is-embedded-into-everyday-work.html",
+      "retrieved_utc": "2026-10-07",
+      "sha256": ""
+    },
+    {
+      "source": "Upwork release: Future Workforce Index 2026",
+      "url": "https://www.globenewswire.com/news-release/2026/07/14/3326964/0/en/upwork-s-future-workforce-index-2026-how-ai-is-redefining-the-value-of-work-as-skilled-freelancing-accelerates.html",
+      "retrieved_utc": "2026-10-07",
+      "sha256": ""
+    },
+    {
+      "source": "Upwork release: the MCP server launch (2026-08-10)",
+      "url": "https://www.globenewswire.com/news-release/2026/08/10/3342153/0/en/upwork-talent-is-now-everywhere-ai-works.html",
+      "retrieved_utc": "2026-10-07",
+      "sha256": ""
+    },
+    {
+      "source": "Upwork's own video description for its MCP server",
+      "url": "https://www.youtube.com/watch?v=A46Z4SPbNQE",
+      "retrieved_utc": "2026-10-07T17:16:23Z",
+      "sha256": ""
+    }
+  ]
+}

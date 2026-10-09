@@ -1,0 +1,132 @@
+n,section,row,column,value
+1,A1 - net of Upwork's fee,"title $7,500 at fee 0.0%",net N = G(1-f),"$7,500"
+2,A1 - net of Upwork's fee,"title $7,500 at fee 0.0%",gross needed to NET G: G* = G/(1-f),"$7,500"
+3,A1 - net of Upwork's fee,"title $7,500 at fee 15.0%",net N = G(1-f),"$6,375"
+4,A1 - net of Upwork's fee,"title $7,500 at fee 15.0%",gross needed to NET G: G* = G/(1-f),"$8,824"
+5,A1 - net of Upwork's fee,"guide $6,500 at fee 0.0%",net N = G(1-f),"$6,500"
+6,A1 - net of Upwork's fee,"guide $6,500 at fee 0.0%",gross needed to NET G: G* = G/(1-f),"$6,500"
+7,A1 - net of Upwork's fee,"guide $6,500 at fee 15.0%",net N = G(1-f),"$5,525"
+8,A1 - net of Upwork's fee,"guide $6,500 at fee 15.0%",gross needed to NET G: G* = G/(1-f),"$7,647"
+9,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 0.0%",retainers for G,6
+10,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 0.0%",hours (retainers for G),72 h
+11,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 0.0%",retainers to NET G,6
+12,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 0.0%",hours (retainers to NET G),72 h
+13,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 15.0%",retainers for G,6
+14,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 15.0%",hours (retainers for G),72 h
+15,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 15.0%",retainers to NET G,7
+16,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","title $7,500 at fee 15.0%",hours (retainers to NET G),84 h
+17,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 0.0%",retainers for G,5
+18,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 0.0%",hours (retainers for G),60 h
+19,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 0.0%",retainers to NET G,5
+20,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 0.0%",hours (retainers to NET G),60 h
+21,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 15.0%",retainers for G,5
+22,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 15.0%",hours (retainers for G),60 h
+23,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 15.0%",retainers to NET G,6
+24,"A3 - retainers held at once ($1,300 each, 12 h each; the guide's capacity is 80 h)","guide $6,500 at fee 15.0%",hours (retainers to NET G),72 h
+25,A8 - the guide's effective rate,note,note,"$1,300 / 12 h = $108/h per retainer hour; that is 3.6x $30, 2.7x $40, 2.2x $50, 1.8x $60, 1.4x $75."
+26,"A7 / A7b - the gap, and closing it inside the guide's calculator",note,note,"Title minus guide: $1,000 = 15.4% of $6,500."
+27,"A7 / A7b - the gap, and closing it inside the guide's calculator",note,note,"With $800 extra projects: 2 needed -> 5 x $1,300 + 2 x $800 = $8,100 at 60 + 20 = 80 of 80 h."
+28,"A7 / A7b - the gap, and closing it inside the guide's calculator",note,note,"With $2,000 pages: 1 needed -> $8,500 at 70 of 80 h (10 h assumed per page, the calculator's extra-project hours)."
+29,"A7 / A7b - the gap, and closing it inside the guide's calculator",note,note,"The guide's default leaves 20 h for ""sales, revisions and administration""; the title uses some or all of it."
+30,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 0.0%",h at $30 (gross / to net),250 / 250
+31,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 0.0%",h at $40 (gross / to net),188 / 188
+32,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 0.0%",h at $50 (gross / to net),150 / 150
+33,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 0.0%",h at $60 (gross / to net),125 / 125
+34,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 0.0%",h at $75 (gross / to net),100 / 100
+35,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 15.0%",h at $30 (gross / to net),250 / 295
+36,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 15.0%",h at $40 (gross / to net),188 / 221
+37,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 15.0%",h at $50 (gross / to net),150 / 177
+38,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 15.0%",h at $60 (gross / to net),125 / 148
+39,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"title $7,500 at fee 15.0%",h at $75 (gross / to net),100 / 118
+40,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 0.0%",h at $30 (gross / to net),217 / 217
+41,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 0.0%",h at $40 (gross / to net),163 / 163
+42,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 0.0%",h at $50 (gross / to net),130 / 130
+43,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 0.0%",h at $60 (gross / to net),109 / 109
+44,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 0.0%",h at $75 (gross / to net),87 / 87
+45,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 15.0%",h at $30 (gross / to net),217 / 255
+46,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 15.0%",h at $40 (gross / to net),163 / 192
+47,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 15.0%",h at $50 (gross / to net),130 / 153
+48,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 15.0%",h at $60 (gross / to net),109 / 128
+49,A2 - billed hourly at a flat rate (NOT the guide's path; the guide's capacity is 80 h; a 40-h week = 173 h),"guide $6,500 at fee 15.0%",h at $75 (gross / to net),87 / 102
+50,"A4 - one-off work needed per month, every month (rounded up)","title $7,500",$900 packages,9
+51,"A4 - one-off work needed per month, every month (rounded up)","title $7,500","$1,800 packages",5
+52,"A4 - one-off work needed per month, every month (rounded up)","title $7,500",$800 pages,10
+53,"A4 - one-off work needed per month, every month (rounded up)","title $7,500","$2,000 pages",4
+54,"A4 - one-off work needed per month, every month (rounded up)","guide $6,500",$900 packages,8
+55,"A4 - one-off work needed per month, every month (rounded up)","guide $6,500","$1,800 packages",4
+56,"A4 - one-off work needed per month, every month (rounded up)","guide $6,500",$800 pages,9
+57,"A4 - one-off work needed per month, every month (rounded up)","guide $6,500","$2,000 pages",4
+58,A5 - the guide's calculator re-run with the fee,fee = 0.0%,gross,"$6,500"
+59,A5 - the guide's calculator re-run with the fee,fee = 0.0%,after fee,"$6,500"
+60,A5 - the guide's calculator re-run with the fee,fee = 0.0%,after fee and the $550 default,"$5,950"
+61,A5 - the guide's calculator re-run with the fee,fee = 0.0%,guide's own figure (fee excluded),"$5,950"
+62,A5 - the guide's calculator re-run with the fee,fee = 15.0%,gross,"$6,500"
+63,A5 - the guide's calculator re-run with the fee,fee = 15.0%,after fee,"$5,525"
+64,A5 - the guide's calculator re-run with the fee,fee = 15.0%,after fee and the $550 default,"$4,975"
+65,A5 - the guide's calculator re-run with the fee,fee = 15.0%,guide's own figure (fee excluded),"$5,950"
+66,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,bids one pack buys (floor),25
+67,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,B = 5,$3
+68,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,B = 10,$6
+69,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,B = 25,$15
+70,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,B = 50,$30
+71,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 4,B = 100,$60
+72,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,bids one pack buys (floor),6
+73,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,B = 5,$12
+74,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,B = 10,$24
+75,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,B = 25,$60
+76,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,B = 50,$120
+77,A6 - Connects cost of bidding per win (schedule; no win rate assumed),c per proposal = 16,B = 100,$240
+78,A6 - Connects cost of bidding per win (schedule; no win rate assumed),break-even definition,note,"Break-even B* = bids per win at which Connects equal one month of NET REVENUE on one retainer, 1,300(1-f)/(c p) (assumes a one-month retainer; see A9):"
+79,A6 - Connects cost of bidding per win (schedule; no win rate assumed),note,note,"fee 0.0%, c = 4: B* = 2,167 bids per win"
+80,A6 - Connects cost of bidding per win (schedule; no win rate assumed),note,note,"fee 0.0%, c = 16: B* = 542 bids per win"
+81,A6 - Connects cost of bidding per win (schedule; no win rate assumed),note,note,"fee 15.0%, c = 4: B* = 1,842 bids per win"
+82,A6 - Connects cost of bidding per win (schedule; no win rate assumed),"note (printed as stored; the plan rounds bid counts up, to 461: dated note A10)",note,"fee 15.0%, c = 16: B* = 460 bids per win"
+83,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 1",wins / month,6.00
+84,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 1",bids/mo at B=10 (Connects $ at c=4 / c=16),60 ($36 / $144)
+85,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 1",bids/mo at B=25 (Connects $ at c=4 / c=16),150 ($90 / $360)
+86,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 1",bids/mo at B=50 (Connects $ at c=4 / c=16),300 ($180 / $720)
+87,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 3",wins / month,2.00
+88,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 3",bids/mo at B=10 (Connects $ at c=4 / c=16),20 ($12 / $48)
+89,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 3",bids/mo at B=25 (Connects $ at c=4 / c=16),50 ($30 / $120)
+90,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 3",bids/mo at B=50 (Connects $ at c=4 / c=16),100 ($60 / $240)
+91,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 6",wins / month,1.00
+92,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 6",bids/mo at B=10 (Connects $ at c=4 / c=16),10 ($6 / $24)
+93,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 6",bids/mo at B=25 (Connects $ at c=4 / c=16),25 ($15 / $60)
+94,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 6",bids/mo at B=50 (Connects $ at c=4 / c=16),50 ($30 / $120)
+95,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 12",wins / month,0.50
+96,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 12",bids/mo at B=10 (Connects $ at c=4 / c=16),5 ($3 / $12)
+97,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 12",bids/mo at B=25 (Connects $ at c=4 / c=16),13 ($7.80 / $31.20)
+98,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"title $7,500 -> k = 6 retainers: L (months) = 12",bids/mo at B=50 (Connects $ at c=4 / c=16),25 ($15 / $60)
+99,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 1",wins / month,5.00
+100,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 1",bids/mo at B=10 (Connects $ at c=4 / c=16),50 ($30 / $120)
+101,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 1",bids/mo at B=25 (Connects $ at c=4 / c=16),125 ($75 / $300)
+102,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 1",bids/mo at B=50 (Connects $ at c=4 / c=16),250 ($150 / $600)
+103,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 3",wins / month,1.67
+104,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 3",bids/mo at B=10 (Connects $ at c=4 / c=16),17 ($10.20 / $40.80)
+105,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 3",bids/mo at B=25 (Connects $ at c=4 / c=16),42 ($25.20 / $101)
+106,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 3",bids/mo at B=50 (Connects $ at c=4 / c=16),84 ($50.40 / $202)
+107,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 6",wins / month,0.83
+108,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 6",bids/mo at B=10 (Connects $ at c=4 / c=16),9 ($5.40 / $21.60)
+109,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 6",bids/mo at B=25 (Connects $ at c=4 / c=16),21 ($12.60 / $50.40)
+110,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 6",bids/mo at B=50 (Connects $ at c=4 / c=16),42 ($25.20 / $101)
+111,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 12",wins / month,0.42
+112,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 12",bids/mo at B=10 (Connects $ at c=4 / c=16),5 ($3 / $12)
+113,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 12",bids/mo at B=25 (Connects $ at c=4 / c=16),11 ($6.60 / $26.40)
+114,A9 - wins and bids needed per month to hold the A3 retainers (schedule over lifetime L and bids per win B),"guide $6,500 -> k = 5 retainers: L (months) = 12",bids/mo at B=50 (Connects $ at c=4 / c=16),21 ($12.60 / $50.40)
+115,A10 - cash at risk before a first win,months to first win = 1,"Connects (B = 100, c = 16)",$240
+116,A10 - cash at risk before a first win,months to first win = 1,+ Claude plan,$20
+117,A10 - cash at risk before a first win,months to first win = 1,+ Freelancer Plus,$19.99
+118,A10 - cash at risk before a first win,months to first win = 1,+ the guide's $550/month,$550
+119,A10 - cash at risk before a first win,months to first win = 1,Upwork upper bound,$830
+120,A10 - cash at risk before a first win,months to first win = 2,"Connects (B = 100, c = 16)",$240
+121,A10 - cash at risk before a first win,months to first win = 2,+ Claude plan,$40
+122,A10 - cash at risk before a first win,months to first win = 2,+ Freelancer Plus,$39.98
+123,A10 - cash at risk before a first win,months to first win = 2,+ the guide's $550/month,"$1,100"
+124,A10 - cash at risk before a first win,months to first win = 2,Upwork upper bound,"$1,420"
+125,A10 - cash at risk before a first win,months to first win = 3,"Connects (B = 100, c = 16)",$240
+126,A10 - cash at risk before a first win,months to first win = 3,+ Claude plan,$60
+127,A10 - cash at risk before a first win,months to first win = 3,+ Freelancer Plus,$59.97
+128,A10 - cash at risk before a first win,months to first win = 3,+ the guide's $550/month,"$1,650"
+129,A10 - cash at risk before a first win,months to first win = 3,Upwork upper bound,"$2,010"
+130,A10 - cash at risk before a first win,note,note,"Time: the guide's 30-day plan (the presenter's figure); hours not stated by the guide, so not priced."
+131,A10 - cash at risk before a first win,note,note,"FBA start-up cash: NOT FOUND - no ratio printed, and no stakes sentence may be said (our pre-registration, section 6)."
