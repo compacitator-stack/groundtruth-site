@@ -1,0 +1,53 @@
+clause,name,what_it_asks,plan_section,result,grade
+1,lock,the plan committed before any return of these baskets or of the S&P 500 fund,plan section lock,the results file records the plan lock commit ecec8d39e2a2cb7301c8b99e7421d20a6b08cb58,VERIFIED
+2,R2/R2b A1,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 3674 'Semiconductors & Related Devices', leader NVDA",PASS (no hard stop)
+3,R4 A1,>= 10 members,plan section 2.1 (R4),98 members,PASS
+4,R2/R2b A2,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 3711 'Motor Vehicles & Passenger Car Bodies', leader TSLA",PASS (no hard stop)
+5,R4 A2,>= 10 members,plan section 2.1 (R4),23 members,PASS
+6,R2/R2b A3,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 2833 'Medicinal Chemicals & Botanical Products', leader none",PASS (no hard stop)
+7,R4 A3,>= 10 members,plan section 2.1 (R4),10 members,PASS
+8,R2/R2b A4,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 2836 'Biological Products, (No Diagnostic Substances)', leader BNTX",PASS (no hard stop)
+9,R4 A4,>= 10 members,plan section 2.1 (R4),141 members,PASS
+10,R2/R2b A5,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 7370 'Services-Computer Programming, Data Processing, Etc.', leader ZM",PASS (no hard stop)
+11,R4 A5,>= 10 members,plan section 2.1 (R4),48 members,PASS
+12,R2/R2b A6,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 7370 'Services-Computer Programming, Data Processing, Etc.', leader FB",PASS (no hard stop)
+13,R4 A6,>= 10 members,plan section 2.1 (R4),18 members,PASS
+14,R2/R2b A7,code = leader's code as of D; description names the business,plan section 2.1 (R2),"code 7372 'Services-Prepackaged Software', leader PLTR",PASS (no hard stop)
+15,R4 A7,>= 10 members,plan section 2.1 (R4),251 members,PASS
+16,K1 A1,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -26.5 pts (basket +48.2% vs SPY +74.7%, N 98)",FALSE
+17,K2 A1,median member beat SPY over 3 y,plan section 6.1 (K2),gap -84.5 pts (median -9.8%),FALSE
+18,K1 A2,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -42.8 pts (basket -8.4% vs SPY +34.4%, N 23)",FALSE
+19,K2 A2,median member beat SPY over 3 y,plan section 6.1 (K2),gap -33.4 pts (median +1.0%),FALSE
+20,K1 A3,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -77.9 pts (basket -10.2% vs SPY +67.7%, N 10)",FALSE
+21,K2 A3,median member beat SPY over 3 y,plan section 6.1 (K2),gap -95.8 pts (median -28.1%),FALSE
+22,K1 A4,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -82.8 pts (basket -54.8% vs SPY +28.0%, N 141)",FALSE
+23,K2 A4,median member beat SPY over 3 y,plan section 6.1 (K2),gap -104.2 pts (median -76.2%),FALSE
+24,K1 A5,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -68.3 pts (basket -34.4% vs SPY +33.9%, N 48)",FALSE
+25,K2 A5,median member beat SPY over 3 y,plan section 6.1 (K2),gap -84.9 pts (median -51.0%),FALSE
+26,K1 A6,basket beat SPY over 3 y,plan section 6.1 (K1),"registered rule: the basket gap is above zero, but it rests on a data error we caught; the figure is withheld. With the flagged member removed: -39.0 pts",TRUE by the registered rule; a data error (0 with it removed)
+27,K2 A6,median member beat SPY over 3 y,plan section 6.1 (K2),gap -18.4 pts (median +56.2%),FALSE
+28,K1 A7,basket beat SPY over 3 y,plan section 6.1 (K1),"gap -37.8 pts (basket +36.9% vs SPY +74.7%, N 251)",FALSE
+29,K2 A7,median member beat SPY over 3 y,plan section 6.1 (K2),gap -63.6 pts (median +11.1%),FALSE
+30,counts,K1 / K2 of N,plan section 6.2,K1 1 of 7; K2 0 of 7,PRINTED
+31,label,SUPPORT / LOTTERY / AGAINST / SPLIT / UNDECIDED,plan section 6.3,AGAINST,AGAINST
+32,robust (i),Arm B label equals Arm A's,plan section 6.4,Arm B LOTTERY,FAIL
+33,robust (ii),every leave-one-out label equals Arm A's,plan section 6.4,"A1->AGAINST, A2->AGAINST, A3->AGAINST, A4->AGAINST, A5->AGAINST, A6->AGAINST, A7->AGAINST",PASS
+34,fragility exit,variant labels equal the headline,plan section 6.5,exit_minus30->AGAINST,STABLE
+35,fragility hole,variant labels equal the headline,plan section 6.5,hole_low->AGAINST; hole_high->AGAINST,STABLE
+36,fragility qa,variant labels equal the headline,plan section 6.5,qa_excluded->AGAINST,STABLE
+37,fragility timing,variant labels equal the headline,plan section 6.5,timing_-63->AGAINST; timing_+63->AGAINST,STABLE
+38,report-only,1-year label; post-run subset; pooled,plan section 6.6,1y AGAINST; after the run AGAINST; pooled beat 114 of 589,PRINTED
+39,prior A1,our written prior basket unsure / median no,plan section 2.4,result basket no / median no,n/a (unsure) / MATCH
+40,prior A2,our written prior basket no / median no,plan section 2.4,result basket no / median no,MATCH / MATCH
+41,prior A3,our written prior basket no / median no,plan section 2.4,result basket no / median no,MATCH / MATCH
+42,prior A4,our written prior basket no / median no,plan section 2.4,result basket no / median no,MATCH / MATCH
+43,prior A5,our written prior basket no / median no,plan section 2.4,result basket no / median no,MATCH / MATCH
+44,prior A6,our written prior basket unsure / median unsure,plan section 2.4,"result basket yes by the registered rule, a data error (no with it removed) / median no",n/a (unsure) / n/a (unsure)
+45,prior A7,our written prior basket no / median no,plan section 2.4,result basket no / median no,MATCH / MATCH
+46,M3-M8 A1,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 24 of 98; ended 8 (3 collapsed); winner CRDO; k 8; after the run False,PRINTED
+47,M3-M8 A2,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 7 of 23; ended 3 (1 collapsed); winner FSS; k 2; after the run True,PRINTED
+48,M3-M8 A3,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 2 of 10; ended 1 (0 collapsed); winner MTEX; k 1; after the run False,PRINTED
+49,M3-M8 A4,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 12 of 141; ended 23 (13 collapsed); winner KRYS; k 13; after the run True,PRINTED
+50,M3-M8 A5,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 5 of 48; ended 11 (2 collapsed); winner SWCH; k 5; after the run True,PRINTED
+51,M3-M8 A6,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 5 of 18; ended 0 (0 collapsed); best member withheld (the data error); k 6; after the run False,PRINTED
+52,M3-M8 A7,beat N of M; ended; winner; leader; hole k; post-run,plan section 5 (M3-M8),beat 59 of 251; ended 60 (6 collapsed); winner SOUN; k 20; after the run False,PRINTED

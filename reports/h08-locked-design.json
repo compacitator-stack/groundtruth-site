@@ -1,0 +1,302 @@
+{
+  "title": "Locked design: every rule written and committed before any return of these baskets was computed",
+  "plan_lock_commit": "ecec8d39e2a2cb7301c8b99e7421d20a6b08cb58",
+  "plan_lock_time_utc": "2026-10-06T08:02:06Z",
+  "first_execution_utc": "2026-10-06T08:02:11Z",
+  "provenance": "The plan was committed before the returns engine first ran. Sections 0-9 of the plan are unchanged since the lock; two dated addenda follow it. These are repository timestamps, not an independent external timestamp attestation.",
+  "seen_before_lock": "No forward return of these baskets, or of the S&P 500 fund over their windows, was computed, printed or read before the lock. One exception, in another universe: an earlier topic-shortlist probe printed one-year returns of 60 large US listings and of the S&P 500 fund over those windows; none is a basket window. Scripts before it read only reference data, which tickers traded on a date, trailing dollar volume and, to link a renamed ticker, the closes around one hand-off day.",
+  "blind_review": "An independent blind review read the draft plan and every lab script before the lock and computed no return: 14 findings (3 blocker, 5 major, 6 minor), each fixed or answered before the lock.",
+  "question": "At a public hype moment, does buying every listed company in the hot stock's industry, the hot stock itself left out, beat the S&P 500 over three years, as a basket and as its typical stock?",
+  "moments": {
+    "A1": {
+      "arm": "named moment",
+      "date": "2022-11-30",
+      "event": "OpenAI releases ChatGPT",
+      "basket": "chip makers: semiconductors, solar-cell makers included",
+      "industry_code": "3674",
+      "industry_sec": "Semiconductors & Related Devices",
+      "hot_stock_left_out": "NVDA",
+      "members": 98
+    },
+    "A2": {
+      "arm": "named moment",
+      "date": "2020-12-21",
+      "event": "Tesla's first session in the S&P 500",
+      "basket": "car and truck makers",
+      "industry_code": "3711",
+      "industry_sec": "Motor Vehicles & Passenger Car Bodies",
+      "hot_stock_left_out": "TSLA",
+      "members": 23
+    },
+    "A3": {
+      "arm": "named moment",
+      "date": "2018-10-17",
+      "event": "Canada's Cannabis Act takes effect",
+      "basket": "medicinal and botanical products: 3 cannabis growers, 5 supplement makers, 2 drug developers",
+      "industry_code": "2833",
+      "industry_sec": "Medicinal Chemicals & Botanical Products",
+      "hot_stock_left_out": null,
+      "members": 10
+    },
+    "A4": {
+      "arm": "named moment",
+      "date": "2020-11-09",
+      "event": "Pfizer and BioNTech announce their vaccine's interim efficacy result",
+      "basket": "biotech (biologics); two vaccine makers among them",
+      "industry_code": "2836",
+      "industry_sec": "Biological Products, (No Diagnostic Substances)",
+      "hot_stock_left_out": "BNTX",
+      "members": 141
+    },
+    "A5": {
+      "arm": "named moment",
+      "date": "2020-09-01",
+      "event": "first session after Zoom's blowout quarter",
+      "basket": "internet and data-processing companies",
+      "industry_code": "7370",
+      "industry_sec": "Services-Computer Programming, Data Processing, Etc.",
+      "hot_stock_left_out": "ZM",
+      "members": 48
+    },
+    "A6": {
+      "arm": "named moment",
+      "date": "2012-05-18",
+      "event": "Facebook's first day of trading",
+      "basket": "internet and data-processing companies",
+      "industry_code": "7370",
+      "industry_sec": "Services-Computer Programming, Data Processing, Etc.",
+      "hot_stock_left_out": "FB",
+      "members": 18
+    },
+    "A7": {
+      "arm": "named moment",
+      "date": "2022-11-30",
+      "event": "OpenAI releases ChatGPT: the software half of the same day",
+      "basket": "packaged software",
+      "industry_code": "7372",
+      "industry_sec": "Services-Prepackaged Software",
+      "hot_stock_left_out": "PLTR",
+      "members": 251
+    },
+    "S1": {
+      "arm": "side check",
+      "date": "2023-05-25",
+      "event": "first session after Nvidia's May 2023 earnings report",
+      "basket": "chip makers: semiconductors, solar-cell makers included",
+      "industry_code": "3674",
+      "industry_sec": "Semiconductors & Related Devices",
+      "hot_stock_left_out": "NVDA",
+      "members": 97
+    },
+    "S2": {
+      "arm": "side check",
+      "date": "2020-12-31",
+      "event": "the Tesla moment dated at year-end 2020 instead",
+      "basket": "car and truck makers",
+      "industry_code": "3711",
+      "industry_sec": "Motor Vehicles & Passenger Car Bodies",
+      "hot_stock_left_out": "TSLA",
+      "members": 23
+    },
+    "B-XOM": {
+      "arm": "rule-picked moment",
+      "date": "2008-12-03",
+      "event": "first day in our data (from 2004) that Exxon Mobil was America's most-traded stock",
+      "basket": "petroleum refiners",
+      "industry_code": "2911",
+      "industry_sec": "Petroleum Refining",
+      "hot_stock_left_out": "XOM",
+      "members": 23
+    },
+    "B-JPM": {
+      "arm": "rule-picked moment",
+      "date": "2009-03-27",
+      "event": "first day in our data (from 2004) that JPMorgan Chase was America's most-traded stock",
+      "basket": "national commercial banks",
+      "industry_code": "6021",
+      "industry_sec": "National Commercial Banks",
+      "hot_stock_left_out": "JPM",
+      "members": 78
+    },
+    "B-AMZN": {
+      "arm": "rule-picked moment",
+      "date": "2016-11-10",
+      "event": "first day in our data (from 2004) that Amazon was America's most-traded stock",
+      "basket": "catalog and mail-order retailers",
+      "industry_code": "5961",
+      "industry_sec": "Retail-Catalog & Mail-Order Houses",
+      "hot_stock_left_out": "AMZN",
+      "members": 12
+    },
+    "B-NVDA": {
+      "arm": "rule-picked moment",
+      "date": "2017-07-17",
+      "event": "first day in our data (from 2004) that Nvidia was America's most-traded stock",
+      "basket": "semiconductors (Enphase, a solar company, files under this code)",
+      "industry_code": "3674",
+      "industry_sec": "Semiconductors & Related Devices",
+      "hot_stock_left_out": "NVDA",
+      "members": 98
+    },
+    "B-TSLA": {
+      "arm": "rule-picked moment",
+      "date": "2020-02-03",
+      "event": "first day in our data (from 2004) that Tesla was America's most-traded stock",
+      "basket": "car and truck makers",
+      "industry_code": "3711",
+      "industry_sec": "Motor Vehicles & Passenger Car Bodies",
+      "hot_stock_left_out": "TSLA",
+      "members": 18
+    }
+  },
+  "rule_picked_events": [
+    {
+      "id": "B-GOOG",
+      "date": "2004-10-26",
+      "kept": false,
+      "reason": "the hot stock has no readable industry code on the date"
+    },
+    {
+      "id": "B-EBAY",
+      "date": "2005-01-25",
+      "kept": false,
+      "reason": "a catch-all industry code"
+    },
+    {
+      "id": "B-AAPL",
+      "date": "2006-08-22",
+      "kept": false,
+      "reason": "fewer than 10 members (5 members)"
+    },
+    {
+      "id": "B-XOM",
+      "date": "2008-12-03",
+      "kept": true,
+      "reason": "kept"
+    },
+    {
+      "id": "B-JPM",
+      "date": "2009-03-27",
+      "kept": true,
+      "reason": "kept"
+    },
+    {
+      "id": "B-BAC",
+      "date": "2009-04-02",
+      "kept": false,
+      "reason": "the same industry code as a kept event less than three years earlier"
+    },
+    {
+      "id": "B-C",
+      "date": "2009-09-01",
+      "kept": false,
+      "reason": "the same industry code as a kept event less than three years earlier"
+    },
+    {
+      "id": "B-GE",
+      "date": "2015-11-25",
+      "kept": false,
+      "reason": "fewer than 10 members (2 members)"
+    },
+    {
+      "id": "B-AMZN",
+      "date": "2016-11-10",
+      "kept": true,
+      "reason": "kept"
+    },
+    {
+      "id": "B-NVDA",
+      "date": "2017-07-17",
+      "kept": true,
+      "reason": "kept"
+    },
+    {
+      "id": "B-TSLA",
+      "date": "2020-02-03",
+      "kept": true,
+      "reason": "kept"
+    },
+    {
+      "id": "B-BA",
+      "date": "2020-06-18",
+      "kept": false,
+      "reason": "fewer than 10 members (3 members)"
+    },
+    {
+      "id": "B-AMC",
+      "date": "2021-06-18",
+      "kept": false,
+      "reason": "fewer than 10 members (3 members)"
+    }
+  ],
+  "rule_picked_rule": "On every session, rank common stocks and ADRs by trailing 20-session mean dollar volume. An event is the first session a stock is number one for the first time in our data (from 2004); the basket is every other identified company with its industry code that day. Dropped: an unidentified leader, a catch-all code, a code kept under three years earlier, fewer than 10 members.",
+  "membership": "Every ticker with a daily bar on the date whose reference row is common stock or an ADR with an SEC registrant number; one row per registrant. Identity is tested against the company's own SEC filings; reused tickers are linked to a successor or bounded as unidentified. The industry code is the one in the company's own SEC filing header as of the date.",
+  "returns": "Buy at the close on the moment date; hold one and three years. Total return with dividends reinvested on the ex-date (split-scaled). A listing that ends is followed to the same registrant or a matched successor (at most 3 hand-offs), else sold at its last close with the cash at 0%. Equal weight at entry, no rebalancing. The S&P 500 = the SPY fund by the same method.",
+  "data_check": "Any member-day above +300% or below -75% is flagged and listed; flagged members stay in the registered result and are removed in a fragility variant.",
+  "metrics": [
+    "whole basket vs the S&P 500, in points",
+    "typical stock (the median member) vs the S&P 500",
+    "members beating the S&P 500, N of M",
+    "listings that ended: collapsed (exited at a fifth or less of the entry price) or ended otherwise",
+    "the basket without its best member and without its best five",
+    "the hot stock's own return",
+    "after the run: the hot stock had already more than doubled in the 252 sessions before the moment"
+  ],
+  "verdict_rule": {
+    "K1": "the whole basket beat the S&P 500 over 3 years (gap above zero)",
+    "K2": "the typical stock beat it over 3 years",
+    "labels": {
+      "SUPPORT": "K1 most and K2 most",
+      "LOTTERY": "K1 most, K2 few",
+      "AGAINST": "K1 few and K2 few",
+      "SPLIT": "K1 few, K2 most",
+      "UNDECIDED": "a tie"
+    },
+    "robust": "the rule-picked moments read the same label and every leave-one-out label agrees; otherwise the label is called FRAGILE",
+    "fragility_families": [
+      "unidentified companies at -100% and at the 90th percentile",
+      "data-check flags removed",
+      "an extra -30% on collapsed exits",
+      "entry 63 sessions earlier and later"
+    ]
+  },
+  "priors": {
+    "A1": "basket unsure, typical no",
+    "A2": "no, no",
+    "A3": "no, no",
+    "A4": "no, no",
+    "A5": "no, no",
+    "A6": "unsure, unsure",
+    "A7": "no, no"
+  },
+  "limits": [
+    "Industry codes are crude.",
+    "Moment choice is partly ours; the rule-picked moments are the guard.",
+    "Unidentified companies and last-close exits flatter the baskets; cash at 0% and missed spin-offs cut the other way.",
+    "US exchange listings only.",
+    "The moments overlap; this is a count, not a significance test.",
+    "The S&P 500 over these windows includes strong bull runs."
+  ],
+  "addenda": [
+    {
+      "id": "A1",
+      "time": "2026-10-06T08:03Z",
+      "change": "A serialization fix after the first run printed every result; the rerun printed 14 of 14 moment lines identical. No computation changed."
+    },
+    {
+      "id": "A2",
+      "time": "2026-10-06",
+      "change": "A factual correction of descriptive prose: the cannabis basket is 3 cannabis growers, 5 supplement makers and 2 drug developers (not 7 supplement makers). No rule or number changed."
+    }
+  ],
+  "sec_bulk_file_sha256": "066aff2f3ec2fa80443df3e2e4174fa8efc0c2248656ed46c09f14d06f8f4b71",
+  "source_sha256": {
+    "PREREG.md": "e9ac55e05d1760591b919e51751ce7a80e6ec54aa7c974bbc057a86dcaa430d2",
+    "RESULTS.md": "d6aa0edbfa7d85fbb1847fd42a463ddf087733f621c13a9304bd23a2cce4f809",
+    "MEMBERSHIP.md": "f27fae3b503dbbb83316f514a659691427e12415a07dae6b940cf10a4e8381f4",
+    "NOTE_DOCTOR_RECOMPUTE.md": "7974df93b5fe39c035ad0a4c2c819d81749b676ab8743ea64e62176ed903d712",
+    "returns.json": "ca7526fab637840df360fac0d20bd4cd8e96ffffe97422be996d342c38f3040f",
+    "membership.json": "fbb9af3e1b2de892f05df7eb43517d8078916b6e7983cfed6910bbbe2fb41b47",
+    "doctor_recompute.json": "5bece3c9b59f8cddbef6a872c6cfcde4c4d6344edbf22264f2cf5a6f2a6e97e9"
+  }
+}
