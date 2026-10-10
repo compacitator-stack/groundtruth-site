@@ -1,0 +1,15 @@
+n,statement,how_strongly,basis
+1,"Our implementation and our fund data reproduce his yearly returns for 2008-2012 in both of his columns (the rule and holding), inside the limits written before our first recorded run: 5 of his 40 rows",Measured,"Our reproduction gate; after the results, re-derived by our port audit and the same gate grades on a second price source"
+2,His rows for 1973-2006 reproduce (34 of 40); 2007 was checked only in the side check with a second commodity fund,Unknowable with the data we hold,"They need his index data, which we do not hold"
+3,"Saying ""we reproduced his table"" without the 5 of 40, which we never do",Not supported,Only 5 of his 40 rows could be checked
+4,The limits and the two-attempt cap were set before the first recorded result,Measured (repository order),The plan's commit and its approval came before the commit holding the gate's result
+5,It passed on the one attempt on record,Self-reported (the repository shows one recorded attempt),"The lab's repository history: one commit holds the gate's result, and no later commit edits it"
+6,"2013-2025: a smaller worst fall than holding, overall and in 3 of the 3 falling periods the plan named",Measured,"Our 2013-2025 run (held 3 of 3 as printed); each falling period measured from its opening value, corrected after the results"
+7,2013-2025: a lower return than holding (5.05% against 5.90% a year) and a higher Sharpe ratio (0.58 against 0.44),Measured,Our 2013-2025 run
+8,The result does not hinge on our price vendor,"Measured (two price sources; Treasury bills from one source, FRED)",Our rebuild of the five funds from our own survivorship-free store (after the results)
+9,The three conditions and the gap in worst falls do not hinge on US stocks; the return shortfall does (without US stocks: 3.76% against 3.70% a year),Measured,The plan's check without the largest contributor to the rule's return
+10,Why returns trailed after 2012: a long rise in which stepping aside cost more,Inferred; no registered arm isolates it,Our 2013-2025 run: about two thirds of the money in the funds on average
+11,The rule got weaker after he published,"Not supported: two windows, two kinds of data","His 2006-2012 window (his indexes) and ours (2013-2025, our funds)"
+12,The rule will protect against the next crash,Unknowable,No test of the future exists
+13,"Trend following or market timing works, or does not, in general","Not supported: one published rule, five funds, one window",This test covers one rule only
+14,A viewer should run this rule,Never said: not advice,Our own decision on the same evidence was to leave it on the shelf

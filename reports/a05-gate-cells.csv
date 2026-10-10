@@ -1,0 +1,11 @@
+year,column,his_table_pct,ours_pct,gap_points,within_3_points,sign_right
+2008,the rule,-0.59,-1.48,-0.89,yes,yes
+2008,holding all five,-30.01,-29.45,+0.56,yes,yes
+2009,the rule,12.77,14.07,+1.30,yes,yes
+2009,holding all five,18.74,18.73,-0.01,yes,yes
+2010,the rule,3.65,3.09,-0.56,yes,yes
+2010,holding all five,14.04,14.23,+0.19,yes,yes
+2011,the rule,2.49,0.75,-1.74,yes,yes
+2011,holding all five,2.81,2.30,-0.51,yes,yes
+2012,the rule,1.26,1.22,-0.04,yes,yes
+2012,holding all five,11.57,11.31,-0.26,yes,yes

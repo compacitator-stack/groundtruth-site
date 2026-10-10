@@ -1,0 +1,117 @@
+{
+  "episode": "A05",
+  "question": "Should I trust my portfolio to a famous published rule, Meb Faber's once-a-month moving-average switch, when the only proof is the author's own table?",
+  "paper": {
+    "title": "A Quantitative Approach to Tactical Asset Allocation",
+    "author": "Mebane T. Faber",
+    "version": "2013 update (first a May 2006 working paper)",
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=962461"
+  },
+  "lock": {
+    "plan_commit": "bd4a952",
+    "plan_time": "2026-06-09 20:34:00 -0700",
+    "approval_commit": "55973ce",
+    "approval_time": "2026-06-09 20:40:48 -0700",
+    "gate_result_commit": "e43737b",
+    "gate_result_time": "2026-06-09 20:43:36 -0700",
+    "run_commit": "629b80b",
+    "run_time": "2026-06-09 21:50:41 -0700",
+    "note": "Commit ids and times in the lab’s own repository; repository timestamps, not an independent timestamp attestation. The plan file was changed by these two commits only, both before the gate’s result."
+  },
+  "plan": [
+    "Main terms, in plain words; the plan also carries alarms for a broken run, which did not fire, and two information-only checks of the gate window.",
+    "The rule exactly as published: the 10-month moving average on month-end total-return closes; fixed 20% slices; Treasury bills in a slice whose investment is below its average; the trade at the month-end close, on the same bar as the signal.",
+    "The universe: SPY, EFA, IEF, VNQ and GSG; a second commodity fund, DBC, as a side check only. Signals use closed months only.",
+    "The benchmarks: holding the same five funds (equal slices, rebalanced monthly, always invested), and Treasury bills.",
+    "The pass mark for his table (2008-2012, the 5 of his 40 years our data reaches; no trading costs, as his paper): within 3 points in at least 4 of the 5 years; the sign right wherever his figure is more than 1 point from zero; 2008 within 4 points; his holding column under the same limits; at most 2 attempts; no widening afterward.",
+    "The three conditions for 2013-2025, with 5 basis points on every switch into or out of a fund: beat Treasury bills by at least 1 point a year; a worst fall within 0.67 times holding’s, or within 10%; a Sharpe ratio at least holding’s. All three must hold.",
+    "The middle case, ruled in advance: if the rule beat cash and kept its worst fall inside the limit but missed the Sharpe condition, that is a partial pass on risk only, counted as a pass only if the gate on his table had passed and the rule fell less than holding in at least 2 of the 3 named falling periods. It did not arise: all three conditions were met.",
+    "Its checks: the three named falling periods (August 2015 to February 2016, January to April 2020, 2022); each investment’s share of the return, and a re-run without the largest contributor; trading at the next month’s first open instead of the month-end close.",
+    "Four choices fixed in advance where the plan judged his paper silent or different: holding is rebalanced monthly, like the rule’s slices (a choice the plan made in advance, calling his paper silent on holding’s rebalance); the Sharpe ratio is over the window’s own Treasury bills (his paper uses a fixed rate); IEF (7-10 year) stands in for his 10-year bonds; 5 basis points on every switch into or out of a fund, a cost his paper leaves out."
+  ],
+  "registered_results": {
+    "gate": "PASS on the 5 of his 40 yearly rows our data reaches (2008-2012): 5 of 5 rule cells within 3 points, every sign right, 2008 gap -0.89 (limit 4), holding column 5 of 5 within 3 points",
+    "conditions_2013_2025": "3 of 3 met",
+    "arms_2013_2025": {
+      "the_rule": {
+        "return_a_year_pct": 5.05,
+        "volatility_pct": 5.9,
+        "sharpe": 0.58,
+        "worst_fall_pct": -5.63
+      },
+      "holding_the_five": {
+        "return_a_year_pct": 5.9,
+        "volatility_pct": 10.58,
+        "sharpe": 0.44,
+        "worst_fall_pct": -20.66
+      },
+      "treasury_bills": {
+        "return_a_year_pct": 1.67
+      }
+    },
+    "without_us_stocks": {
+      "the_rule_return_pct": 3.76,
+      "holding_the_four_return_pct": 3.7,
+      "the_rule_worst_fall_pct": -6.06,
+      "holding_the_four_worst_fall_pct": -20.98,
+      "conditions": "3 of 3 met",
+      "note": "The plan names this check (take out the largest contributor, US stocks, and re-run); the lab’s code ran the other four funds at a quarter each, for the rule and for holding, a choice the plan does not make."
+    }
+  },
+  "known_history": "The 2013-2025 years had already happened when the plan was written. Writing it first stops the test being tuned to its result; it cannot make anyone unaware of what markets did.",
+  "added_after_the_results": [
+    "The three falling periods measured from each window’s opening value (the lab’s printout skipped each window’s first month, which changed 4 of the 6 printed figures, in two of the three periods).",
+    "The 13 yearly rows for 2013-2025 and the counts read from them (5 of 13 led; 8 trailed, holding up in all 8).",
+    "What the gate can tell apart: 0 of 1,000 and 8 of 1,000 random monthly switchers pass its first three clauses; our mis-built earlier bot passes them.",
+    "A second price source (our own store): the same grades on the gate, the three conditions and the three falling periods (the check without US stocks and the DBC side check were not re-run), every gate cell within 0.4 points, the 2013-2025 returns and worst falls equal to two decimals.",
+    "The early-2020 receipt of how the protection works (one episode, not a law).",
+    "Four corrections to the lab’s printouts, none changing a pass or fail: the falling periods (above); the next-open timing cost with trading costs; the second commodity fund graded; the no-switch stretch computed.",
+    "A re-implementation written from the plan’s text, without the lab’s own engine, re-derived the 82 printed values it checks in the lab’s two result files (81 distinct figures), 82 of 82; 8 of the 82 matched only when it copied two of the lab’s own departures from the plan (the 4 falling-period figures and the 4 next-open figures, corrected above); the lab’s own scripts re-ran byte-identical on 2 of 2 result files; for this report the re-implementation ran again, byte-identical.",
+    "The monthly return to equal slices, charged for the rule and for holding: the yearly return moves by under 0.02 points and no grade.",
+    "The dividend check restated: SPY’s adjusted close 15.0% below raw (the lab’s prose said 17.7%, which is raw over adjusted).",
+    "His table counted: the rule led holding in 17 of his 40 years."
+  ],
+  "not_tested": [
+    "taxes",
+    "other windows",
+    "other investments, or more of them",
+    "the bot we built from the rule earlier, as a verdict"
+  ],
+  "reopen": [
+    "His earlier years, with index data: total-return series for his five indexes, running the same gate on 1973-2007. Material misses would shrink \"his record is checkable\" to \"the tail of his record is checkable\". This is a data purchase, not a re-run.",
+    "A crash where the rule falls further than holding: a new observation on the claim that held, and the claim to watch, because the return claim already trailed.",
+    "New rules or results from Faber: we would re-check our copy against them, then re-run.",
+    "A mistake in our work: if a re-run of our re-implementation gave a different grade, this test would reopen (its code and the 2026-06-09 price pull are not published with this report).",
+    "A fault in the single-source Treasury bill data: an error there would move the rule’s cash slices, the Treasury bill arm and every Sharpe ratio at once."
+  ],
+  "sources": [
+    {
+      "source": "Mebane T. Faber, A Quantitative Approach to Tactical Asset Allocation (2013 update; first a May 2006 working paper), free on SSRN: the rule, his Figure 14 and Figure 16 (read off the page images), his words, and the paper’s dates",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=962461"
+    },
+    {
+      "source": "Faber’s blog, 2011-11-03, Measuring the Performance of the Ivy Portfolio: the name",
+      "url": "https://mebfaber.com/2011/11/03/measuring-the-performance-of-the-ivy-portfolio/"
+    },
+    {
+      "source": "Faber’s blog, 2015-06-02, Chapter 9, The Endowment Portfolio: his 2009 book and its never-switching mix",
+      "url": "https://mebfaber.com/2015/06/02/chapter-9-the-endowment-portfolio-swensen-el-erian-and-ivy/"
+    },
+    {
+      "source": "Yahoo Finance adjusted daily closes for SPY, EFA, IEF, VNQ, GSG and DBC, pulled on 2026-06-09: the fund prices behind our runs (this pull is not published with this report)",
+      "url": ""
+    },
+    {
+      "source": "Federal Reserve Bank of St. Louis (FRED), 3-month Treasury bill rate, TB3MS: the Treasury bill leg",
+      "url": "https://fred.stlouisfed.org/series/TB3MS"
+    },
+    {
+      "source": "Our own survivorship-free store (a market-data vendor’s daily bars and dividend records): the second price source, after the results (not published with this report)",
+      "url": ""
+    },
+    {
+      "source": "The lab’s own record and our port audit of it (after the results), neither published with this report: the plan, the gate’s result, the 2013-2025 run, and the repository’s commit ids and times",
+      "url": ""
+    }
+  ]
+}
