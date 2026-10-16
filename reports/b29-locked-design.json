@@ -1,0 +1,77 @@
+{
+  "summary scope": "Summary of the plan locked before the run. Summary, not the full plan text; private lock is not a public timestamp proof. Main terms and selected report diagnostics; not the complete private registry or raw results.",
+  "private lock refs": {
+    "original": "3aa19e6",
+    "launch addendum": "c2a0e85",
+    "amendment": "Post-results Amendment 1, independent numerical correction; original results retained",
+    "proof_limit": "Private source hashes identify records, not publicly pinned immutable plan text."
+  },
+  "questions Q1/Q2/Q3 and film omission of Q3": {
+    "Q1": "Annual +300% endpoint in H104 active days at the primary N300/f.03/b.5/d1/P; compare no-edge field with two one-account +.10R/+.20R alternatives. A non-discriminating recipe is not skill evidence.",
+    "Q2": "Fixed retrospective record: SAME identity W>=4 podiums/5 AND G5 podiums/5 including >=2 wins. Threshold, not exact order or loose nine-of-ten; selected before plan lock but after seeing record; not discovery significance.",
+    "Q3": "Report-only presentation of a registered question omitted from the film: one account, f.03, b.5, d1, cost .02R, $1,500 floor, 150 active days, +300% endpoint at least half the time. Registered grid bracket p=[.88,1], width .12; cost break-even p=.68; net edge [.30,.48] R/trade. q(.88)=.363587588044 and q(1)=1. This is a sufficient grid endpoint, not an exact minimum or sizing advice. Fixed grid has 42 points (step .005 from break-even, then forced 1); the last gap is retained."
+  },
+  "prior expectation": "Fixed before the run: a selected single-year extreme may be less informative than persistent finishes. This was an expectation, not a measured result.",
+  "registered decision rules": "Validity and support first. Q1 stronger +.20R alternative probability below .10 makes the recipe NON-DISCRIMINATING. For eligible labels, simultaneous U<=.01 is RARE UNDER THIS REGISTERED MODEL; L>=.10 is WITHIN THIS MODEL'S LUCK ENVELOPE; otherwise CANNOT TELL. Q2 headline is rare if its three components are rare, envelope if a component is envelope, otherwise unresolved; no pooled probability. Registered same-identity J rows across either arm can trigger the assumption-sensitive framing; a retrospective selection adjustment is absent.",
+  "same-identity predicate": "Fixed retrospective record: SAME identity W>=4 podiums/5 AND G5 podiums/5 including >=2 wins. Threshold, not exact order or loose nine-of-ten; selected before plan lock but after seeing record; not discovery significance.",
+  "retrospective selection": "Fixed retrospective record. Chosen after observing the archive, then locked before simulation. ANY searches identities within a field, not possible historical targets. The 72-row film subset was selected post-results from registered cells; the 29 qualifying rows were selected by their outcome. Neither is the full study.",
+  "calendars": "World calendar-year and Global June–May windows overlap on a 72-month model scaffold. Thirteen active dates in odd months and twelve in even give 150/year. Q2 schedules 900 active-day draws across six years; 813 unique days are used by the joint ten-event windows. D1 shares histories on overlaps; D0 separates World/Global outcomes. The 813 count was launch-addendum telemetry, not a changed calendar. Arm B Q1 samples 2012–2025; Q2 starts 2012–2020 and follows consecutive years.",
+  "risk/payoff/activity/funding/cost/floor assumptions": {
+    "primary": "Arm A headline: assumed 300 people, payoff 0.5 times risk, one trade/active day, 150 days/year, cost 0.02R per trade, $1,500 absolute floor, one separately funded $5,000 account/person/event; shared overlapping histories; ANY identity matching the fixed joint record. Fixed 3% risk (F03) and guessed persistent risk mixtures FU/FH are separate components; no pooling. Real entrants/accounts unknown.",
+    "sensitivity": "For the designated replacement in the 72-row post-results subset: persistent 2% or 3% risk versus 0.2% opponents; 150 active days/year; one or two trades/day; guessed payoff 0.5, 1 or 2 times risk; independent account strategies; three separately funded $5,000 entries per person, fresh each event after ruin; zero trading costs and no loss floor. Assumed field sizes and overlap choices vary; real-world calibration is unknown.",
+    "mixtures": "Risks .002,.01,.02,.03,.04,.05 persist by identity across accounts/events. FU weights (1,1,1,1,1,1)/6; FH weights (1,1,2,2,2,2)/10. These are guessed distributions, not measured contestants.",
+    "rules": "Rank positive-return people with at least ten completed trades by best qualifying account; continuous tie keys. Arm A account strategies are independent; Arm B shares direction across an identity’s accounts on an active day, with different entries. Accounts have separate funding. No replacement people after failure; fresh event funding is a model assumption. Primary absolute floor absorbs strictly below $1,500; equality survives. Stop the day at equity at or below 50% of day-start equity; resume next active day if surviving. Removing floor does not remove insolvency.",
+    "scope": "A sensitivities include C0 zero cost, C05 .05R, L0 no floor, K3 three accounts, and JOINT zero cost/no floor/three accounts; payoff .5/1/2, activity 1/2, N100/300/1000. HK and causal own-equity RAISE are additional registered sensitivities, not the 72-row subset."
+  },
+  "field repetition counts and intervals": "Original lock unchanged: Arm A Q2 M=1,640; Arm B M=320; simultaneous 95% Clopper–Pearson with fixed family J=51,846; ordinary 95% intervals separately retained. Exact A Q1/Q3 use numerical probabilities, not fabricated Monte Carlo counts. Historical slices use actual slice denominators and ordinary intervals; they do not veto pooled labels. Shared variants are correlated.",
+  "Arm B proxy and data gap": "SPY/QQQ 2012-2025 liquid-index intraday proxy, not oil/DAX or multiday/weekend reconstruction; 320 fields, simultaneous zero-hit upper .044435345167, too coarse for 1% rare band. Precision failure is not refutation. DATA-GAP REVIEWED - ACCEPTED WITH DISCLOSURE (29 of 3,520 sessions excluded, incl. the four March-2020 halt days). Complete regular minutes required for both SPY/QQQ; 32 of 32 early-close sessions retained. One of 14 years and seven of 168 months tripped the gap criterion; launch addendum accepted disclosure without relaxing eligibility. Broader B payoff, stop, cost, enforcement, private/high-risk grids were excluded before lock. Fair directions do not guarantee zero expected bracket return.",
+  "addendum chronology": [
+    {
+      "stage": "Original private lock 3aa19e6",
+      "change": "Main plan terms fixed before run."
+    },
+    {
+      "stage": "Pre-run launch addendum c2a0e85, after lock, before study cells",
+      "change": "Compute ceiling raised from 24 to 40 hours; full-launch projection 33.5229434189 hours is an estimate, not elapsed time. DATA-GAP accepted with disclosure. Active-date/coverage telemetry clarified, including 813 unique Q2 days. No change to complete-tape eligibility, seed families, repetitions, parameters, 218,202 cells or the 51,846 interval family."
+    },
+    {
+      "stage": "Post-results Amendment 1",
+      "change": "Corrected Q1 null floating-point cancellation and explained one-hit rare-band sensitivity; no new study draws or rewritten original results."
+    }
+  ],
+  "Amendment 1 correction": {
+    "scope": "Post-results correction for the primary annual N300 field at f.03/b.5/d1/P/H104/R300/END. Corrected null 2.0289416069918675e-13 replaces retired print 1.99840144433e-13 in explanation. NON-DISCRIMINATING label unchanged.",
+    "method": "Independent exact-rational and stable -expm1(N*log1p(-q)) probe; analytic error bound, not a row-by-row rerun. Original result receipt preserved.",
+    "precision": "For the separate Q2 headline components with M=1,640 and J=51,846, zero-hit simultaneous upper is .008829636863; one hit gives about .0106 and misses the .01 rare band."
+  },
+  "unretained two diagnostic series": "Fewer-than-three-qualifying-people counts and total terminal equity were not retained. They are unavailable, not zero. Recorded funding, losses and maximum qualifying equity cannot reconstruct them without replay; these requested descriptive clauses remain unfulfilled.",
+  "reopen criteria": {
+    "annual recipe": "Supported and discriminating annual recipe",
+    "field": "Dated entrants, accounts and funding",
+    "prospective": "Prospective record test",
+    "precision": "Resolution and appropriate instruments",
+    "correction": "Reproducible source or instrument correction"
+  },
+  "membership_scope": "Post-results subset of registered cells: Arm A F002 JOINT designated-replacement J rows, N100/300/1000, b0.5/1/2, d1/2, D0/D1, S02/S03. Excludes ANY, W-only/G-only, other risks/configurations, Q1/Q1_ALT/Q3, Arm B and report-only diagnostics. The 29 qualifying rows are selected by their envelope label; the 43 others are CANNOT TELL.",
+  "membership_column_definitions": {
+    "id": "Registered cell ID; only A Q2 F002 JOINT S02/S03 J types occur here.",
+    "N": "Assumed people INCLUDING replacement, not account count.",
+    "b": "Guessed winning payoff / planned risk.",
+    "d": "Trades per active day in A.",
+    "D": "D1 shared overlapping histories; D0 separate World/Global draws.",
+    "S": "S02 replacement 2%, S03 replacement 3%; remaining people 0.2%.",
+    "x": "Fields in which designated replacement matches joint threshold.",
+    "M": "Simulated fields for this row, 1,640.",
+    "probability": "x/M conditional point estimate, not probability of actual skill.",
+    "ordinary_interval": "Stored equal-tail 95% interval for this cell.",
+    "simultaneous_interval": "Stored 95% interval adjusted across fixed family J=51,846.",
+    "qualifies": "True iff simultaneous lower bound >=.10.",
+    "label": "Registered cell classification; others here are CANNOT TELL, not proven rare.",
+    "flags": "Complete row-specific source flags, separated by |. Common ANY-search flag explains ANY elsewhere; these S rows test the designated replacement.",
+    "source_line": "Physical RESULTS line, private record identified by source hash.",
+    "reciprocal_fields": "Rounded M/x; not a separate estimate.",
+    "selection": "Post-results 72-row subset and outcome-selected qualifying subset.",
+    "conditions": "Exact row axes plus shared model assumptions."
+  },
+  "study_coverage": "Registered 218,202 cells: A Q1 62,214; A Q1_ALT 101,076; A Q2 15,558; A Q3 3,066; B Q1 31,104; B Q2 5,184. This report summarizes main questions, primary results, precision, scope and deficiencies; its result ledger prints the 72-row film subset, not the entire raw registry. Report-only alternative targets, historical slices, analytical comparisons, other per-cell diagnostics and raw alternative rows are not reproduced cell by cell. The two unretained diagnostic series remain unavailable."
+}
