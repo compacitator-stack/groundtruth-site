@@ -1,0 +1,145 @@
+{
+  "summary scope": {
+    "text": "Summary of the plan locked before the run. Summary, not the full plan text. Main terms only: not the complete private registry, raw event exports or a public immutable preregistration. The lock commit is in a private repository with no public ref that pins it; these hashes identify records, not public timestamp proof. Source wording about Tori is paraphrased without changing its meaning.",
+    "sources": []
+  },
+  "private lock refs": {
+    "text": "Lock a30-prereg-lock = f617d5d. Pre-lock amendments: 1 official market-wide halts as known no-trade; 2 measured dependence reachability and the donor-entry-block fallback; 3 exactly one interval substitution (fb08ab1) on the same frozen synthetic calibration. Accepted post-lock integration amendment c733d66 (price basis: stored split-adjusted snapshot, factor 1 for 3/3 funds). Attempt 1 void (0 input rows), attempt 2 incomplete (instrumentation), attempt 3 accepted (442cdc2). Private hashes identify records; they are not public proofs.",
+    "sources": [
+      "P:65",
+      "P:212",
+      "P:222",
+      "N:180-184"
+    ]
+  },
+  "questions Q1/Q2/Q3 and film omission of Q3": {
+    "text": "Q1 ENTRIES: with the same mechanised exits, do trendline-bounce entries beat random entries on the same instrument, side, clock slot, regime and initial stop distance? Q2 LOSSES: how small are losses under each entry policy, and how much containment is already there with random entries and the same exits (no no-stop arm)? Q3 WHAT IT WOULD TAKE: exact gross R needed to clear the estimated costs, and the improvement over twins needed. The film states no cost row; Q3 is report-only.",
+    "sources": [
+      "P:17",
+      "P:19",
+      "P:21"
+    ]
+  },
+  "universe, dates and data": {
+    "text": "SPY, QQQ, IWM (DIA dropped by the support rule); regular-session minute bars from the research data snapshot; warm-up 2011-04-01..2015-12-31; line entries 2016-01-01..2024-12-31; natural follow-up to 2026-06-18; XNYS calendar 4.13.2; 15-minute entry grid 09:45 to 15 minutes before close; line frames month, week, day, 4-hour, 1-hour, 15-minute.",
+    "sources": [
+      "P:31",
+      "P:33",
+      "P:34",
+      "P:36",
+      "P:38",
+      "P:39",
+      "P:40"
+    ]
+  },
+  "data validity": {
+    "text": "Unknown minutes are never zero-return bars; no ray is valid across an unknown span from its anchor to the entry; \"This strict validity may limit opportunity and is not to be relaxed after seeing counts or results.\"",
+    "sources": [
+      "P:46",
+      "P:48"
+    ]
+  },
+  "line rule (ours)": {
+    "text": "A connected top-down cascade of lines through confirmed pivots; the touch tolerance, pivot confirmation, numeric entry delay and missing-minute contract are our choices, not the source's.",
+    "sources": [
+      "P:77",
+      "N:136"
+    ]
+  },
+  "exits": {
+    "text": "Natural-exit primary: protective / pivot-trail stop, or a completed 15-minute close through the frozen line with manual closure at the next open; no break-even, profit-target or session-end exit. Finite-horizon companion, not Tori's exit: marked at the next open after 63 sessions, a separate follow-up estimand.",
+    "sources": [
+      "P:110",
+      "P:112",
+      "P:114",
+      "P:122",
+      "P:124"
+    ]
+  },
+  "random-entry twins and balance": {
+    "text": "K=20 twins per matched donor from the next 60 scheduled sessions at the same clock slot, same fund and side, matched trend and volatility buckets, a translated donor line with the same stop distance; fixed seeds; balance printed, no rematching.",
+    "sources": [
+      "P:130",
+      "P:134",
+      "P:136",
+      "P:137",
+      "P:145",
+      "P:151",
+      "P:157"
+    ]
+  },
+  "sizing and costs": {
+    "text": "R = planned initial dollar risk ($42, $50, $420), never an account percentage or a loss ceiling; estimated round-trip costs are guesses swept x0/x1/x2: 9 accounting cells; headline $42 / $2.",
+    "sources": [
+      "P:163",
+      "P:165",
+      "P:169",
+      "P:173"
+    ]
+  },
+  "coverage gates": {
+    "text": ">=90% of selected donors matched; >=500 matched groups; >=50 per fund; >=24 represented quarters; every entry year <=5% incomplete sessions; failure = INSUFFICIENT COVERAGE / PRECISION for Q1/Q2 while Q3 still prints.",
+    "sources": [
+      "P:153",
+      "P:54"
+    ]
+  },
+  "dependence and intervals": {
+    "text": "Fixed 248-session donor-entry blocks; >=8 occupied blocks, a 496-session reading check and a frozen calibration >=90% in every scenario, else SAMPLING CONFIDENCE WITHHELD; every interval \"conditional on dependence not reaching beyond neighbouring 248-session blocks\".",
+    "sources": [
+      "P:214",
+      "P:216",
+      "P:218",
+      "P:219",
+      "P:220"
+    ]
+  },
+  "registered decision rules": {
+    "text": "Ordered statuses: complete coverage and outcomes first; otherwise NO COMPLETE-OUTCOME VERDICT with selected, matched and unresolved counts retained; Q1 labels only through the validity gates; a crossing of zero never proves equivalence (.05R margin).",
+    "sources": [
+      "P:246",
+      "P:252",
+      "P:261",
+      "P:266"
+    ]
+  },
+  "other designs": {
+    "text": "D00 is the registered primary rule. D01-D11 are the eleven registered one-change designs; their selected-session counts are reported, without outcome rankings or a performance vote. D09-D11 change exits and inherit D00 entry timing. These are pre-outcome counts shared by natural-exit primary and finite-horizon companion, not Tori's exit. Our mechanical reading, on real intraday paths of liquid US instruments; not Tori's crude-oil market or a reconstruction of Tori's discretionary trades.",
+    "sources": [
+      "P:177",
+      "F:95"
+    ]
+  },
+  "prior expectation": {
+    "text": "A guess fixed before the run: the point difference may be within .05R; a guess, not a result.",
+    "sources": [
+      "P:282"
+    ]
+  },
+  "what would change our answer": {
+    "text": "A separately registered missing-data contract and line rule with enough opportunity; enough complete, dispersed matched groups under a named exit or follow-up rule that pass the block and calibration gates; crude-oil paths with an independently specified, source-faithful decision and execution record; or a supported source correction / reproducible code defect for the affected claim. A nicer-looking result from another version of the rule is not one.",
+    "sources": [
+      "N:188-194"
+    ]
+  },
+  "terms": {
+    "text": "A donor is a selected line-entry setup; a matched donor has an admissible twin pool. Only matched donors receive the twenty-draw bundle. A twin is one with-replacement later entry draw carrying a translated version of that donor geometry. K is the fixed number of twins per matched donor, twenty. Delta is line-entry net R minus the mean of its twins, then averaged across donors; Delta_block gives occupied blocks equal weight. R is fixed initial planned dollar risk, not account return or a loss ceiling. A block is a fixed calendar group of 248 scheduled sessions, assigned by donor entry; it is not an assertion of independent history. D00 coverage gates are matched fraction, matched group count, count per admitted fund, represented quarters, and completeness of each admitted fund-year.",
+    "sources": [
+      "P:130",
+      "P:145",
+      "P:153",
+      "P:163",
+      "P:208",
+      "P:214"
+    ]
+  },
+  "separate result and interval identities": {
+    "text": "The natural-exit primary and finite-horizon companion, not Tori's exit are separate outcome definitions. INSUFFICIENT COVERAGE / PRECISION and NO COMPLETE-OUTCOME VERDICT govern the registered decision. TAIL PRECISION UNRESOLVED is a loss-tail support status; synthetic calibration is not market evidence. conditional on dependence not reaching beyond neighbouring 248-session blocks. Our mechanical reading, on real intraday paths of liquid US instruments; not Tori's crude-oil market or a reconstruction of Tori's discretionary trades.",
+    "sources": [
+      "P:216",
+      "P:246",
+      "P:252",
+      "P:272"
+    ]
+  }
+}
