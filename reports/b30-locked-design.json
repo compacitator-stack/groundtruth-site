@@ -1,0 +1,145 @@
+{
+  "question": {
+    "text": "Q1, the only verdict question: do the three quoted SPY opening-bell win rates (51%, 53%, 54%) hold within our predeclared tolerance on this window/proxy? Q2-Q4 and every QQQ row are descriptive; not inferred.",
+    "sources": [
+      "P:17",
+      "P:176"
+    ]
+  },
+  "source claim": {
+    "text": "The Rumers say, in their video published 2026-09-19, that buying SPY at the open and selling after an hour, two hours or at the end of the day wins 51%, 53% and 54% of the time. The spoken percentages are the registered comparators.",
+    "sources": [
+      "T:613-615",
+      "P:176"
+    ]
+  },
+  "source unknowns": {
+    "text": "Exact source dates, the underlying trades, vendor, tie treatment, fill convention and whether costs were included are not supplied. Their on-screen table prints rates and win/loss/flat counts; their formula and trades are not verified.",
+    "sources": [
+      "TBL:15-24",
+      "TBL:47-54"
+    ]
+  },
+  "window": {
+    "text": "2011-07-01 through 2026-05-29 inclusive, fixed before returns. \"Last 15 years\" with the 2026-09-19 publication date suggests roughly September 2011 to September 2026: our inference, not exact source dates.",
+    "sources": [
+      "P:32",
+      "P:33"
+    ]
+  },
+  "eligibility and coverage": {
+    "text": "Full scheduled regular sessions only (09:30-16:00 ET); early closes excluded by calendar, never by price. Coverage floors: at least 99% of full sessions overall and at least 90% in each represented calendar year, for both funds.",
+    "sources": [
+      "P:36",
+      "P:37",
+      "P:45"
+    ]
+  },
+  "entry and three alternative exits": {
+    "text": "Long SPY at the first eligible print of the 09:30 minute; exit at the first print of the 10:30 or 11:30 minute, or the last eligible print of the 15:59 minute (our near-close proxy, not a certified closing-auction fill). One hypothetical trade per session per exit; the exits are alternative histories, never added together.",
+    "sources": [
+      "P:53",
+      "P:54",
+      "P:55",
+      "P:59"
+    ]
+  },
+  "scheduled coordinate blocks 63/126/252": {
+    "text": "Uncertainty ranges use a calendar-block ratio cluster-t envelope with blocks of 63, 126 and 252 scheduled full sessions, keeping excluded-date coordinates and the final partial block. One trade per session does not make signs independent.",
+    "sources": [
+      "P:105",
+      "P:107",
+      "P:109"
+    ]
+  },
+  "12 occupied-block minimum": {
+    "text": "Each block length requires at least 12 occupied blocks, a positive denominator and finite nonzero variance; otherwise the range is withheld.",
+    "sources": [
+      "P:111"
+    ]
+  },
+  "alpha .05/6 each": {
+    "text": "The family is the three SPY win-rate members only, each at alpha = .05/6; no alpha moved from withdrawn money members. Above-half labels reuse the same three bounds.",
+    "sources": [
+      "P:113",
+      "P:176"
+    ]
+  },
+  "two percentage-point frozen tolerance bands": {
+    "text": "Tolerance: two percentage points absolute, inclusive bands [49%, 53%], [51%, 55%] and [52%, 56%]. A point inside its band is WITHIN PREDECLARED TOLERANCE; a whole range inside is WITHIN BAND; a range wholly outside is DISJOINT; otherwise OVERLAPS BAND.",
+    "sources": [
+      "P:131",
+      "P:135"
+    ]
+  },
+  "conjunction and half reuse": {
+    "text": "The claim holds only if 3 of 3 ranges are wholly inside their bands; it does not hold if at least one range is wholly outside; otherwise cannot tell. Above-half classifications reuse the same three bounds and answer a different question.",
+    "sources": [
+      "P:136",
+      "P:137",
+      "P:138",
+      "P:182"
+    ]
+  },
+  "quantity fixed before buy": {
+    "text": "Whole shares q = floor(50/(0.01 x M)), with M the immediately preceding scheduled session's last regular-minute close, fixed at 09:29 ET before entry. $50 is a hypothetical stress budget against a 1% adverse move, not account capital, a stop or a maximum loss.",
+    "sources": [
+      "P:71",
+      "P:75"
+    ]
+  },
+  "estimated cost grid": {
+    "text": "Primary expense $0.04 per share round trip plus $0 commission, once per trade: an estimate, not a quote. The full registered sweep has 72 cells per fund and exit: risk $20 or $50, adverse 0.5%, 1% or 2%, $0 to $0.20 per share and $0 or $1 commission.",
+    "sources": [
+      "P:77",
+      "P:79",
+      "P:81"
+    ]
+  },
+  "no money inference": {
+    "text": "Money amounts are measured; descriptive; not inferred. A positive or negative sign is an observed sign, never a money verdict; the nine branch sentences were frozen before returns.",
+    "sources": [
+      "P:141",
+      "P:144",
+      "P:146"
+    ]
+  },
+  "primary vs descriptive extensions": {
+    "text": "SPY Q1 is the only inferential question. Later-window comparisons (Q3), the overnight/intraday decomposition (B24), concentration, every cost cell and the added fund QQQ are descriptive; not inferred.",
+    "sources": [
+      "P:139",
+      "P:140",
+      "P:142",
+      "P:178"
+    ]
+  },
+  "missing observations": {
+    "text": "No forward fill, zero return or nearest-bar substitution. Four official market-wide halt records are exemptions, not imputed prices; unknown gaps stay unknown.",
+    "sources": [
+      "P:61",
+      "P:63",
+      "P:65"
+    ]
+  },
+  "one run and C01 custody": {
+    "text": "One registered outcome run at the lock; no rerun or post-price method change. A dated post-run descriptive correction, C01 (2026-10-18), recomputes the after-cost classes in exact decimal arithmetic, and with them the class counts, conditional win/loss means, ratios and signed medians; Q1 rates, bounds and labels, unconditional means and percentiles are unchanged. It is shown beside its locked predecessors.",
+    "sources": [
+      "R:3",
+      "C01:2",
+      "C01M:1"
+    ]
+  },
+  "reopen conditions": {
+    "text": "Holds needs 3 of 3 ranges wholly inside; any valid disjoint range would give does not hold. Exact source dates and the original ledger, actual order/fill and fee records, a verified error, or a fresh registration for a wider window or different method could change the reading.",
+    "sources": [
+      "P:138",
+      "P:148",
+      "N:331",
+      "N:333"
+    ]
+  },
+  "summary scope": {
+    "text": "Summary, not the full plan text. Main terms only, paraphrased; not the complete private registry or a public immutable preregistration. The lock commit acc81d8 is held in a private repository; no public ref pins it. Hashes identify records; they are not public timestamp proof.",
+    "sources": []
+  }
+}

@@ -1,0 +1,28 @@
+source_id,meaning,sha256_lf,reference
+N,"Ratified research interpretation and limitations, with its labelled source amendment",bc3ea7900ff71fa492908f07b85bea6096dd5362254deaefe9d13a638d0a7654,40aad6f
+H,Report content handoff: ratified passages in order,2c7d1059e16d8e3451b39b71df6adc3bf31c1857172bcdd9747c6df4a603385a,40aad6f
+V,Script-to-source verification record,1d140d9639ad9bf88ad35c3e7e0c6691a8c5ed4000397500259f9dd9219ad16f,40aad6f
+P,Private registered plan with labelled pre-run amendments,5894b8618fdb90524723f8affb0e9e9a0d380af7c798eabab03dad1d5720f20e,acc81d8
+R,Accepted numerical result ledger (one registered run),2a020fd7a38772447225e82937759550e3f4d1c48b54c7cc5db24000160e445b,6a19556
+Q1,Saved win-rate result rows,9a84e3febb82a3158793786e5a5e84cb12e7acd079b202c4c61a233391461739,6a19556
+FR,Saved registered branch sentences,9210ab583d3b8091e0ef0b2e38d69fd7dbc247e4bd82d2cfd9ea81fd5b517e82,6a19556
+C01,Dated descriptive correction C01: exact-decimal after-cost classes,985741bee99bda1c084ae3977361a1e7ba191b6d50fad52fd04f43cbc794642a,40aad6f
+C01M,"C01 correction receipt (cause, first failing check, correction execution)",ec7d0c5f047284ccd47e24cbb7fbec71ed8a23a079f0be67efbf5fdb6bc6cb7a,40aad6f
+DIST,Saved distribution summaries,274107d729b1857e37755980190f184cc52e9c21f75b611bf8ea4ad2057b2b27,6a19556
+ACC,Saved accounting cells (all registered cost cells),a21f2ca4eb7b7fe1c1be0c6ada4739b41e44ba5f6712d8416a5912a3ef4e778d,6a19556
+T,The Rumers source-video English captions (saved copy),3cabe6d32361c231718c078b43c128e2a76d1173f7cc6a1c193bac3bb020f50d,https://www.youtube.com/watch?v=XBOGd67BJks
+MAN,Source retrieval and custody record,1b0229e962c0d3e34f76048d7e26474baf0fa9b417d995733fdf02a4bc17bc50,40aad6f
+PK,Packaging registration record,4e8c3456fc21250d6dd367cf672649729e9c76e9951ef73c6d4580e75bbd9612,40aad6f
+TBL,Transcription of The Rumers on-screen results table at 1424 s,cb5a2db64d07c8068d0a91b4d4baf9730338120fb2fd155c022ca96a62b6f208,https://www.youtube.com/watch?v=XBOGd67BJks&t=1424
+SWP,Sampled on-screen review of the source video,e805af8ef6c54df6f2598d700d3ce22e202d369003f0f21a162e5a1dac29bf9c,https://www.youtube.com/watch?v=XBOGd67BJks
+CONC,Saved concentration diagnostics,f4605134142dc6c23360e6253893c603b15b3306608a6edc502376607ff105ec,6a19556
+PAIR,Saved paired later-window comparisons,b19e50ae6562b0194763665e6238b68c800faf66c868e476e6e7ef47ea8dc019,6a19556
+WIN,Saved pooled window fractions,4ecef61aaca49ac8f3cfcfa3789dee394e787fe5c7804b1ec009c2e71df5b4d1,6a19556
+B24,Saved overnight / intraday decomposition summaries,3053f3970589e182f1da35eb77eae5de4b03ab061672c9200a3d29e4dc9ca5bb,6a19556
+CAP_CLOCK,Attributed quote-card capture record: their table at 1424 s,b505a7ff30a21aca6f2cb96ebff42fd18aa9855954e631677690e6b85fa92078,40aad6f
+CAP_RISK,Attributed quote-card capture record: risk wording near 131.5 s,0bbb66ca20d10441acd8a65a7243a9a9d237d0a7c1308dcd102916738bb3c42e,40aad6f
+CAP_STOP,Attributed quote-card capture record: structural-stop wording near 259 s,be55f3808dd907072bae05992878ec83d5551ebc13fb5c4ef71b4a9777f34e4b,40aad6f
+CHART,"Real SPY minute-bar chart record for the entry illustration, 2026-05-29",df6a96bae149b337740f175e2dea19be78a61439e736ce7adf259ef19abde5ef,40aad6f
+LIBRARY,"Publishing-practice record, with the back-catalogue qualification",e74aaa604085ddda5cd3e04cc2fe40fb05f3a56d38860d19a4955863aa6092d2,40aad6f
+EDITORIAL,"Locked episode script: questions, definitions and sign-off",84a22b6fa168c6ff04f2ded5dd03968f052898e755784a3bd66efc1af604581a,40aad6f
+NEXT,Next-episode public metadata record,c94354b33927aa7d788e343ac3241dd0b6dce66d7a978c9958a0be751356f04e,https://youtu.be/H7iX0th2BBU
