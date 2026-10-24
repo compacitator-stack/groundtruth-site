@@ -1,0 +1,19 @@
+source_id,meaning,sha256,reference
+N,Ratified research interpretation and limitations,764ed380e6fbb3bbb6b56cc98e5d7f12183ce657b6b58d57f4324568f676510a,Private record; identity hash only
+P,Private registered plan with three labelled amendments,095ebed19f4a9af9f3eed0c6e533c73dd4f7db06a1a4397f6fc5b21259de2cdc,Private record; identity hash only
+J,Saved descriptive count and context results,866efc3f186d7352dbff12db8f19d33a68907320947c95ea27fa039374b7ac8b,Private record; identity hash only
+T,Saved descriptive accounting tables,f6d9adad8c4b74d5f4216874dc675baa378a956a89fbe64a9a6654fa9b908203,Private record; identity hash only
+L,Saved simulated opportunity and trade records,d4d9e1202c72e22ece30020ab111553aa69f1a7cff1de97f0e106d4d9d06cbd6,Private record; identity hash only
+V,Saved captions of Carl / ProRealAlgos Silent Flip free lesson,fede288406cb1ac60d50362153c19811b29bf74d25dbd975fdabfa8b5e980d8a,https://www.youtube.com/watch?v=Q2QjB5jBTro
+S,Dated text capture of the public Silent Flip rules page,35b62a94b30b3a3a0aa745f4317fc642894ecc3eaeb03bf9188f886ca2f3d701,https://prorealalgos.com/silentflip/
+C,Source-rule ledger with caption and chart coordinates,52d096d6046b824398071b6542e0e53ad421386a5e96bd05d64f9b45e510b085,https://www.youtube.com/watch?v=Q2QjB5jBTro
+CAPTURE,Public-page retrieval and indicator email-gate record,c607e862cd3a397e9c7d7a1fa3726eb95f105f879722dacd3b3bb7bb7a0a56df,https://prorealalgos.com/silentflip/
+FRAME,Source-video frame capture identities and coordinates,e58bcca4098ccd1146bac5780a1383b52b96f592f372c77438e9494b91183feb,https://www.youtube.com/watch?v=Q2QjB5jBTro
+VERIFY,Script-to-source verification record,e1a3e8bf91cdc13c4706565daaa9a4bfa5d8bd1cfca5dcb99d0068b834e24ff9,Private record; identity hash only
+SCRIPT,"Locked episode script: narration, questions and definitions",0a6419bba2c17b1ac981494365dd4daae7fb839ac4b6ac16458503adb90e946f,Private record; identity hash only
+R,Saved descriptive result summary,5b97410da7663a1d409ae0ca1e0db2827f5962b65474241baaafa54ed92b0b8b,Private record; identity hash only
+RUN,Saved run custody and output identities,e91baa7a5c434573f43c1baf7e6790f178277d9a717187d720aa5eb376236881,Private record; identity hash only
+CHART,Pre-entry NVDA illustration identity and source-bound candle records,9da918e535feb874c24661fd64d99045f3a96fbb6b0c3b204f25acb8eaae4d8d,Private record; identity hash only
+PAGE_IMAGE,Public rules-page image capture and composition record,909359b804e3af785c1dc11f1d7d43e30f92bda9236c16a454a11be5eafb0027,https://prorealalgos.com/silentflip/
+NEXT,Existing public next-episode metadata record,0d13a46e26621f6e51529f0c12ab06a0c13cd08b188c2d9900a30a8a8887f623,https://www.youtube.com/watch?v=PPkL0gwfhoU
+LIBRARY,Publishing practice with the unfinished back-catalogue qualification,e74aaa604085ddda5cd3e04cc2fe40fb05f3a56d38860d19a4955863aa6092d2,Private record; identity hash only

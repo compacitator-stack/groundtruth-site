@@ -1,0 +1,1348 @@
+{
+  "descriptive status": {
+    "text": "Amendment 1: the interval method failed qualification in 16/16 scenario/suite rows; this episode is descriptive. No market sampling interval, luck test or future-money inference.",
+    "sources": [
+      "N:220",
+      "N:239"
+    ]
+  },
+  "source and indicator": {
+    "text": "The frequency portion of that stake is under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently. \"As taught\" means the registered mechanical reading, including our numerical choices where the source leaves discretion. It does not mean a replication of the gated code. The primary reading fades a strong first 15-minute candle at a respected level, requires the next candle to reverse direction without breaking that level, and enters on the silent candle's extreme during the third candle. The preceding regular session supplies the range; earlier completed bars supply outer levels. Numerical strength/tolerance and bounded history are our choices (P:102-106). The stop is beyond the level and formation by one cent, the target is the nearer opposite range level, and an open position flattens at the 15:59 opening print (P:112-120). The narrated word \"limit\" is retained in the source ledger; implemented touch-through entry uses stop-order mechanics (C:26; P:106). We did not test the email-gated indicator/algo, completeness or exact definition of the source's \"24 Hours\" feed, account results, real retail fills, short availability, or the description's 1:9. The secondary was NOT RUN: 0 of 4,943 candidates could meet the historical identity rule (P:22-28); no breadth result exists. The five names were selected by Carl in 2026 after the sample window: hindsight selection, not a point-in-time market universe. Costs are estimates. The lesson's discretionary stop adjustments are not a universal algorithm; the registered three-move proxy is our alternative, not a test of Carl's discretion (P:169,173).",
+    "sources": [
+      "N:9",
+      "N:92",
+      "N:218"
+    ]
+  },
+  "universe and retrospective eras": {
+    "text": "The count table in section 2 of the report, https://gt.juliannieto.com/reports/a31-opening-candle-setup.html#section-2, counts supported stock-days, qualifying first candles (C1), confirmed two-candle setups and actual triggered entries, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently. Supported N/M uses scheduled full stock-days; C1, confirmed and trigger N/M use supported stock-days, while the missing count and confirmed calendar envelope use scheduled full stock-days. A supported day has the complete current regular session and required prior history: selecting these days is retrospective data selection, not a real-time eligibility filter a trader can foresee (P:90). Pooling adds exposure across stocks, not independent observations. FULL = 2019-07-01 through 2026-06-18; DEVELOPMENT = 2019-07-01 through 2023-12-29; HELD-OUT = 2024-01-02 through 2026-06-18 (P:13). These retrospective eras were fixed before outcomes; held-out does not mean future data collected after the lesson.",
+    "sources": [
+      "N:30"
+    ]
+  },
+  "complete-data selection and missing days": {
+    "text": "The count table in section 2 of the report, https://gt.juliannieto.com/reports/a31-opening-candle-setup.html#section-2, counts supported stock-days, qualifying first candles (C1), confirmed two-candle setups and actual triggered entries, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently. Supported N/M uses scheduled full stock-days; C1, confirmed and trigger N/M use supported stock-days, while the missing count and confirmed calendar envelope use scheduled full stock-days. A supported day has the complete current regular session and required prior history: selecting these days is retrospective data selection, not a real-time eligibility filter a trader can foresee (P:90). Pooling adds exposure across stocks, not independent observations. FULL = 2019-07-01 through 2026-06-18; DEVELOPMENT = 2019-07-01 through 2023-12-29; HELD-OUT = 2024-01-02 through 2026-06-18 (P:13). These retrospective eras were fixed before outcomes; held-out does not mean future data collected after the lesson. Each object in 'complete count objects' below pairs supported and scheduled denominators with the saved lower/upper confirmed-count envelope, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently (its J locator's /calendar_lower and /calendar_upper; P:50,191). The count form is known confirmed setups through known confirmed setups plus unsupported days, over scheduled full stock-days, allowing at most one setup per stock/day (P:106). It describes uncertainty without assigning outcomes to any missing day; it is not a sampling interval. FULL pooled is 32-811/8,685; PFE is 12-259/1,737 and XOM 7-208/1,737, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently. Those individual upper bounds can exceed the fortnightly translation; even though the pooled upper bound remains below the exact ten-day rate, \"roughly\" is not an exact statistical threshold and none of these upper bounds establishes actual setups on missing days, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently.",
+    "sources": [
+      "N:30",
+      "N:57"
+    ]
+  },
+  "formation and execution": {
+    "text": "The primary reading fades a strong first 15-minute candle at a respected level, requires the next candle to reverse direction without breaking that level, and enters on the silent candle's extreme during the third candle. The preceding regular session supplies the range; earlier completed bars supply outer levels. Numerical strength/tolerance and bounded history are our choices (P:102-106). The stop is beyond the level and formation by one cent, the target is the nearer opposite range level, and an open position flattens at the 15:59 opening print (P:112-120). The narrated word \"limit\" is retained in the source ledger; implemented touch-through entry uses stop-order mechanics (C:26; P:106).",
+    "sources": [
+      "N:92"
+    ]
+  },
+  "accounting and costs": {
+    "text": "R expresses a trade's result as a fraction of planned dollar risk: net dollars / (100 shares * the distance between order price and stop before entry). +1R means a gain equal to planned risk; -1R means a loss of that size. R is neither account capital nor a loss cap. We sum each trade's own R, not pooled dollars divided by a common risk amount (P:112,122,128). No risk-sized strategy or compounded account was run. Primary C2 has 21/89 fills per C1 opportunity: 10/21 winners, 11/21 losses, 0/21 ties (T:5955). C0 is the idealized zero-expense diagnostic. C1-C5 are estimated expense overlays, not broker quotes or observed costs. Execution expenses are round trip per share; standard short borrow is an assumed 3% annual rate charged for one trading day using /252, without verified availability (P:134-145).",
+    "sources": [
+      "N:94",
+      "N:96"
+    ]
+  },
+  "22 registered readings": {
+    "text": "Across all 22 registered readings, the FULL confirmed count ranges from 5/7,906 with ZERO TOLERANCE to 61/7,906 with TOLERANCE .10 RANGE; the observed 04:00-20:00 extended-hours reading produces 28/7,906, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently (J:/Q1/357,360,333). The maximum tolerance is max($0.01, 0.10 * C1 range), versus the primary max($0.01, 0.05 * C1 range), both fixed before outcomes (P:104,159). Observed extended hours are an incomplete-feed diagnostic, not a reproduction of a \"24 Hours\" feed. The full inventory of the 22 readings and their denominators is in section 2 of the report, https://gt.juliannieto.com/reports/a31-opening-candle-setup.html#section-2, under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently; these are one-factor alternatives, not an exhaustive search over combinations (P:149-169). There, the support column carries each reading's scheduled-calendar denominator; the event fractions remain conditional on its supported days.",
+    "sources": [
+      "N:61",
+      "N:63"
+    ]
+  },
+  "same-entry comparison": {
+    "text": "At 10:00, A requires the silent-candle predicate and B ignores only that predicate. Both use the same entry trigger, formation stop, target, quantity, expiry and validity rules. When both enter, the trades coincide. A removed trade is B filled while A did not; it is not a trade Carl took. This comparison counts predicate exclusions, not the benefit of waiting from 09:45 (P:126-130). FULL partitions into 21/89 identical fills, 19/89 removed fills and 49/89 neither; development is 11/54, 8/54 and 35/54; held-out is 10/35, 11/35 and 14/35 (R:15-17). A minus B per opportunity = minus the removed net sum divided by all C1 opportunities (P:128). This identity is not a causal claim about live execution.",
+    "sources": [
+      "N:144",
+      "N:158"
+    ]
+  },
+  "early-entry contrast": {
+    "text": "The 09:45 UNEQUAL-STOPS contrast has 89/89 early-policy fills versus the taught arm's 21/89, on the same C1 opportunities. At C2, taught minus early is +0.845 own-risk R and +$10.37 per common opportunity, using 89/89 opportunities (T:5955 /practical_0945). [INFERRED] Entry time, selection and stop geometry differ; each arm's R uses its own pre-order risk. This cannot isolate the silent-candle check or establish the benefit of waiting.",
+    "sources": [
+      "N:164"
+    ]
+  },
+  "range-to-flip context": {
+    "text": "Q4 asks about range-to-flip visits in 09:45-10:30 among sessions with all required levels, whether or not a formation occurred (P:171). FULL has 5,807/7,906 eligible supported stock-days, 2,099/7,906 without outer levels and 779/8,685 scheduled stock-days unresolved by the support mask (J:/Q4/330).",
+    "sources": [
+      "N:166"
+    ]
+  },
+  "secondary and identity": {
+    "text": "Amendment 2: secondary NOT RUN; 0 of 4,943 candidates could meet the historical identity rule. No breadth result exists.",
+    "sources": [
+      "N:218"
+    ]
+  },
+  "loader scope and preserved run": {
+    "text": "Amendment 3: split duplicate checks confined to used tickers; 184 duplicate keys were on other stocks, 0/184 on study stocks. The first intake stopped before prices, 0/5 replays; 7/7 first-run files preserved. The second lock governed one completed invocation.",
+    "sources": [
+      "N:240",
+      "N:241",
+      "N:242"
+    ]
+  },
+  "reopen evidence": {
+    "text": "- Carl's indicator or explicit level-construction rules: preserve the new source and freeze the resulting design before an authorized recount. Preserve this result; no outcome-selected retrofit. - Dated historical identity evidence: a separately authorized preregistration could implement breadth testing, preserving the current 0/4,943 record. - Real timestamped orders/fills, quantities, fees and short-availability records: reconcile execution and account claims at their actual sample size. Those records would not retroactively validate every discretionary decision or this fill proxy.",
+    "sources": [
+      "N:254",
+      "N:255",
+      "N:256"
+    ]
+  },
+  "summary scope": {
+    "text": "Summary, not the full plan text. Main terms only; historical clauses superseded by Amendments 1-3 are not new designs. The lock a31-prereg-lock-2 identifies commit 88d8835fb4c897e04a5801b7d7892fa3cc738e69 in a private repository. No public ref pins it; hashes identify records, not public timestamp proof.",
+    "sources": [
+      "N:240",
+      "N:242"
+    ]
+  },
+  "inferential status": {
+    "text": "DESCRIPTIVE; NO LUCK OR FUTURE-MONEY INFERENCE",
+    "sources": [
+      "N:220"
+    ]
+  },
+  "complete count objects": [
+    {
+      "universe": "NVDA",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 1737,
+        "M": 1737
+      },
+      "supported": {
+        "N": 1619,
+        "M": 1737
+      },
+      "opportunities": {
+        "N": 18,
+        "M": 1619
+      },
+      "setups": {
+        "N": 6,
+        "M": 1619
+      },
+      "triggers": {
+        "N": 4,
+        "M": 1619
+      },
+      "frequency": 0.0037059913526868438,
+      "calendar_lower": 0.0034542314335060447,
+      "calendar_upper": 0.07138744962579159,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 9,
+            "M": 1619
+          },
+          "setups": {
+            "N": 2,
+            "M": 1619
+          },
+          "triggers": {
+            "N": 1,
+            "M": 1619
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 9,
+            "M": 1619
+          },
+          "setups": {
+            "N": 4,
+            "M": 1619
+          },
+          "triggers": {
+            "N": 3,
+            "M": 1619
+          }
+        }
+      },
+      "unknown": {
+        "N": 118,
+        "M": 1737
+      },
+      "calendar_bounds": {
+        "lower_N": 6,
+        "upper_N": 124,
+        "M": 1737
+      },
+      "source": "J:/Q1/0",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "NVDA",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 1125,
+        "M": 1125
+      },
+      "supported": {
+        "N": 1007,
+        "M": 1125
+      },
+      "opportunities": {
+        "N": 8,
+        "M": 1007
+      },
+      "setups": {
+        "N": 3,
+        "M": 1007
+      },
+      "triggers": {
+        "N": 1,
+        "M": 1007
+      },
+      "frequency": 0.0029791459781529296,
+      "calendar_lower": 0.0026666666666666666,
+      "calendar_upper": 0.10755555555555556,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 4,
+            "M": 1007
+          },
+          "setups": {
+            "N": 2,
+            "M": 1007
+          },
+          "triggers": {
+            "N": 1,
+            "M": 1007
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 4,
+            "M": 1007
+          },
+          "setups": {
+            "N": 1,
+            "M": 1007
+          },
+          "triggers": {
+            "N": 0,
+            "M": 1007
+          }
+        }
+      },
+      "unknown": {
+        "N": 118,
+        "M": 1125
+      },
+      "calendar_bounds": {
+        "lower_N": 3,
+        "upper_N": 121,
+        "M": 1125
+      },
+      "source": "J:/Q1/1",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "NVDA",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 612,
+        "M": 612
+      },
+      "supported": {
+        "N": 612,
+        "M": 612
+      },
+      "opportunities": {
+        "N": 10,
+        "M": 612
+      },
+      "setups": {
+        "N": 3,
+        "M": 612
+      },
+      "triggers": {
+        "N": 3,
+        "M": 612
+      },
+      "frequency": 0.004901960784313725,
+      "calendar_lower": 0.004901960784313725,
+      "calendar_upper": 0.004901960784313725,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 5,
+            "M": 612
+          },
+          "setups": {
+            "N": 0,
+            "M": 612
+          },
+          "triggers": {
+            "N": 0,
+            "M": 612
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 5,
+            "M": 612
+          },
+          "setups": {
+            "N": 3,
+            "M": 612
+          },
+          "triggers": {
+            "N": 3,
+            "M": 612
+          }
+        }
+      },
+      "unknown": {
+        "N": 0,
+        "M": 612
+      },
+      "calendar_bounds": {
+        "lower_N": 3,
+        "upper_N": 3,
+        "M": 612
+      },
+      "source": "J:/Q1/2",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "UBER",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 1737,
+        "M": 1737
+      },
+      "supported": {
+        "N": 1586,
+        "M": 1737
+      },
+      "opportunities": {
+        "N": 11,
+        "M": 1586
+      },
+      "setups": {
+        "N": 2,
+        "M": 1586
+      },
+      "triggers": {
+        "N": 2,
+        "M": 1586
+      },
+      "frequency": 0.0012610340479192938,
+      "calendar_lower": 0.0011514104778353484,
+      "calendar_upper": 0.08808290155440414,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 4,
+            "M": 1586
+          },
+          "setups": {
+            "N": 0,
+            "M": 1586
+          },
+          "triggers": {
+            "N": 0,
+            "M": 1586
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 7,
+            "M": 1586
+          },
+          "setups": {
+            "N": 2,
+            "M": 1586
+          },
+          "triggers": {
+            "N": 2,
+            "M": 1586
+          }
+        }
+      },
+      "unknown": {
+        "N": 151,
+        "M": 1737
+      },
+      "calendar_bounds": {
+        "lower_N": 2,
+        "upper_N": 153,
+        "M": 1737
+      },
+      "source": "J:/Q1/66",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "UBER",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 1125,
+        "M": 1125
+      },
+      "supported": {
+        "N": 974,
+        "M": 1125
+      },
+      "opportunities": {
+        "N": 7,
+        "M": 974
+      },
+      "setups": {
+        "N": 1,
+        "M": 974
+      },
+      "triggers": {
+        "N": 1,
+        "M": 974
+      },
+      "frequency": 0.001026694045174538,
+      "calendar_lower": 0.0008888888888888889,
+      "calendar_upper": 0.1351111111111111,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 2,
+            "M": 974
+          },
+          "setups": {
+            "N": 0,
+            "M": 974
+          },
+          "triggers": {
+            "N": 0,
+            "M": 974
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 5,
+            "M": 974
+          },
+          "setups": {
+            "N": 1,
+            "M": 974
+          },
+          "triggers": {
+            "N": 1,
+            "M": 974
+          }
+        }
+      },
+      "unknown": {
+        "N": 151,
+        "M": 1125
+      },
+      "calendar_bounds": {
+        "lower_N": 1,
+        "upper_N": 152,
+        "M": 1125
+      },
+      "source": "J:/Q1/67",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "UBER",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 612,
+        "M": 612
+      },
+      "supported": {
+        "N": 612,
+        "M": 612
+      },
+      "opportunities": {
+        "N": 4,
+        "M": 612
+      },
+      "setups": {
+        "N": 1,
+        "M": 612
+      },
+      "triggers": {
+        "N": 1,
+        "M": 612
+      },
+      "frequency": 0.0016339869281045752,
+      "calendar_lower": 0.0016339869281045752,
+      "calendar_upper": 0.0016339869281045752,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 2,
+            "M": 612
+          },
+          "setups": {
+            "N": 0,
+            "M": 612
+          },
+          "triggers": {
+            "N": 0,
+            "M": 612
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 2,
+            "M": 612
+          },
+          "setups": {
+            "N": 1,
+            "M": 612
+          },
+          "triggers": {
+            "N": 1,
+            "M": 612
+          }
+        }
+      },
+      "unknown": {
+        "N": 0,
+        "M": 612
+      },
+      "calendar_bounds": {
+        "lower_N": 1,
+        "upper_N": 1,
+        "M": 612
+      },
+      "source": "J:/Q1/68",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PFE",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 1737,
+        "M": 1737
+      },
+      "supported": {
+        "N": 1490,
+        "M": 1737
+      },
+      "opportunities": {
+        "N": 21,
+        "M": 1490
+      },
+      "setups": {
+        "N": 12,
+        "M": 1490
+      },
+      "triggers": {
+        "N": 9,
+        "M": 1490
+      },
+      "frequency": 0.008053691275167786,
+      "calendar_lower": 0.0069084628670120895,
+      "calendar_upper": 0.1491076568796776,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 11,
+            "M": 1490
+          },
+          "setups": {
+            "N": 5,
+            "M": 1490
+          },
+          "triggers": {
+            "N": 4,
+            "M": 1490
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 10,
+            "M": 1490
+          },
+          "setups": {
+            "N": 7,
+            "M": 1490
+          },
+          "triggers": {
+            "N": 5,
+            "M": 1490
+          }
+        }
+      },
+      "unknown": {
+        "N": 247,
+        "M": 1737
+      },
+      "calendar_bounds": {
+        "lower_N": 12,
+        "upper_N": 259,
+        "M": 1737
+      },
+      "source": "J:/Q1/132",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PFE",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 1125,
+        "M": 1125
+      },
+      "supported": {
+        "N": 878,
+        "M": 1125
+      },
+      "opportunities": {
+        "N": 14,
+        "M": 878
+      },
+      "setups": {
+        "N": 9,
+        "M": 878
+      },
+      "triggers": {
+        "N": 6,
+        "M": 878
+      },
+      "frequency": 0.010250569476082005,
+      "calendar_lower": 0.008,
+      "calendar_upper": 0.22755555555555557,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 7,
+            "M": 878
+          },
+          "setups": {
+            "N": 4,
+            "M": 878
+          },
+          "triggers": {
+            "N": 3,
+            "M": 878
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 7,
+            "M": 878
+          },
+          "setups": {
+            "N": 5,
+            "M": 878
+          },
+          "triggers": {
+            "N": 3,
+            "M": 878
+          }
+        }
+      },
+      "unknown": {
+        "N": 247,
+        "M": 1125
+      },
+      "calendar_bounds": {
+        "lower_N": 9,
+        "upper_N": 256,
+        "M": 1125
+      },
+      "source": "J:/Q1/133",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PFE",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 612,
+        "M": 612
+      },
+      "supported": {
+        "N": 612,
+        "M": 612
+      },
+      "opportunities": {
+        "N": 7,
+        "M": 612
+      },
+      "setups": {
+        "N": 3,
+        "M": 612
+      },
+      "triggers": {
+        "N": 3,
+        "M": 612
+      },
+      "frequency": 0.004901960784313725,
+      "calendar_lower": 0.004901960784313725,
+      "calendar_upper": 0.004901960784313725,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 4,
+            "M": 612
+          },
+          "setups": {
+            "N": 1,
+            "M": 612
+          },
+          "triggers": {
+            "N": 1,
+            "M": 612
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 3,
+            "M": 612
+          },
+          "setups": {
+            "N": 2,
+            "M": 612
+          },
+          "triggers": {
+            "N": 2,
+            "M": 612
+          }
+        }
+      },
+      "unknown": {
+        "N": 0,
+        "M": 612
+      },
+      "calendar_bounds": {
+        "lower_N": 3,
+        "upper_N": 3,
+        "M": 612
+      },
+      "source": "J:/Q1/134",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "BAC",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 1737,
+        "M": 1737
+      },
+      "supported": {
+        "N": 1675,
+        "M": 1737
+      },
+      "opportunities": {
+        "N": 23,
+        "M": 1675
+      },
+      "setups": {
+        "N": 5,
+        "M": 1675
+      },
+      "triggers": {
+        "N": 3,
+        "M": 1675
+      },
+      "frequency": 0.0029850746268656717,
+      "calendar_lower": 0.0028785261945883708,
+      "calendar_upper": 0.03857225100748417,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 13,
+            "M": 1675
+          },
+          "setups": {
+            "N": 4,
+            "M": 1675
+          },
+          "triggers": {
+            "N": 2,
+            "M": 1675
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 10,
+            "M": 1675
+          },
+          "setups": {
+            "N": 1,
+            "M": 1675
+          },
+          "triggers": {
+            "N": 1,
+            "M": 1675
+          }
+        }
+      },
+      "unknown": {
+        "N": 62,
+        "M": 1737
+      },
+      "calendar_bounds": {
+        "lower_N": 5,
+        "upper_N": 67,
+        "M": 1737
+      },
+      "source": "J:/Q1/198",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "BAC",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 1125,
+        "M": 1125
+      },
+      "supported": {
+        "N": 1063,
+        "M": 1125
+      },
+      "opportunities": {
+        "N": 15,
+        "M": 1063
+      },
+      "setups": {
+        "N": 3,
+        "M": 1063
+      },
+      "triggers": {
+        "N": 1,
+        "M": 1063
+      },
+      "frequency": 0.0028222013170272815,
+      "calendar_lower": 0.0026666666666666666,
+      "calendar_upper": 0.057777777777777775,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 9,
+            "M": 1063
+          },
+          "setups": {
+            "N": 3,
+            "M": 1063
+          },
+          "triggers": {
+            "N": 1,
+            "M": 1063
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 6,
+            "M": 1063
+          },
+          "setups": {
+            "N": 0,
+            "M": 1063
+          },
+          "triggers": {
+            "N": 0,
+            "M": 1063
+          }
+        }
+      },
+      "unknown": {
+        "N": 62,
+        "M": 1125
+      },
+      "calendar_bounds": {
+        "lower_N": 3,
+        "upper_N": 65,
+        "M": 1125
+      },
+      "source": "J:/Q1/199",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "BAC",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 612,
+        "M": 612
+      },
+      "supported": {
+        "N": 612,
+        "M": 612
+      },
+      "opportunities": {
+        "N": 8,
+        "M": 612
+      },
+      "setups": {
+        "N": 2,
+        "M": 612
+      },
+      "triggers": {
+        "N": 2,
+        "M": 612
+      },
+      "frequency": 0.0032679738562091504,
+      "calendar_lower": 0.0032679738562091504,
+      "calendar_upper": 0.0032679738562091504,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 4,
+            "M": 612
+          },
+          "setups": {
+            "N": 1,
+            "M": 612
+          },
+          "triggers": {
+            "N": 1,
+            "M": 612
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 4,
+            "M": 612
+          },
+          "setups": {
+            "N": 1,
+            "M": 612
+          },
+          "triggers": {
+            "N": 1,
+            "M": 612
+          }
+        }
+      },
+      "unknown": {
+        "N": 0,
+        "M": 612
+      },
+      "calendar_bounds": {
+        "lower_N": 2,
+        "upper_N": 2,
+        "M": 612
+      },
+      "source": "J:/Q1/200",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "XOM",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 1737,
+        "M": 1737
+      },
+      "supported": {
+        "N": 1536,
+        "M": 1737
+      },
+      "opportunities": {
+        "N": 16,
+        "M": 1536
+      },
+      "setups": {
+        "N": 7,
+        "M": 1536
+      },
+      "triggers": {
+        "N": 3,
+        "M": 1536
+      },
+      "frequency": 0.004557291666666667,
+      "calendar_lower": 0.004029936672423719,
+      "calendar_upper": 0.11974668969487623,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 5,
+            "M": 1536
+          },
+          "setups": {
+            "N": 3,
+            "M": 1536
+          },
+          "triggers": {
+            "N": 1,
+            "M": 1536
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 11,
+            "M": 1536
+          },
+          "setups": {
+            "N": 4,
+            "M": 1536
+          },
+          "triggers": {
+            "N": 2,
+            "M": 1536
+          }
+        }
+      },
+      "unknown": {
+        "N": 201,
+        "M": 1737
+      },
+      "calendar_bounds": {
+        "lower_N": 7,
+        "upper_N": 208,
+        "M": 1737
+      },
+      "source": "J:/Q1/264",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "XOM",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 1125,
+        "M": 1125
+      },
+      "supported": {
+        "N": 966,
+        "M": 1125
+      },
+      "opportunities": {
+        "N": 10,
+        "M": 966
+      },
+      "setups": {
+        "N": 6,
+        "M": 966
+      },
+      "triggers": {
+        "N": 2,
+        "M": 966
+      },
+      "frequency": 0.006211180124223602,
+      "calendar_lower": 0.005333333333333333,
+      "calendar_upper": 0.14666666666666667,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 3,
+            "M": 966
+          },
+          "setups": {
+            "N": 2,
+            "M": 966
+          },
+          "triggers": {
+            "N": 0,
+            "M": 966
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 7,
+            "M": 966
+          },
+          "setups": {
+            "N": 4,
+            "M": 966
+          },
+          "triggers": {
+            "N": 2,
+            "M": 966
+          }
+        }
+      },
+      "unknown": {
+        "N": 159,
+        "M": 1125
+      },
+      "calendar_bounds": {
+        "lower_N": 6,
+        "upper_N": 165,
+        "M": 1125
+      },
+      "source": "J:/Q1/265",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "XOM",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 612,
+        "M": 612
+      },
+      "supported": {
+        "N": 570,
+        "M": 612
+      },
+      "opportunities": {
+        "N": 6,
+        "M": 570
+      },
+      "setups": {
+        "N": 1,
+        "M": 570
+      },
+      "triggers": {
+        "N": 1,
+        "M": 570
+      },
+      "frequency": 0.0017543859649122807,
+      "calendar_lower": 0.0016339869281045752,
+      "calendar_upper": 0.07026143790849673,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 2,
+            "M": 570
+          },
+          "setups": {
+            "N": 1,
+            "M": 570
+          },
+          "triggers": {
+            "N": 1,
+            "M": 570
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 4,
+            "M": 570
+          },
+          "setups": {
+            "N": 0,
+            "M": 570
+          },
+          "triggers": {
+            "N": 0,
+            "M": 570
+          }
+        }
+      },
+      "unknown": {
+        "N": 42,
+        "M": 612
+      },
+      "calendar_bounds": {
+        "lower_N": 1,
+        "upper_N": 43,
+        "M": 612
+      },
+      "source": "J:/Q1/266",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PRIMARY POOLED",
+      "design": 0,
+      "era": "FULL",
+      "scheduled": {
+        "N": 8685,
+        "M": 8685
+      },
+      "supported": {
+        "N": 7906,
+        "M": 8685
+      },
+      "opportunities": {
+        "N": 89,
+        "M": 7906
+      },
+      "setups": {
+        "N": 32,
+        "M": 7906
+      },
+      "triggers": {
+        "N": 21,
+        "M": 7906
+      },
+      "frequency": 0.004047558816089046,
+      "calendar_lower": 0.0036845135290731147,
+      "calendar_upper": 0.09337938975244675,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 42,
+            "M": 7906
+          },
+          "setups": {
+            "N": 14,
+            "M": 7906
+          },
+          "triggers": {
+            "N": 8,
+            "M": 7906
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 47,
+            "M": 7906
+          },
+          "setups": {
+            "N": 18,
+            "M": 7906
+          },
+          "triggers": {
+            "N": 13,
+            "M": 7906
+          }
+        }
+      },
+      "unknown": {
+        "N": 779,
+        "M": 8685
+      },
+      "calendar_bounds": {
+        "lower_N": 32,
+        "upper_N": 811,
+        "M": 8685
+      },
+      "source": "J:/Q1/330",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PRIMARY POOLED",
+      "design": 0,
+      "era": "DEVELOPMENT",
+      "scheduled": {
+        "N": 5625,
+        "M": 5625
+      },
+      "supported": {
+        "N": 4888,
+        "M": 5625
+      },
+      "opportunities": {
+        "N": 54,
+        "M": 4888
+      },
+      "setups": {
+        "N": 22,
+        "M": 4888
+      },
+      "triggers": {
+        "N": 11,
+        "M": 4888
+      },
+      "frequency": 0.004500818330605565,
+      "calendar_lower": 0.003911111111111111,
+      "calendar_upper": 0.13493333333333332,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 25,
+            "M": 4888
+          },
+          "setups": {
+            "N": 11,
+            "M": 4888
+          },
+          "triggers": {
+            "N": 5,
+            "M": 4888
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 29,
+            "M": 4888
+          },
+          "setups": {
+            "N": 11,
+            "M": 4888
+          },
+          "triggers": {
+            "N": 6,
+            "M": 4888
+          }
+        }
+      },
+      "unknown": {
+        "N": 737,
+        "M": 5625
+      },
+      "calendar_bounds": {
+        "lower_N": 22,
+        "upper_N": 759,
+        "M": 5625
+      },
+      "source": "J:/Q1/331",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    },
+    {
+      "universe": "PRIMARY POOLED",
+      "design": 0,
+      "era": "HELD-OUT",
+      "scheduled": {
+        "N": 3060,
+        "M": 3060
+      },
+      "supported": {
+        "N": 3018,
+        "M": 3060
+      },
+      "opportunities": {
+        "N": 35,
+        "M": 3018
+      },
+      "setups": {
+        "N": 10,
+        "M": 3018
+      },
+      "triggers": {
+        "N": 10,
+        "M": 3018
+      },
+      "frequency": 0.0033134526176275677,
+      "calendar_lower": 0.0032679738562091504,
+      "calendar_upper": 0.01699346405228758,
+      "by_direction": {
+        "long": {
+          "opportunities": {
+            "N": 17,
+            "M": 3018
+          },
+          "setups": {
+            "N": 3,
+            "M": 3018
+          },
+          "triggers": {
+            "N": 3,
+            "M": 3018
+          }
+        },
+        "short": {
+          "opportunities": {
+            "N": 18,
+            "M": 3018
+          },
+          "setups": {
+            "N": 7,
+            "M": 3018
+          },
+          "triggers": {
+            "N": 7,
+            "M": 3018
+          }
+        }
+      },
+      "unknown": {
+        "N": 42,
+        "M": 3060
+      },
+      "calendar_bounds": {
+        "lower_N": 10,
+        "upper_N": 52,
+        "M": 3060
+      },
+      "source": "J:/Q1/332",
+      "scope": "under our reading of the free lesson and rules page; the indicator itself is behind an email sign-up we did not use, and it may draw its levels differently."
+    }
+  ]
+}
