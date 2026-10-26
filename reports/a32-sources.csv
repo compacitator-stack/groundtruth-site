@@ -1,0 +1,27 @@
+source_id,kind,sha256,bytes,representation
+S01,Ratified findings,ddebc51be6f16db96e487dcac7c5a7ff7198e6520f93f6b8dda84e4c1bb6cb45,58039,LF-normalized UTF-8 text
+S02,Locked pre-registration,ccbe717902696a3d4593964da0f658367fecfed103f8853fa3951fef587ef7a3,45982,LF-normalized UTF-8 text
+S03,Saved results,3191711332525f39c3e1a23373c56e3638e39f9682cb0c01c6aaca7d7fa7d0d4,801002,LF-normalized UTF-8 text
+S04,SPY primary ledger,204772773ca7765eb5c22fb82c44bf3d9a5b8be935c73170ac3f924d243429ff,196671,raw binary bytes
+S05,QQQ primary ledger,be6236986afa4e04c98a1546035c82b2425f5d5b13538b7065e48346733359ac,125743,raw binary bytes
+S06,Source captions,58f61017231f0df1d9d3e6502d090bdfdadd04e018b2f7e8256c4b2e8ad2ad87,67000,LF-normalized UTF-8 text
+S07,Source-video identity,8cd8fc48b034a836acfaeb76a1b2fc5a93f1d426074a4de786c8a0df82577463,2576,LF-normalized UTF-8 text
+S08,Script verification,666bd26ef49bb8dbf6dd65fcc029efc980fe45ee9be86763a3a4a532454a2ed7,25133,LF-normalized UTF-8 text
+S09,Bound board specification,3a7cab5db8adc10ef5fea035f891394446d6dbf43257bbe45b1ea3cb2beb829b,47713,LF-normalized UTF-8 text
+S10,Film-figure bindings,b7378622246fa9132d29254f4ee4f8dd041a78169ccbea4c9305458e1f1e6f8e,168520,LF-normalized UTF-8 text
+N,Ratified findings,ddebc51be6f16db96e487dcac7c5a7ff7198e6520f93f6b8dda84e4c1bb6cb45,58039,LF-normalized UTF-8 text
+R,Saved descriptive results,18f7c4df35dde6f8d41d52909c114023bbf9c37d9769dae5868d14aaf284cbcf,54419,LF-normalized UTF-8 text
+J,Saved structured results,3191711332525f39c3e1a23373c56e3638e39f9682cb0c01c6aaca7d7fa7d0d4,801002,LF-normalized UTF-8 text
+P,Private registered plan; main terms summarized in the public summary,ccbe717902696a3d4593964da0f658367fecfed103f8853fa3951fef587ef7a3,45982,LF-normalized UTF-8 text
+V,Original tutorial captions,58f61017231f0df1d9d3e6502d090bdfdadd04e018b2f7e8256c4b2e8ad2ad87,67000,LF-normalized UTF-8 text
+S,Source teaching record,a18ad20364c242cfaf32884c708824a9fbc49e292493c0101e75fd4adb00003e,10431,LF-normalized UTF-8 text
+SCRIPT,Locked episode wording,4e798b3761315d78ba6f9103c15e596d88da66d5572d868bcfa06f8747d74b84,25504,LF-normalized UTF-8 text
+NEXT,Separate opening-candle episode identity,543f1884e347d6b8efe2b7cec173dde444b1f6e33fcc178ceab5ac0b8967893e,13038,LF-normalized UTF-8 text
+CHART,Selected pre-entry chart provenance,c8764011f627f4fd6589df2dafeaf6662be2033e9a2744dfccb7631d832cbfb3,3612,LF-normalized UTF-8 text
+RASTER:iliya_agreement,Accepted-cut source-image transcription at frame 0,d51d6b35f2e0e4407a45f3f8bf11760472398b36eac77556444a1080aa255fca,583683,raw binary bytes
+ART:iliya_agreement,"Source screenshot, caption-span and credit custody",ed3201ba18b02af01db15711248bf9b3f0a377bc537e8b1d90d3aa9ee2a366ec,3702,LF-normalized UTF-8 text
+RASTER:c1_spy_setup,Accepted-cut source-image transcription at frame 1277,fed7b77d7d419a8eb193ffe9ef9d50ab1a952f2166b4ea37e5ce4ec7361c708f,713206,raw binary bytes
+RASTER:iliya_slope,Accepted-cut source-image transcription at frame 2032,38a375b2e44e83fe3d7f62cca67184a34d96cdc2c279105755349d020f019cae,487288,raw binary bytes
+ART:iliya_slope,"Source screenshot, caption-span and credit custody",c627c158afb3251937ce3284cd9e67b0b725f0ac84434f539dc397a623e74268,3337,LF-normalized UTF-8 text
+RASTER:iliya_confluence,Accepted-cut source-image transcription at frame 8606,9337e45044f8256179efa263c481ff5d163c6d51d248c76482ee2c6bb2bc9c93,457335,raw binary bytes
+ART:iliya_confluence,"Source screenshot, caption-span and credit custody",3e8a324e77ff388a0b61019fc55f145188e7e043d4c0e3fbcbedcd003281afb1,3507,LF-normalized UTF-8 text

@@ -1,0 +1,132 @@
+{
+  "label": "Summary, not the full plan text",
+  "status": "DESCRIPTIVE; no interval or luck inference",
+  "lock": "a32-prereg-lock-2",
+  "lock_commit": "8c4c8f2",
+  "private_pin": "The lock commit is in a private repository without a public immutable ref. It identifies our saved plan; it is not public timestamp proof.",
+  "amendments": [
+    "Amendment 1: the interval method failed calibration in 3 of 5 synthetic scenarios; the study became descriptive before market results.",
+    "Amendment 2: after the first run refused before a trade, one impossible minute was treated as missing, counted and never repaired; a second lock preceded the completed run."
+  ],
+  "scope": "These two index funds, SPY and QQQ; this entry (ours); these costs; 2004-2026 with no QQQ trades from late July 2004 to mid-December 2011. EARLY is mostly SPY. Iliya, on indices: 'But on indices, I use a bit more of a VWAP' (471.12-479.919s).",
+  "money": "R PER TRADE = RESULT / PLANNED RISK PER SHARE, fixed before entry; not account equity or a loss cap. Estimated primary round trip $0.04/share, plus assumed short borrow 3% annual /252 for one day; commission zero. Costs and borrow availability are assumptions, not observed fills. Lower gap = kept worse order minus removed better order; upper gap = kept better order minus removed worse order.",
+  "mechanics": "[MEASURED: our specification] The entry is OUR reading of Iliya's lower-frame rule. Iliya says: \"How does the break work? We need the body closure above or below the MA. That is our confirmation.\" . We read that as a 15-minute close crossing the 15-minute 50 EMA. A long needs the previous close at or below the previous EMA and the current close above the current EMA; a short is the mirror . The rest of the trade is also ours, not Iliya's :\n- Fill: the next minute's open.\n- Stop: one cent beyond the signal candle's extreme.\n- Target: two times the planned risk.\n- Time exit: at 120 minutes, or at the last minute's open.\n- Unit: R = result divided by the planned risk per share, fixed before entry.\n\n[MEASURED: our cost estimates] Round trip, per share: $0.02, $0.04 (primary) or $0.10. Shorts also pay an assumed 3% annual borrow for one day. Commission is 0 . These are estimates, not broker quotes.\n\n[MEASURED: comparison design] The entries are the same in both groups, with identical exits and costs.\n- KEPT: at the decision, the completed 1-hour and 4-hour 50 EMAs both point the trade's way: close on the trade's side of the EMA, and slope the trade's way .\n- REMOVED: every other entry, split into against / mixed / flat .\n\nThe slope rule is a numeric one we chose . Iliya says: \"There is no good slope. You just need to see it visually trending higher or lower.\" .",
+  "periods": {
+    "SPY": {
+      "EARLY": [
+        "2004-03-12",
+        "2011-12-30"
+      ],
+      "DEVELOPMENT": [
+        "2012-01-03",
+        "2023-12-29"
+      ],
+      "HELD": [
+        "2024-01-02",
+        "2026-06-18"
+      ]
+    },
+    "QQQ": {
+      "EARLY": [
+        "2004-03-12",
+        "2011-12-30"
+      ],
+      "DEVELOPMENT": [
+        "2012-01-03",
+        "2023-12-29"
+      ],
+      "HELD": [
+        "2024-01-02",
+        "2026-06-18"
+      ]
+    },
+    "DIA": {
+      "EARLY": null,
+      "DEVELOPMENT": [
+        "2012-01-03",
+        "2023-12-29"
+      ],
+      "HELD": [
+        "2024-01-02",
+        "2026-06-18"
+      ]
+    },
+    "IWM": {
+      "EARLY": [
+        "2008-01-08",
+        "2011-12-30"
+      ],
+      "DEVELOPMENT": [
+        "2012-01-03",
+        "2023-12-29"
+      ],
+      "HELD": [
+        "2024-01-02",
+        "2026-06-18"
+      ]
+    }
+  },
+  "windows": {
+    "SPY": [
+      "2004-03-12",
+      "2026-06-18"
+    ],
+    "QQQ": [
+      "2004-03-12",
+      "2026-06-18"
+    ],
+    "DIA": [
+      "2012-01-03",
+      "2026-06-18"
+    ],
+    "IWM": [
+      "2008-01-08",
+      "2026-06-18"
+    ]
+  },
+  "support": "Retrospective complete regular sessions with 250 prior valid bars per frame. This is retrospective selection, not a real-time tradable support screen; no inference to excluded sessions.",
+  "comparison": "Same entries, exits and cost rules; completed hourly and four-hour 50 EMA directions both match the trade for kept, every other entry removed.",
+  "source_limit": "Iliya reads slope visually; our flat band is a numeric choice. The source describes a confluence inside a full system. No claim about skill, accounts, courses, future results or other markets.",
+  "ledger_columns": {
+    "row": "One-based row number in this public primary-ledger export.",
+    "id": "Saved entry identity: fund, session date, decision offset and design.",
+    "fund": "SPY or QQQ. Our reading on these two index funds only; on indices Iliya uses a bit more of a VWAP (471.12-479.919 seconds in the original tutorial).",
+    "design": "D00, the primary registered mechanics; other design ledgers are not in this file.",
+    "date": "Regular-session date in YYYY-MM-DD format.",
+    "era": "EARLY, DEVELOPMENT or HELD (labelled HELD-OUT in prose); FULL pools those saved entries.",
+    "decision": "Completed signal-bar end, in minute offsets from the session open.",
+    "entry": "Observed entry minute, in minute offsets from the session open.",
+    "deadline": "Reserved time-exit minute offset; may be later than the actual exit.",
+    "exit_minute": "Actual simulated exit minute offset from the session open.",
+    "side": "1 = long; -1 = short.",
+    "order": "Signal-close reference rounded to cents, in integer millionths of a dollar per share.",
+    "stop": "Planned stop price, in integer millionths of a dollar per share.",
+    "target": "Planned target price, in integer millionths of a dollar per share.",
+    "risk": "Planned risk per share fixed before entry, in integer millionths of a dollar. Not account capital or a loss cap.",
+    "fill": "Observed entry-open price, in integer millionths of a dollar per share.",
+    "adverse_exit": "Exit price for the adverse ordering of touches, in integer millionths of a dollar per share.",
+    "favorable_exit": "Exit price for the favorable ordering of touches, in integer millionths of a dollar per share.",
+    "reason": "Saved exit reason: entry_gap, time, stop_gap, target_gap, ambiguous, stop or target. Ambiguous means both stop and target touched in the same observed minute.",
+    "state": "Hourly/four-hour pair state: up, down, mixed, flat or unknown.",
+    "h_dir": "Hourly direction code: 1 up, -1 down, 0 flat, 2 mixed price/slope, 9 unknown.",
+    "f_dir": "Four-hour direction code: 1 up, -1 down, 0 flat, 2 mixed price/slope, 9 unknown.",
+    "kept": "True only when both completed hourly and four-hour 50 EMA directions match side; otherwise False (removed).",
+    "daily": "Prior completed daily direction: 1 up, -1 down, 0 flat, 2 mixed price/slope, 9 unknown.",
+    "q4_eligible": "Saved daily-frame support flag for the separate three-frame question; does not select this primary file.",
+    "q4_kept": "Saved daily-plus-hourly-plus-four-hour agreement flag; does not select this primary file.",
+    "gross_lower_num": "Adverse-order gross numerator. Divide by denominator for gross R per trade; planned risk, not account return.",
+    "gross_upper_num": "Favorable-order gross numerator. Divide by denominator for gross R per trade; planned risk, not account return.",
+    "net_lower_num_0.02": "Adverse-order net numerator at estimated $0.02 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "net_upper_num_0.02": "Favorable-order net numerator at estimated $0.02 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "net_lower_num_0.04": "Adverse-order net numerator at primary estimated $0.04 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "net_upper_num_0.04": "Favorable-order net numerator at primary estimated $0.04 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "net_lower_num_0.10": "Adverse-order net numerator at estimated $0.10 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "net_upper_num_0.10": "Favorable-order net numerator at estimated $0.10 round trip per share plus assumed short borrow. Divide by denominator for net R per trade.",
+    "denominator": "25200 times planned risk in millionths per share. Exact arithmetic scale shared by gross and net numerators; no account sizing. All net estimates assume commission 0 and one full day at 3% annual borrow on shorts, with availability assumed, not a quote."
+  },
+  "reopen": [
+    "Exact source slide or slope rule under a new preregistration, preserving this result.",
+    "Custodied EURUSD, GBPUSD and gold minute data.",
+    "Timestamped orders, fills and fees at their actual sample size."
+  ]
+}
